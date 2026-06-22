@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MATTER · Command Board</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+
+    <!-- MASTHEAD -->
+    <header class="masthead">
+      <div class="topline">
+        <span class="mono">MATTER &amp; ENERGY · CEO OPERATING CONSOLE</span>
+        <span class="mono">VOL. 01 · BRT</span>
+      </div>
+      <div class="title-row">
+        <h1>Command<br><em>Board</em></h1>
+        <p class="epigraph">My energy is the fuel. Shape is the job. Nothing leaves me without a place to land.</p>
+      </div>
+
+      <!-- COMMAND BAR -->
+      <div class="controls">
+        <div class="cmd">
+          <span class="prompt">›</span>
+          <input id="cmd" autocomplete="off" spellcheck="false"
+            placeholder="route this: … · what's hot · what's stuck · what am I bypassing · update on [client] · close [item] · or just type anything">
+        </div>
+        <button id="run-btn">Intake →</button>
+        <button id="refresh-btn">↺ Refresh</button>
+      </div>
+      <div class="statusbar" id="status"></div>
+    </header>
+
+    <!-- BOARD -->
+    <main id="board"></main>
+
+    <footer>
+      <div class="topline" style="border:0;padding:0">
+        <span class="mono">DRAFTS ONLY · NOTHING SENDS WITHOUT MANUEL'S CONFIRMATION</span>
+        <span class="mono">RUNS AS MANUEL · READS ONLY WHAT MANUEL CAN SEE</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- INTAKE PIPELINE MODAL -->
+  <div class="scrim" id="scrim">
+    <div class="pipe">
+      <div class="phead"><h2>Intake</h2><button class="x" id="pipe-x">✕</button></div>
+      <div class="pbody" id="pipe-body"></div>
+    </div>
+  </div>
+
+  <!-- COMMIT BANNER -->
+  <div class="commit-banner" id="commit">
+    <span><b id="commit-n">0</b> staged item(s) — local only, not yet in Notion</span>
+    <button id="commit-x">How to commit</button>
+  </div>
+
+  <script src="data/store.js"></script>
+  <script src="assets/engine.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

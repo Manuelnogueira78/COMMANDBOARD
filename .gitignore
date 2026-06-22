@@ -1,0 +1,5 @@
+node_modules/
+*.log
+.DS_Store
+scratchpad_*.png
+.claude/settings.local.json
