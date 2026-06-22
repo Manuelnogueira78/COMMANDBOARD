@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MATTER · Command Board</title>
+  <style>
+/* ============================================================
+   MATTER COMMAND BOARD — Editorial Design System
+   Monochrome print aesthetic. Times serif display, Courier mono
+   labels, hairline rules, paper ground, single spot vermilion.
+   Tokens lifted from Matter_Editorial_Spread.
+   ============================================================ */
+
+:root {
+  /* Paper / ground */
+  --paper:    #ffffff;
+  --paper-2:  #fafafa;
+  --paper-3:  #f4f4f4;
+
+  /* Ink ramp */
+  --rule:       #e2e2e2;
+  --rule-2:     #ececec;
+  --ink-faint:  #cccccc;
+  --ink-4:      #a8a8a8;
+  --ink-3:      #828282;
+  --ink-2:      #5e5e5e;
+  --ink-1:      #3d3d3d;
+  --ink-0:      #232323;
+  --ink:        #0a0a0a;
+  --ink-true:   #000000;
+
+  /* Spot color — print vermilion. Used ONLY for live signal:
+     fire / overdue / unresolved gate / flag severity. */
+  --spot:       #c1271d;
+  --spot-soft:  #f5e2df;
+  --spot-ink:   #7d1812;
+
+  /* Functional, still restrained */
+  --amber:      #8a6d00;
+  --amber-soft: #f4efdb;
+
+  --serif: "Times New Roman", Times, Georgia, "Hoefler Text", serif;
+  --mono:  "Courier New", Courier, ui-monospace, "SF Mono", Menlo, monospace;
+
+  --col-max: 1180px;
+  --gut: 48px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0 var(--gut) 120px;
+}
+
+/* ---- Mono utility: labels, kickers, metadata, data ---- */
+.mono {
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 11px;
+  color: var(--ink-2);
+}
+.mono-sm { font-size: 10px; letter-spacing: 0.2em; }
+
+/* ============================================================
+   MASTHEAD
+   ============================================================ */
+.shell { max-width: var(--col-max); margin: 0 auto; }
+
+.masthead { padding-top: 40px; }
+.masthead .topline {
+  display: flex; justify-content: space-between; align-items: baseline;
+  border-bottom: 1px solid var(--ink-true);
+  padding-bottom: 10px;
+}
+.masthead .topline .mono { color: var(--ink); }
+
+.masthead .title-row {
+  border-bottom: 4px solid var(--ink-true);
+  padding: 18px 0 22px;
+  display: flex; justify-content: space-between; align-items: flex-end; gap: 24px;
+}
+.masthead h1 {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-size: clamp(44px, 7vw, 92px);
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+}
+.masthead h1 em { font-style: italic; }
+.masthead .epigraph {
+  font-style: italic;
+  color: var(--ink-2);
+  font-size: 15px;
+  max-width: 360px;
+  text-align: right;
+  line-height: 1.35;
+}
+
+.controls {
+  display: flex; gap: 0; align-items: stretch;
+  border-bottom: 1px solid var(--rule);
+}
+.controls .cmd {
+  flex: 1;
+  display: flex; gap: 12px; align-items: center;
+  padding: 14px 0;
+}
+.controls input {
+  flex: 1; border: 0; outline: 0; background: transparent;
+  font-family: var(--mono); font-size: 14px; color: var(--ink);
+  letter-spacing: 0.02em;
+}
+.controls input::placeholder { color: var(--ink-4); }
+.controls .prompt { color: var(--spot); font-family: var(--mono); font-weight: 700; }
+.controls button {
+  border: 1px solid var(--ink-true); background: var(--paper);
+  font-family: var(--mono); text-transform: uppercase; letter-spacing: 0.15em;
+  font-size: 10px; padding: 8px 14px; cursor: pointer; color: var(--ink);
+  transition: background .12s, color .12s;
+}
+.controls button:hover { background: var(--ink-true); color: var(--paper); }
+
+.statusbar {
+  display: flex; gap: 28px; align-items: center;
+  padding: 9px 0; border-bottom: 1px solid var(--rule);
+}
+.statusbar .dot { width: 7px; height: 7px; border-radius: 50%; display: inline-block; margin-right: 7px; }
+.dot.live { background: var(--spot); }
+.dot.idle { background: var(--ink-faint); }
+.statusbar .stale { color: var(--spot); }
+
+/* ============================================================
+   SECTION
+   ============================================================ */
+.section { padding: 38px 0 8px; border-top: 1px solid var(--rule); }
+.section:first-of-type { border-top: 0; }
+
+.section-head {
+  display: flex; align-items: baseline; gap: 16px; margin-bottom: 22px;
+}
+.section-head .num {
+  font-family: var(--mono); font-size: 11px; color: var(--ink-4);
+  letter-spacing: 0.1em; width: 26px;
+}
+.section-head h2 {
+  font-family: var(--serif); font-weight: 400; font-size: 30px;
+  letter-spacing: -0.01em; line-height: 1;
+}
+.section-head .sub {
+  font-style: italic; color: var(--ink-3); font-size: 14px; margin-left: auto;
+  text-align: right; max-width: 420px;
+}
+.section-head .count {
+  font-family: var(--mono); font-size: 12px; color: var(--ink);
+  border: 1px solid var(--ink-true); border-radius: 999px;
+  padding: 2px 9px; min-width: 26px; text-align: center;
+}
+.count.hot { background: var(--spot); color: #fff; border-color: var(--spot); }
+.count.zero { color: var(--ink-4); border-color: var(--rule); }
+
+.empty {
+  font-style: italic; color: var(--ink-4); font-size: 15px;
+  padding: 4px 0 18px;
+}
+.empty.good::before { content: "✓  "; font-style: normal; color: var(--ink-3); }
+
+/* ============================================================
+   GATE (unresolved intake)
+   ============================================================ */
+.gate { border: 2px solid var(--spot); background: var(--spot-soft); padding: 18px 20px; }
+.gate .ghead { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 10px; }
+.gate .ghead .mono { color: var(--spot-ink); }
+.gate-item { padding: 10px 0; border-top: 1px solid #e7c9c5; }
+.gate-item:first-of-type { border-top: 0; }
+.gate-item .txt { font-size: 16px; }
+.gate-item .resume {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+  border: 1px solid var(--spot); color: var(--spot-ink); background: transparent;
+  padding: 5px 10px; cursor: pointer; margin-top: 8px;
+}
+.gate-item .resume:hover { background: var(--spot); color: #fff; }
+
+/* ============================================================
+   FLAGS
+   ============================================================ */
+.flag {
+  border-left: 3px solid var(--ink-true);
+  padding: 16px 0 16px 18px; margin-bottom: 2px;
+  border-top: 1px solid var(--rule);
+}
+.flag:first-child { border-top: 0; }
+.flag.sev-high { border-left-color: var(--spot); }
+.flag.sev-med  { border-left-color: var(--ink); }
+.flag.sev-low  { border-left-color: var(--ink-4); }
+
+.flag .frow { display: flex; gap: 14px; align-items: baseline; }
+.flag .ftag {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
+  background: var(--ink-true); color: var(--paper); padding: 3px 8px; white-space: nowrap;
+}
+.flag.sev-high .ftag { background: var(--spot); }
+.flag h3 { font-family: var(--serif); font-weight: 400; font-size: 20px; letter-spacing: -.01em; }
+.flag .pattern { font-style: italic; color: var(--ink-3); font-size: 13px; margin-left: auto; text-align: right; }
+.flag .evidence {
+  margin-top: 10px; padding-left: 0; list-style: none;
+  font-family: var(--mono); font-size: 12px; color: var(--ink-2); line-height: 1.7;
+}
+.flag .evidence li::before { content: "— "; color: var(--ink-4); }
+.flag .evidence a { color: var(--ink-1); text-decoration: underline; text-underline-offset: 2px; }
+.flag .move {
+  margin-top: 12px; display: flex; gap: 12px; align-items: center;
+  font-size: 15px;
+}
+.flag .move .lbl { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; color: var(--ink-3); text-transform: uppercase; }
+.flag .move .act { margin-left: auto; display: flex; gap: 8px; }
+.flag .move button {
+  font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+  border: 1px solid var(--ink-true); background: var(--paper); padding: 5px 10px; cursor: pointer;
+}
+.flag .move button:hover { background: var(--ink-true); color: var(--paper); }
+
+/* ============================================================
+   HEAT
+   ============================================================ */
+.heat-row {
+  display: grid; grid-template-columns: 52px 1fr auto; gap: 18px; align-items: start;
+  padding: 16px 0; border-top: 1px solid var(--rule);
+}
+.heat-row:first-child { border-top: 0; }
+.heat-rank {
+  font-family: var(--serif); font-size: 40px; line-height: .8; color: var(--ink-faint);
+  letter-spacing: -.04em;
+}
+.heat-row.t1 .heat-rank { color: var(--spot); }
+.heat-row.t2 .heat-rank { color: var(--ink); }
+.heat-main .what { font-size: 19px; font-family: var(--serif); }
+.heat-main .scope { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); margin-top: 3px; }
+.heat-main .why { font-size: 14px; color: var(--ink-2); font-style: italic; margin-top: 7px; }
+.heat-main .why b { font-style: normal; background: var(--spot-soft); color: var(--spot-ink); padding: 0 3px; font-family: var(--mono); font-size: 12px; }
+.heat-side { text-align: right; }
+.heat-score { font-family: var(--mono); font-size: 22px; color: var(--ink); }
+.heat-score .of { font-size: 11px; color: var(--ink-4); }
+.heat-link {
+  display: inline-block; margin-top: 8px; font-family: var(--mono);
+  font-size: 10px; letter-spacing: .12em; text-transform: uppercase;
+}
+.heat-link.has { color: var(--ink-2); }
+.heat-link.has::before { content: "▪ ITEM "; color: var(--ink-3); }
+.heat-link.orphan { color: var(--spot); }
+.heat-link.orphan::before { content: "⚑ "; }
+.spark { display: inline-flex; gap: 2px; align-items: flex-end; height: 18px; margin-top: 6px; }
+.spark i { width: 3px; background: var(--ink-3); display: block; }
+
+/* ============================================================
+   ITEMS  (live, pre-decision, hold)
+   ============================================================ */
+.owner-group { margin-bottom: 26px; }
+.owner-bar {
+  display: flex; align-items: baseline; gap: 12px;
+  border-bottom: 2px solid var(--ink-true); padding-bottom: 6px; margin-bottom: 6px;
+}
+.owner-bar .oname { font-family: var(--serif); font-size: 22px; }
+.owner-bar .orole { font-family: var(--mono); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--ink-3); }
+.owner-bar .oload { margin-left: auto; font-family: var(--mono); font-size: 11px; color: var(--ink-2); }
+.owner-bar.overloaded .oload { color: var(--spot); }
+
+.item {
+  display: grid; grid-template-columns: 1fr 160px 110px; gap: 16px; align-items: baseline;
+  padding: 12px 0; border-bottom: 1px solid var(--rule);
+}
+.item .iname { font-size: 16px; }
+.item .iask { font-family: var(--mono); font-size: 12px; color: var(--ink-2); line-height: 1.45; }
+.item .iask::before { content: "→ "; color: var(--ink-4); }
+.item .idate { font-family: var(--mono); font-size: 12px; text-align: right; color: var(--ink-1); white-space: nowrap; }
+.item .idate.over { color: var(--spot); font-weight: 700; }
+.item .idate.soon { color: var(--amber); }
+.item .iflags { display: flex; gap: 5px; margin-top: 5px; flex-wrap: wrap; }
+.chip {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
+  border: 1px solid var(--ink-faint); color: var(--ink-2); padding: 1px 5px; border-radius: 2px;
+}
+.chip.c { border-color: var(--spot); color: var(--spot-ink); }
+.chip.blocked { border-color: var(--amber); color: var(--amber); }
+.item .iactions { grid-column: 1 / -1; display: flex; gap: 8px; margin-top: 4px; }
+.item .iactions button {
+  font-family: var(--mono); font-size: 9px; letter-spacing: .1em; text-transform: uppercase;
+  border: 1px solid var(--rule); background: transparent; color: var(--ink-3); padding: 3px 8px; cursor: pointer;
+}
+.item .iactions button:hover { border-color: var(--ink-true); color: var(--ink); }
+
+.predecision .item, .hold .item { grid-template-columns: 1fr 160px 110px; }
+.age { font-family: var(--mono); font-size: 11px; }
+.age.aging { color: var(--spot); }
+
+/* ============================================================
+   BETS
+   ============================================================ */
+.bets { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border: 1px solid var(--ink-true); }
+.bet { padding: 20px 18px; border-right: 1px solid var(--rule); }
+.bet:last-child { border-right: 0; }
+.bet .bn { font-family: var(--mono); font-size: 32px; color: var(--ink-faint); line-height: 1; }
+.bet h3 { font-family: var(--serif); font-weight: 400; font-size: 21px; margin: 8px 0 6px; letter-spacing: -.01em; }
+.bet .bmeta { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.bets-over { border-color: var(--spot); }
+.bet-warning { font-family: var(--mono); font-size: 12px; color: var(--spot); margin-top: 10px; letter-spacing: .05em; }
+
+/* ============================================================
+   INTAKE MODAL — the pipeline
+   ============================================================ */
+.scrim {
+  position: fixed; inset: 0; background: rgba(10,10,10,.45);
+  display: none; align-items: flex-start; justify-content: center; z-index: 50;
+  padding: 60px 20px; overflow-y: auto;
+}
+.scrim.open { display: flex; }
+.pipe {
+  background: var(--paper); width: 100%; max-width: 640px;
+  border: 1px solid var(--ink-true); box-shadow: 0 24px 64px rgba(0,0,0,.22);
+}
+.pipe .phead {
+  border-bottom: 4px solid var(--ink-true); padding: 18px 24px;
+  display: flex; justify-content: space-between; align-items: baseline;
+}
+.pipe .phead h2 { font-family: var(--serif); font-weight: 400; font-size: 26px; }
+.pipe .phead .x { font-family: var(--mono); cursor: pointer; font-size: 18px; border: 0; background: 0; }
+.pipe .pbody { padding: 22px 24px 26px; }
+.pipe .step-label { font-family: var(--mono); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; color: var(--spot); margin-bottom: 6px; }
+.pipe .step-q { font-family: var(--serif); font-size: 22px; margin-bottom: 4px; line-height: 1.2; }
+.pipe .step-hint { font-style: italic; color: var(--ink-3); font-size: 14px; margin-bottom: 18px; }
+.pipe .raw {
+  font-family: var(--mono); font-size: 12px; color: var(--ink-2);
+  background: var(--paper-3); padding: 10px 12px; border-left: 2px solid var(--ink-faint); margin-bottom: 20px;
+  white-space: pre-wrap;
+}
+.pipe .choices { display: flex; gap: 12px; }
+.pipe .choices.col { flex-direction: column; }
+.pipe .choice {
+  flex: 1; border: 1px solid var(--ink-true); background: var(--paper); padding: 16px;
+  cursor: pointer; text-align: left; transition: background .12s, color .12s;
+}
+.pipe .choice:hover, .pipe .choice.sel { background: var(--ink-true); color: var(--paper); }
+.pipe .choice .ct { font-family: var(--serif); font-size: 18px; }
+.pipe .choice .cd { font-family: var(--mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-top: 5px; }
+.pipe .choice:hover .cd, .pipe .choice.sel .cd { color: var(--ink-faint); }
+.pipe label.field { display: block; margin-bottom: 16px; }
+.pipe label.field .fl { font-family: var(--mono); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; color: var(--ink-2); margin-bottom: 6px; display: block; }
+.pipe input.fi, .pipe textarea.fi, .pipe select.fi {
+  width: 100%; border: 1px solid var(--ink-faint); padding: 11px 12px;
+  font-family: var(--mono); font-size: 13px; color: var(--ink); background: var(--paper); outline: 0;
+}
+.pipe input.fi:focus, .pipe textarea.fi:focus, .pipe select.fi:focus { border-color: var(--ink-true); }
+.pipe textarea.fi { resize: vertical; min-height: 64px; }
+.pipe .owner-pin {
+  font-family: var(--mono); font-size: 12px; color: var(--ink); background: var(--paper-3);
+  padding: 9px 12px; border-left: 2px solid var(--ink-true); margin-bottom: 16px;
+}
+.pipe .owner-pin b { color: var(--spot-ink); }
+.pipe .interrupt {
+  border: 2px solid var(--spot); background: var(--spot-soft); padding: 14px 16px; margin-bottom: 18px;
+}
+.pipe .interrupt .mono { color: var(--spot-ink); }
+.pipe .interrupt p { font-size: 15px; margin-top: 6px; }
+.pipe .pnav { display: flex; justify-content: space-between; gap: 12px; margin-top: 8px; }
+.pipe .pnav button {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  padding: 11px 20px; cursor: pointer; border: 1px solid var(--ink-true);
+}
+.pipe .pnav .back { background: var(--paper); color: var(--ink); }
+.pipe .pnav .next { background: var(--ink-true); color: var(--paper); }
+.pipe .pnav .next:disabled { background: var(--ink-faint); border-color: var(--ink-faint); cursor: not-allowed; }
+.pipe .gate-fail { font-family: var(--mono); font-size: 11px; color: var(--spot); margin-top: 10px; letter-spacing: .04em; }
+
+/* Drafts panel */
+.draft-box { border: 1px solid var(--ink-true); margin-top: 18px; }
+.draft-box .dh { background: var(--ink-true); color: var(--paper); font-family: var(--mono); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; padding: 7px 12px; }
+.draft-box .db { padding: 14px; font-family: var(--mono); font-size: 13px; white-space: pre-wrap; line-height: 1.6; }
+.draft-box .dnote { padding: 0 14px 14px; font-style: italic; color: var(--ink-3); font-size: 13px; }
+.draft-box .dnote::before { content: "⚠ "; color: var(--spot); font-style: normal; }
+
+/* commit banner */
+.commit-banner {
+  position: fixed; left: 50%; transform: translateX(-50%); bottom: 24px;
+  background: var(--ink-true); color: var(--paper); font-family: var(--mono);
+  font-size: 12px; letter-spacing: .05em; padding: 12px 20px; display: none;
+  align-items: center; gap: 16px; z-index: 40; box-shadow: 0 12px 40px rgba(0,0,0,.3);
+}
+.commit-banner.show { display: flex; }
+.commit-banner b { color: var(--spot); }
+.commit-banner button { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; background: var(--paper); color: var(--ink); border: 0; padding: 6px 12px; cursor: pointer; }
+
+footer { margin-top: 60px; border-top: 1px solid var(--ink-true); padding-top: 14px; }
+footer .mono { color: var(--ink-3); }
+
+@media (max-width: 720px) {
+  :root { --gut: 20px; }
+  .item, .heat-row { grid-template-columns: 1fr; gap: 6px; }
+  .item .idate { text-align: left; }
+  .bets { grid-template-columns: 1fr; }
+  .bet { border-right: 0; border-bottom: 1px solid var(--rule); }
+  .masthead .title-row { flex-direction: column; align-items: flex-start; }
+  .masthead .epigraph { text-align: left; }
+}
+
+</style>
+</head>
+<body>
+  <div class="shell">
+
+    <!-- MASTHEAD -->
+    <header class="masthead">
+      <div class="topline">
+        <span class="mono">MATTER &amp; ENERGY · CEO OPERATING CONSOLE</span>
+        <span class="mono">VOL. 01 · BRT</span>
+      </div>
+      <div class="title-row">
+        <h1>Command<br><em>Board</em></h1>
+        <p class="epigraph">My energy is the fuel. Shape is the job. Nothing leaves me without a place to land.</p>
+      </div>
+
+      <!-- COMMAND BAR -->
+      <div class="controls">
+        <div class="cmd">
+          <span class="prompt">›</span>
+          <input id="cmd" autocomplete="off" spellcheck="false"
+            placeholder="route this: … · what's hot · what's stuck · what am I bypassing · update on [client] · close [item] · or just type anything">
+        </div>
+        <button id="run-btn">Intake →</button>
+        <button id="refresh-btn">↺ Refresh</button>
+      </div>
+      <div class="statusbar" id="status"></div>
+    </header>
+
+    <!-- BOARD -->
+    <main id="board"></main>
+
+    <footer>
+      <div class="topline" style="border:0;padding:0">
+        <span class="mono">DRAFTS ONLY · NOTHING SENDS WITHOUT MANUEL'S CONFIRMATION</span>
+        <span class="mono">RUNS AS MANUEL · READS ONLY WHAT MANUEL CAN SEE</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- INTAKE PIPELINE MODAL -->
+  <div class="scrim" id="scrim">
+    <div class="pipe">
+      <div class="phead"><h2>Intake</h2><button class="x" id="pipe-x">✕</button></div>
+      <div class="pbody" id="pipe-body"></div>
+    </div>
+  </div>
+
+  <!-- COMMIT BANNER -->
+  <div class="commit-banner" id="commit">
+    <span><b id="commit-n">0</b> staged item(s) — local only, not yet in Notion</span>
+    <button id="commit-x">How to commit</button>
+  </div>
+
+  <script>
+/* ============================================================
+   MATTER COMMAND BOARD — STORE  (the board's memory)
+
+   This file is the Notion mirror. It is regenerated by the
+   agent on every "refresh" (a live Slack re-scan + Notion sync).
+   The web app reads window.MATTER_STORE; the user's intake also
+   layers on top via localStorage until committed back here.
+
+   Loaded as a plain <script> so the board opens from file://
+   with no server and no CORS.
+
+   PRIVACY: derived from PRIVATE Slack channels Manuel can access.
+   Comp/salary figures are deliberately abstracted out of this
+   committed mirror. See README › Privacy.
+
+   Last scan:  2026-06-22  (channels: #moto-leadership,
+   #new-business, #mtt-comms, #rfp_hinge)
+   ============================================================ */
+window.MATTER_STORE = {
+  meta: {
+    lastScan: "2026-06-22T11:00:00-03:00",
+    nextScan: "morning 07:00 BRT / end-of-day 18:00 BRT",
+    scannedChannels: ["#moto-leadership", "#new-business", "#mtt-comms", "#rfp_hinge"],
+    slackBase: "https://matterenergy.slack.com/archives/",
+    notion: {
+      board:  "387aef2a-7a75-81a2-b382-d3d4b4f0e389",
+      items:  "2676fa7f-74ac-46bc-b74e-29e60ebd1e00",
+      flags:  "06042bda-11dd-4b7b-b57d-6108bd9e8b65",
+      heat:   "68bf3b1a-5024-4463-87ba-a31b03077576"
+    }
+  },
+
+  config: {
+    owners: {
+      joao:    { name: "João Calazans", role: "CCO · creative / pitch / client", slack: "U0B7MAZKMQB" },
+      ju:      { name: "Ju Fernandes",  role: "COO · ops / budget / hiring / institutional", slack: "U088KN7SG69" },
+      matheus: { name: "Matheus",       role: "CTO · AI / systems / infra / knowledge base", slack: "U04JDFQ1BTQ" },
+      me:      { name: "Manuel",        role: "CEO", slack: "U04JH5V4405" }
+    },
+    lexicon: {
+      fire:       ["pegando fogo", "mais uma semana de fire", "muita coisa ao mesmo tempo", "to meio sumido", "ritmo muito devagar"],
+      confusion:  ["confuso", "não sei quem", "não tenho updates", "ficou em aberto", "desconectado", "espalhado"],
+      quality:    ["MORNO", "erros inaceitáveis", "qualidade caindo"],
+      commercial: ["não descemos ainda", "como precifica", "conversão", "não ganhamos"],
+      overdue:    ["atrasado", "passou da data", "ainda não", "cadê"]
+    },
+    thresholds: {
+      decision_aging_days: 7, owner_overload_k: 3,
+      idea_window_days: 5, idea_new_n: 3, idea_stalled_m: 3,
+      bets_ceiling: 3, due_soon_days: 2
+    },
+    bets: [
+      { title: "Moto — consolidar a conta + R0 de AI", status: "live", note: "rascunho — confirme" },
+      { title: "New Business: motor de conversão (não o deck)", status: "live", note: "rascunho — confirme" },
+      { title: "Brand Comms: framework sistêmico + time", status: "forming", note: "rascunho — confirme" }
+    ]
+  },
+
+  /* ---- ITEMS — only where a human already gave shape, or where
+     a real open loop maps to pre-decision/hold. The board never
+     auto-creates a task from heat. ---- */
+  items: [
+    {
+      id: "itm-content-strategist", item: "Content Strategist — fechar contratação",
+      type: "task", stage: "live", domain: "operations / people",
+      owner: "ju", assignee: "Louise", origin: "ju",
+      ask: "Fechar Content Strategist e decidir se entra +1 especialista no sprint",
+      date: "2026-06-23", createdAt: "2026-06-09T12:48:00-03:00",
+      scope: "Brand Comms", constraint_flags: [], blocked_by: null,
+      source: { channel: "#mtt-comms", cid: "C0B5STYHLDD" }, reads: []
+    },
+    {
+      id: "itm-sprint-date", item: "Sprint de estratégia — fechar data + briefar Roberta",
+      type: "task", stage: "hold", domain: "operations",
+      owner: "ju", assignee: "Ju Fernandes", origin: "ju",
+      ask: "Fechar a data do sprint e briefar Roberta",
+      date: null, createdAt: "2026-06-09T12:48:00-03:00",
+      scope: "Brand Comms", constraint_flags: [], blocked_by: "itm-content-strategist",
+      source: { channel: "#mtt-comms", cid: "C0B5STYHLDD" }, reads: []
+    },
+    {
+      id: "itm-sprint-prework", item: "Prework do sprint de estratégia",
+      type: "task", stage: "hold", domain: "operations",
+      owner: "ju", assignee: "Louise", origin: "ju",
+      ask: "Preparar o prework do sprint",
+      date: null, createdAt: "2026-06-09T12:48:00-03:00",
+      scope: "Brand Comms", constraint_flags: [], blocked_by: "itm-sprint-date",
+      source: { channel: "#mtt-comms", cid: "C0B5STYHLDD" }, reads: []
+    },
+    {
+      id: "itm-nb-conversion", item: "New Business: foco em conversão (não no deck)",
+      type: "task", stage: "pre-decision", domain: "commercial",
+      owner: null, assignee: null, origin: "manuel",
+      ask: "Gather reads: quantas reuniões novas e apresentações de BU estamos realmente conseguindo",
+      date: null, createdAt: "2026-05-19T05:26:00-03:00",
+      scope: "New Business", constraint_flags: ["C1"], blocked_by: null,
+      source: { channel: "#new-business", cid: "C08QGHMBNCT" }, reads: []
+    },
+    {
+      id: "itm-constellation", item: "Constellation — timeline revisada",
+      type: "task", stage: "hold", domain: "creative / client",
+      owner: "joao", assignee: "Fernando Prado", origin: "manuel",
+      ask: "Revisar a timeline quando o briefing oficial do cliente chegar",
+      date: null, createdAt: "2025-12-01T09:25:00-03:00",
+      scope: "Moto / Constellation", constraint_flags: ["C3"],
+      blocked_by: "Briefing oficial do cliente (Belle / Ricardo)",
+      source: { channel: "#moto-leadership", cid: "C08912PRB1A" }, reads: []
+    },
+    {
+      id: "itm-hinge-feedback", item: "RFP Hinge — capturar aprendizado da perda",
+      type: "task", stage: "pre-decision", domain: "commercial",
+      owner: "matheus", assignee: "Matheus", origin: "matheus",
+      ask: "Gather reads: feedback da Gabbi sobre o que faltou, para a conversão dos próximos",
+      date: null, createdAt: "2026-02-24T04:50:00-03:00",
+      scope: "New Business", constraint_flags: [], blocked_by: null,
+      source: { channel: "#rfp_hinge", cid: "C0A9GPKTQM9" }, reads: []
+    }
+  ],
+
+  /* ---- HEAT — a read, not a to-do. signals are 0–5 each. ---- */
+  heat: [
+    {
+      id: "heat-content-strategist", what: "Content Strategist + sprint de estratégia",
+      scope: "Brand Comms", itemId: "itm-content-strategist",
+      why: "Decisão de contratação e formato do sprint <b>em aberto há semanas</b>; vários nomes circulando sem fechar.",
+      signals: { velocity: 4, altitude: 4, client: 1, slippage: 3, stall: 2 },
+      cid: "C0B5STYHLDD"
+    },
+    {
+      id: "heat-comms-framework", what: "Framework operacional de Brand Comms",
+      scope: "Brand Comms", itemId: null,
+      why: "Tratado como prioridade mas <b>sem item que o possua</b>: quem operacionaliza, cobra as BUs e dá tração.",
+      signals: { velocity: 3, altitude: 4, client: 1, slippage: 2, stall: 3 },
+      cid: "C0B5STYHLDD"
+    },
+    {
+      id: "heat-nb-conversion", what: "New Business: conversão vs. deck",
+      scope: "New Business", itemId: "itm-nb-conversion",
+      why: "Manuel abriu a frente (19/mai): <b>o objetivo é conversão</b>, não o deck. Sem métrica de reuniões/apresentações ainda.",
+      signals: { velocity: 3, altitude: 5, client: 4, slippage: 2, stall: 3 },
+      cid: "C08QGHMBNCT"
+    },
+    {
+      id: "heat-moto", what: "Moto AI R0/R1 + Constellation award",
+      scope: "Moto", itemId: "itm-constellation",
+      why: "Deck R0 e briefing de Constellation. <b>Sinal fraco</b>: canal de liderança sem movimento desde dez/2025 — verificar se migrou.",
+      signals: { velocity: 1, altitude: 5, client: 4, slippage: 3, stall: 4 },
+      cid: "C08912PRB1A"
+    },
+    {
+      id: "heat-hinge", what: "RFP Hinge — aprendizado da perda",
+      scope: "New Business", itemId: "itm-hinge-feedback",
+      why: "Perda em fev; combinado pedir feedback à Gabbi p/ conversão futura — <b>sem retorno registrado</b>.",
+      signals: { velocity: 1, altitude: 3, client: 2, slippage: 4, stall: 5 },
+      cid: "C0A9GPKTQM9"
+    }
+  ],
+
+  /* Structural flags are DERIVED at render time by the engine from
+     items + heat, so they never drift from the data. Persisted
+     overrides (cleared / converted) live here. */
+  flagState: {}
+};
+
+/* ============================================================
+   MATTER COMMAND BOARD — Engine
+   Pure logic. No DOM. Enforces the framework on the data.
+
+   Exposes window.Engine with:
+     - OWNER_MAP routing
+     - classifyDomain / suggestOwner
+     - gate validation (the single enforced invariant)
+     - detectConstraintFlags (C1/C2/C3/C6)
+     - detectStructuralFlags (the 7)
+     - scoreHeat
+     - date / age helpers
+   ============================================================ */
+(function () {
+  "use strict";
+
+  // ---- config is injected from the store; this is the fallback shape ----
+  const CFG = (window.MATTER_STORE && window.MATTER_STORE.config) || {};
+
+  const OWNERS = CFG.owners || {};
+  const LEX = CFG.lexicon || {};
+  const TH = Object.assign({
+    decision_aging_days: 7,
+    owner_overload_k: 3,
+    idea_window_days: 5,
+    idea_new_n: 3,
+    idea_stalled_m: 3,
+    bets_ceiling: 3,
+    due_soon_days: 2
+  }, CFG.thresholds || {});
+
+  // ---- DOMAIN → OWNER routing (the OWNER MAP from the spec) ----
+  // returns { ownerKey, reason } or { ownerKey:null } => pre-decision
+  const DOMAIN_RULES = [
+    { key: "joao",    domain: "creative",   re: /\b(criativ|creative|pitch|deck|posicion|positioning|campanh|campaign|brand|client|cliente|cmo|apresenta|narrativ|copy|art)\b/i },
+    { key: "ju",      domain: "operations", re: /\b(oper|budget|or[çc]ament|hiring|contrat|vaga|timeline|prazo|cronograma|institu|process|financ|contrat|legal|RH|people)\b/i },
+    { key: "matheus", domain: "ai/systems", re: /\b(\bAI\b|\bIA\b|tool|ferramenta|system|sistema|t[ée]cnic|technical|infra|knowledge\s?base|base de conhecimento|automat|pipeline|integra|API|dado|data|dashboard|c[óo]digo|code)\b/i },
+  ];
+
+  // explicit name mentions win over keyword inference (you named a person)
+  function namedOwner(text) {
+    const t = " " + text.toLowerCase() + " ";
+    for (const k of Object.keys(OWNERS)) {
+      const first = (OWNERS[k].name || "").split(" ")[0].toLowerCase();
+      const variants = [k, first, first.normalize("NFD").replace(/[̀-ͯ]/g, "")];
+      if (variants.some(v => v && new RegExp("[^a-z]" + v + "[^a-z]", "i").test(t))) return k;
+    }
+    return null;
+  }
+
+  function classifyDomain(text) {
+    const hits = [];
+    for (const r of DOMAIN_RULES) if (r.re.test(text)) hits.push(r);
+    const named = namedOwner(text);
+    const keys = hits.map(h => h.key);
+    const dom = hits.length ? hits.map(h => h.domain).join(" + ") : null;
+
+    // No keyword domain matched
+    if (hits.length === 0) {
+      if (named && named !== "me") return { domain: (OWNERS[named] || {}).role || null, ownerKey: named, secondaryKey: null, crosses: false };
+      return { domain: null, ownerKey: null, secondaryKey: null, crosses: false };
+    }
+    // A person was explicitly named → they are primary; any other matched domain owner is secondary cc
+    if (named && named !== "me") {
+      const other = keys.find(k => k !== named) || null;
+      return { domain: dom, ownerKey: named, secondaryKey: other, crosses: !!other };
+    }
+    if (hits.length === 1) return { domain: dom, ownerKey: hits[0].key, secondaryKey: null, crosses: false };
+    return { domain: dom, ownerKey: hits[0].key, secondaryKey: hits[1].key, crosses: true };
+  }
+
+  function ownerName(key) { return (OWNERS[key] && OWNERS[key].name) || (key === "me" ? "Manuel" : "unassigned"); }
+  function ownerRole(key) { return (OWNERS[key] && OWNERS[key].role) || ""; }
+
+  // ---- THE GATE — the single enforced invariant ----
+  // A task needs owner + ask + date. A thought carries none of them.
+  // pre-decision / hold are the escape valves.
+  function gateCheck(item) {
+    const errs = [];
+    if (item.type === "thought") {
+      if (item.owner || item.ask || item.date) errs.push("A thought cannot carry an owner, ask, or date. Label it, store it, stop.");
+      return { ok: errs.length === 0, errs };
+    }
+    if (item.type === "task") {
+      if (item.stage === "pre-decision") {
+        if (!item.ask) errs.push("Pre-decision still needs an ask: “gather reads on X.”");
+        if (item.date) errs.push("Pre-decision carries no date until it has an owner.");
+        return { ok: errs.length === 0, errs, stage: "pre-decision" };
+      }
+      if (item.stage === "hold") {
+        if (!item.blocked_by) errs.push("Hold must name what it is blocked_by.");
+        if (item.date) errs.push("Hold carries no date until it is unblocked.");
+        return { ok: errs.length === 0, errs, stage: "hold" };
+      }
+      // live task — full gate
+      if (!item.owner) errs.push("A task cannot be saved without an OWNER.");
+      if (!item.ask)   errs.push("A task cannot be saved without an ASK (specific enough to act on tomorrow).");
+      if (!item.date)  errs.push("A task cannot be saved without a DATE. If you can't name one, this is pre-decision or hold — not a task.");
+      return { ok: errs.length === 0, errs };
+    }
+    errs.push("Every input resolves to a dated task or a labeled thought. There is no third state.");
+    return { ok: false, errs };
+  }
+
+  // ---- CONSTRAINT FLAGS surfaced at intake (C1/C2/C3/C6) ----
+  function detectConstraintFlags(text, opts) {
+    opts = opts || {};
+    const f = [];
+    const t = text.toLowerCase();
+    if (/\b(leadership|lideran|board|todos|all-hands|wide|geral|an[úu]ncio|announce|post|publica)\b/.test(t) || opts.goesWide)
+      f.push({ code: "C1", label: "GOES WIDE / AI-AUTHORED", ask: "Who reads it before it ships?" });
+    if (opts.isBet || /\b(aposta|bet|grande aposta|big swing|moonshot)\b/.test(t))
+      f.push({ code: "C2", label: "A BET", ask: "This is one of your 2–3 this quarter. Does it earn the slot?" });
+    if (opts.crosses || /\b(entrar no|assumir|take over|j[áa] [ée] do|owner)\b/.test(t))
+      f.push({ code: "C3", label: "ENTERING OWNED WORK", ask: "Bring the lead into the room. Who?" });
+    if (/\b(depende|depends|precisa que|requer|primeiro|first|antes|blocked)\b/.test(t))
+      f.push({ code: "C6", label: "DEPENDS ON SOMETHING UNBUILT", ask: "What has to exist first?" });
+    return f;
+  }
+
+  // ---- HEAT scoring ----
+  // weighted: velocity, altitude, client urgency, slippage, stall
+  function scoreHeat(entry) {
+    const w = { velocity: 1.2, altitude: 1.4, client: 1.3, slippage: 1.5, stall: 1.0 };
+    const s = entry.signals || {};
+    let raw = 0, max = 0;
+    for (const k in w) { raw += (s[k] || 0) * w[k]; max += 5 * w[k]; }
+    return Math.round((raw / max) * 100);
+  }
+  function heatTier(score) { return score >= 70 ? 1 : score >= 45 ? 2 : 3; }
+
+  // ---- DATE / AGE helpers ----
+  const DAY = 86400000;
+  function today() { const d = new Date(); d.setHours(0,0,0,0); return d; }
+  function parseD(s) { if (!s) return null; const d = new Date(s + "T00:00:00"); return isNaN(d) ? null : d; }
+  function daysUntil(s) { const d = parseD(s); return d ? Math.round((d - today()) / DAY) : null; }
+  function ageDays(iso) { if (!iso) return 0; return Math.max(0, Math.round((Date.now() - new Date(iso)) / DAY)); }
+  function fmtDate(s) {
+    const d = parseD(s); if (!d) return "—";
+    return d.toLocaleDateString("en-GB", { day: "2-digit", month: "short" });
+  }
+  function dueClass(s) {
+    const n = daysUntil(s); if (n === null) return "";
+    if (n < 0) return "over"; if (n <= TH.due_soon_days) return "soon"; return "";
+  }
+
+  // ============================================================
+  //  STRUCTURAL FLAGS — the seven. Derived from items + heat.
+  //  Each: { code, title, severity, evidence[], pattern, move, kind }
+  // ============================================================
+  function detectStructuralFlags(items, heat) {
+    const out = [];
+    const live = items.filter(i => i.type === "task" && i.stage === "live");
+    const byMe = items.filter(i => i.origin === "manuel");
+
+    // FLAG 1 — ORPHAN: heat with no matching Item
+    (heat || []).forEach(h => {
+      if (!h.itemId) out.push({
+        code: "ORPHAN", title: h.what, severity: h.score >= 70 ? "high" : "med",
+        pattern: "Vision/energy with no place to land.",
+        evidence: [`Hot in ${h.scope} — score ${h.score}. No Item owns it.`].concat(h.evidence || []),
+        move: "Route it (owner + ask + date) or label the decision and park it.",
+        kind: "orphan", refHeat: h.id
+      });
+    });
+
+    // FLAG 2 — BYPASS: a landed decision aimed past the work's owner
+    items.filter(i => i.bypass).forEach(i => out.push({
+      code: "BYPASS", title: i.item, severity: "high",
+      pattern: "Route, never become the second channel.",
+      evidence: [i.bypass.detail || "Decision landed outside the owner's channel.",
+                 `Owner of record: ${i.bypass.realOwner}. Recipient: ${i.bypass.recipient}.`],
+      move: `Re-route through ${i.bypass.realOwner}; don't be the second channel.`,
+      kind: "bypass", refItem: i.id
+    }));
+
+    // FLAG 3 — IDEA WITHOUT LANDING: generation outrunning absorption
+    const recentNew = byMe.filter(i => ageDays(i.createdAt) <= TH.idea_window_days);
+    const unmoved = byMe.filter(i => (i.stage === "pre-decision" || (!i.owner && i.type === "task")) && ageDays(i.createdAt) > TH.idea_window_days);
+    if (recentNew.length >= TH.idea_new_n && unmoved.length >= TH.idea_stalled_m) out.push({
+      code: "IDEA-NO-LANDING", title: `${recentNew.length} new in ${TH.idea_window_days}d, ${unmoved.length} prior still unmoved`,
+      severity: "med", pattern: "One lands before the next leaves.",
+      evidence: unmoved.slice(0, 4).map(i => `Unmoved ${ageDays(i.createdAt)}d: ${i.item}`),
+      move: "Clear the backlog before accepting the new one. Land one first.",
+      kind: "idea"
+    });
+
+    // FLAG 4 — AI SHIPPED UNCHECKED
+    items.filter(i => i.aiAuthored && i.wentWide && !i.reviewer).forEach(i => out.push({
+      code: "AI-UNCHECKED", title: i.item, severity: "high",
+      pattern: "Nothing wide unchecked, AI most of all.",
+      evidence: [`AI-authored, distributed to ${i.wideChannel || "a wide channel"}. No human reviewer recorded.`],
+      move: "Name a reviewer now, or pull it back until one signs off.",
+      kind: "ai", refItem: i.id
+    }));
+
+    // FLAG 5 — DECISION AGING: pre-decision past threshold, no reads
+    items.filter(i => i.stage === "pre-decision" && ageDays(i.createdAt) > TH.decision_aging_days && !(i.reads && i.reads.length)).forEach(i => out.push({
+      code: "DECISION-AGING", title: i.item, severity: ageDays(i.createdAt) > TH.decision_aging_days * 2 ? "high" : "med",
+      pattern: "The “we should talk about it” class that never resolves.",
+      evidence: [`Pre-decision ${ageDays(i.createdAt)} days. No reads attached (threshold ${TH.decision_aging_days}d).`],
+      move: "Gather reads on it this week, or let it go on the record as dropped.",
+      kind: "aging", refItem: i.id
+    }));
+
+    // FLAG 6 — SEQUENCE BREAK: live item whose blocker isn't closed
+    live.filter(i => i.blocked_by).forEach(i => {
+      const blk = items.find(b => b.id === i.blocked_by);
+      if (blk && blk.stage !== "done") out.push({
+        code: "SEQUENCE-BREAK", title: i.item, severity: "med",
+        pattern: "Something left before the prior thing landed.",
+        evidence: [`Live, but blocked_by “${blk.item}” which is ${blk.stage}.`],
+        move: `Land “${blk.item}” first, or move this back to hold.`,
+        kind: "sequence", refItem: i.id
+      });
+    });
+
+    // FLAG 7 — OWNER OVERLOAD: one owner across K+ live/hot items
+    const load = {};
+    live.forEach(i => { if (i.owner) load[i.owner] = (load[i.owner] || 0) + 1; });
+    Object.keys(load).forEach(k => {
+      if (load[k] >= TH.owner_overload_k) out.push({
+        code: "OWNER-OVERLOAD", title: `${ownerName(k)} — ${load[k]} live items`, severity: load[k] >= TH.owner_overload_k + 2 ? "high" : "med",
+        pattern: "When one person becomes the structure instead of building it.",
+        evidence: live.filter(i => i.owner === k).slice(0, 5).map(i => i.item),
+        move: "Distribute the load — second owner, or sequence so they aren't the single path.",
+        kind: "overload", refOwner: k
+      });
+    });
+
+    const rank = { high: 0, med: 1, low: 2 };
+    return out.sort((a, b) => (rank[a.severity] - rank[b.severity]));
+  }
+
+  window.Engine = {
+    CFG, OWNERS, LEX, TH,
+    classifyDomain, ownerName, ownerRole,
+    gateCheck, detectConstraintFlags, detectStructuralFlags,
+    scoreHeat, heatTier,
+    daysUntil, ageDays, fmtDate, dueClass, parseD
+  };
+})();
+
+/* ============================================================
+   MATTER COMMAND BOARD — App  (render + interaction)
+   Reads window.MATTER_STORE (the Notion mirror), overlays the
+   user's local intake (localStorage), derives flags via Engine,
+   and renders the editorial board. Drafts only — never sends.
+   ============================================================ */
+(function () {
+  "use strict";
+  const E = window.Engine;
+  const SEED = window.MATTER_STORE;
+  const LS_KEY = "matter_command_board_v1";
+  const $ = (s, r) => (r || document).querySelector(s);
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const slackUrl = cid => SEED.meta.slackBase + cid;
+
+  // ---------- STATE ----------
+  function loadLocal() { try { return JSON.parse(localStorage.getItem(LS_KEY)) || {}; } catch { return {}; } }
+  function saveLocal(d) { localStorage.setItem(LS_KEY, JSON.stringify(d)); }
+  let local = loadLocal();
+  local.items = local.items || [];          // user-added items (staged for Notion)
+  local.cleared = local.cleared || {};       // flag code+ref -> true
+
+  function workingItems() {
+    const map = {};
+    SEED.items.forEach(i => map[i.id] = i);
+    local.items.forEach(i => map[i.id] = i);  // local overrides/extends
+    return Object.values(map);
+  }
+  function stagedCount() { return local.items.length; }
+
+  function computeHeat() {
+    return SEED.heat.map(h => Object.assign({}, h, { score: E.scoreHeat(h), tier: E.heatTier(E.scoreHeat(h)) }))
+      .sort((a, b) => b.score - a.score);
+  }
+  function computeFlags(items, heat) {
+    return E.detectStructuralFlags(items, heat)
+      .filter(f => !local.cleared[f.code + ":" + (f.refItem || f.refHeat || f.refOwner || f.title)]);
+  }
+
+  // ---------- RENDER ----------
+  function render() {
+    const items = workingItems();
+    const heat = computeHeat();
+    const flags = computeFlags(items, heat);
+
+    const tasks = items.filter(i => i.type === "task");
+    const live = tasks.filter(i => i.stage === "live");
+    const pre  = tasks.filter(i => i.stage === "pre-decision");
+    const hold = tasks.filter(i => i.stage === "hold");
+    const thoughts = items.filter(i => i.type === "thought");
+    const gate = items.filter(i => i._unresolved);
+
+    $("#board").innerHTML =
+      sec_gate(gate) +
+      sec_flags(flags) +
+      sec_heat(heat) +
+      sec_live(live) +
+      sec_pre(pre) +
+      sec_hold(hold, items) +
+      sec_bets(live);
+
+    renderStatus(flags, heat);
+    bindBoard();
+  }
+
+  function renderStatus(flags, heat) {
+    const d = new Date(SEED.meta.lastScan);
+    const ageMin = Math.round((Date.now() - d) / 60000);
+    const stale = ageMin > 720; // >12h
+    $("#status").innerHTML =
+      `<span class="mono"><span class="dot ${stale ? "idle" : "live"}"></span>${stale ? "STALE" : "LIVE"}</span>` +
+      `<span class="mono">SCAN ${esc(d.toLocaleString("en-GB", { day: "2-digit", month: "short", hour: "2-digit", minute: "2-digit" }))}</span>` +
+      `<span class="mono">${SEED.meta.scannedChannels.length} CHANNELS</span>` +
+      `<span class="mono">${flags.length} FLAGS</span>` +
+      `<span class="mono">${heat.length} HEAT</span>` +
+      (stale ? `<span class="mono stale">↺ ask me to refresh</span>` : "");
+    const sc = stagedCount();
+    const banner = $("#commit");
+    if (sc > 0) { banner.classList.add("show"); $("#commit-n").textContent = sc; }
+    else banner.classList.remove("show");
+  }
+
+  function head(num, title, sub, count, cls) {
+    return `<div class="section-head"><span class="num">${num}</span><h2>${title}</h2>` +
+      (count != null ? `<span class="count ${cls || ""}">${count}</span>` : "") +
+      (sub ? `<span class="sub">${sub}</span>` : "") + `</div>`;
+  }
+
+  // 1 — GATE
+  function sec_gate(gate) {
+    if (!gate.length) return `<section class="section">${head("01", "The Gate", "Should be empty. If it isn't, it's the first thing you see.")}` +
+      `<p class="empty good">Nothing half-formed. Everything resolved to a dated task or a labeled thought.</p></section>`;
+    return `<section class="section"><div class="gate"><div class="ghead"><span class="mono">⚑ Unresolved input — resolve before it creates a hunt</span></div>` +
+      gate.map(g => `<div class="gate-item"><div class="txt">${esc(g.raw || g.item)}</div>` +
+        `<button class="resume" data-resume="${g.id}">Resume intake →</button></div>`).join("") +
+      `</div></section>`;
+  }
+
+  // 2 — FLAGS
+  function sec_flags(flags) {
+    const body = flags.length
+      ? flags.map(f => `<div class="flag sev-${f.severity}">
+          <div class="frow"><span class="ftag">${esc(f.code)}</span><h3>${esc(f.title)}</h3><span class="pattern">${esc(f.pattern)}</span></div>
+          <ul class="evidence">${(f.evidence || []).map(e => `<li>${e}</li>`).join("")}</ul>
+          <div class="move"><span class="lbl">One move</span><span>${esc(f.move)}</span>
+            <span class="act"><button data-flag-route="${esc(f.refItem || "")}" data-flag-title="${esc(f.title)}">Convert to item</button>
+            <button data-flag-clear="${esc(f.code + ":" + (f.refItem || f.refHeat || f.refOwner || f.title))}">Clear</button></span></div>
+        </div>`).join("")
+      : `<p class="empty good">No structural friction detected from the current scan. Evidence is thin elsewhere — the board is staying quiet rather than inflating.</p>`;
+    return `<section class="section">${head("02", "Structural Flags", "Not tasks. Systemic frictions that create confusion.", flags.length, flags.length ? "hot" : "zero")}${body}</section>`;
+  }
+
+  // 3 — HEAT
+  function sec_heat(heat) {
+    const rows = heat.map((h, i) => {
+      const bars = Object.values(h.signals).map(v => `<i style="height:${3 + v * 3}px"></i>`).join("");
+      const link = h.itemId
+        ? `<a class="heat-link has" href="#" data-scroll="${esc(h.itemId)}">${esc(h.itemId.replace(/^itm-/, ""))}</a>`
+        : `<span class="heat-link orphan">ORPHAN — no item</span>`;
+      return `<div class="heat-row t${h.tier}">
+        <div class="heat-rank">${i + 1}</div>
+        <div class="heat-main"><div class="what">${esc(h.what)}</div>
+          <div class="scope">${esc(h.scope)}</div>
+          <div class="why">${h.why}</div>
+          <a class="scope" href="${slackUrl(h.cid)}" target="_blank" style="text-decoration:underline">open in slack ↗</a></div>
+        <div class="heat-side"><div class="heat-score">${h.score}<span class="of">/100</span></div>
+          <div class="spark">${bars}</div><br>${link}</div>
+      </div>`;
+    }).join("");
+    return `<section class="section">${head("03", "Heat", "What's hot now — a read, not a to-do. The board never auto-creates tasks from this.", heat.length)}${rows}</section>`;
+  }
+
+  function itemRow(i) {
+    const dc = E.dueClass(i.date);
+    const chips = (i.constraint_flags || []).map(c => `<span class="chip c">${esc(c)}</span>`).join("") +
+      (i.blocked_by ? `<span class="chip blocked">blocked</span>` : "");
+    const date = i.date ? `<span class="idate ${dc}">${E.fmtDate(i.date)}${dc === "over" ? " · OVERDUE" : ""}</span>` : `<span class="idate">—</span>`;
+    return `<div class="item" id="row-${esc(i.id)}">
+      <div><div class="iname">${esc(i.item)}</div><div class="iflags">${chips}</div></div>
+      <div class="iask">${esc(i.ask || "")}${i.assignee ? ` <span class="mono-sm">(${esc(i.assignee)})</span>` : ""}</div>
+      ${date}
+      <div class="iactions">
+        <button data-draft="${esc(i.id)}">Draft message</button>
+        <button data-close="${esc(i.id)}">Close</button>
+        ${i.source ? `<button onclick="window.open('${slackUrl(i.source.cid)}')">Source: ${esc(i.source.channel)}</button>` : ""}
+      </div></div>`;
+  }
+
+  // 4 — LIVE ITEMS by owner
+  function sec_live(live) {
+    const keys = ["joao", "ju", "matheus", "me"];
+    const groups = keys.map(k => {
+      const its = live.filter(i => i.owner === k);
+      const over = its.length >= E.TH.owner_overload_k;
+      return `<div class="owner-group"><div class="owner-bar ${over ? "overloaded" : ""}">
+          <span class="oname">${esc(E.ownerName(k))}</span><span class="orole">${esc(E.ownerRole(k))}</span>
+          <span class="oload">${its.length} live${over ? " · OVERLOAD" : ""}</span></div>
+        ${its.length ? its.map(itemRow).join("") : `<p class="empty">No live items.</p>`}</div>`;
+    }).join("");
+    const unassigned = live.filter(i => !i.owner);
+    return `<section class="section">${head("04", "Live Items", "The work that has shape — owner · ask · date.", live.length)}${groups}` +
+      (unassigned.length ? `<div class="owner-group"><div class="owner-bar"><span class="oname">Unassigned</span></div>${unassigned.map(itemRow).join("")}</div>` : "") +
+      `</section>`;
+  }
+
+  // 5 — PRE-DECISION (with age)
+  function sec_pre(pre) {
+    pre.sort((a, b) => E.ageDays(b.createdAt) - E.ageDays(a.createdAt));
+    const body = pre.length ? `<div class="predecision">` + pre.map(i => {
+      const age = E.ageDays(i.createdAt), aging = age > E.TH.decision_aging_days;
+      return itemRow(i).replace("</div></div>", "") +
+        `<div class="iactions"><span class="age ${aging ? "aging" : ""}">${age}d old${aging ? " · AGING" : ""}</span></div></div>`;
+    }).join("") + `</div>` : `<p class="empty">Nothing waiting on reads.</p>`;
+    return `<section class="section">${head("05", "Pre-Decision", "Needs reads before it can have an owner. Aging ones rise.", pre.length)}${body}</section>`;
+  }
+
+  // 6 — HOLD
+  function sec_hold(hold, items) {
+    const byId = {}; items.forEach(i => byId[i.id] = i);
+    const body = hold.length ? `<div class="hold">` + hold.map(i => {
+      const blk = byId[i.blocked_by] ? byId[i.blocked_by].item : i.blocked_by;
+      return `<div class="item">
+        <div><div class="iname">${esc(i.item)}</div><div class="iflags"><span class="chip blocked">blocked_by</span></div></div>
+        <div class="iask">${esc(i.ask || "")}</div>
+        <div class="idate">⏸ ${esc(blk)}</div>
+        <div class="iactions"><button data-unblock="${esc(i.id)}">Unblock → live</button>${i.source ? `<button onclick="window.open('${slackUrl(i.source.cid)}')">${esc(i.source.channel)}</button>` : ""}</div>
+      </div>`;
+    }).join("") + `</div>` : `<p class="empty">Nothing on hold.</p>`;
+    return `<section class="section">${head("06", "Hold", "Real, but not the hour yet. No date until unblocked.", hold.length)}${body}</section>`;
+  }
+
+  // 7 — BETS
+  function sec_bets(live) {
+    const bets = SEED.config.bets || [];
+    const liveBets = bets.filter(b => b.status === "live").length;
+    const over = liveBets > E.TH.bets_ceiling;
+    const cards = bets.slice(0, Math.max(3, bets.length)).map((b, i) =>
+      `<div class="bet"><div class="bn">0${i + 1}</div><h3>${esc(b.title)}</h3>
+        <div class="bmeta">${esc(b.status)}${b.note ? " · " + esc(b.note) : ""}</div></div>`).join("");
+    return `<section class="section">${head("07", "Bets", "The 2–3 for the quarter. Three asks is a ceiling, not a target.", liveBets)}` +
+      `<div class="bets ${over ? "bets-over" : ""}">${cards}</div>` +
+      (over ? `<div class="bet-warning">⚑ ${liveBets} live bets — over the ceiling of ${E.TH.bets_ceiling}. Which one comes off the table?</div>` : "") +
+      `</section>`;
+  }
+
+  // ---------- BOARD ACTIONS ----------
+  function bindBoard() {
+    document.querySelectorAll("[data-close]").forEach(b => b.onclick = () => closeItem(b.dataset.close));
+    document.querySelectorAll("[data-unblock]").forEach(b => b.onclick = () => unblock(b.dataset.unblock));
+    document.querySelectorAll("[data-draft]").forEach(b => b.onclick = () => openDraft(b.dataset.draft));
+    document.querySelectorAll("[data-flag-clear]").forEach(b => b.onclick = () => { local.cleared[b.dataset.flagClear] = true; saveLocal(local); render(); });
+    document.querySelectorAll("[data-flag-route]").forEach(b => b.onclick = () => startIntake("route this: " + b.dataset.flagTitle));
+    document.querySelectorAll("[data-scroll]").forEach(b => b.onclick = e => { e.preventDefault(); const el = $("#row-" + b.dataset.scroll); if (el) { el.scrollIntoView({ behavior: "smooth", block: "center" }); el.style.background = "var(--spot-soft)"; setTimeout(() => el.style.background = "", 1200); } });
+    document.querySelectorAll("[data-resume]").forEach(b => b.onclick = () => { const it = local.items.find(x => x.id === b.dataset.resume); if (it) startIntake(it.raw, it.id); });
+  }
+  function persist(i) { const ix = local.items.findIndex(x => x.id === i.id); if (ix >= 0) local.items[ix] = i; else local.items.push(i); saveLocal(local); }
+  function closeItem(id) {
+    let i = local.items.find(x => x.id === id);
+    if (!i) { i = Object.assign({}, SEED.items.find(x => x.id === id)); if (!i) return; }
+    i.stage = "done"; i.closedAt = new Date().toISOString(); persist(i); flash(`Closed “${i.item}”. Logged.`); render();
+  }
+  function unblock(id) {
+    let i = local.items.find(x => x.id === id) || Object.assign({}, SEED.items.find(x => x.id === id));
+    if (!i) return; i.stage = "live"; i.blocked_by = null;
+    if (!i.date) { i._unresolved = true; persist(i); flash("Unblocked — now a live task. It needs a date."); startIntake(i.raw || i.item, i.id); return; }
+    persist(i); render();
+  }
+
+  // ---------- INTAKE PIPELINE ----------
+  const pipe = { open: false, raw: "", id: null, step: 0, data: {} };
+
+  function startIntake(raw, existingId) {
+    pipe.open = true; pipe.raw = (raw || "").replace(/^route this:\s*/i, "").trim();
+    pipe.id = existingId || ("u-" + Date.now());
+    pipe.step = 0; pipe.data = { constraint_done: [] };
+    $("#scrim").classList.add("open"); renderStep();
+  }
+  function closeIntake() { pipe.open = false; $("#scrim").classList.remove("open"); }
+
+  function autoOwner() {
+    const c = E.classifyDomain(pipe.raw);
+    pipe.data.domain = c.domain; pipe.data.ownerKey = c.ownerKey;
+    pipe.data.secondaryKey = c.secondaryKey; pipe.data.crosses = c.crosses;
+    return c;
+  }
+
+  function renderStep() {
+    const b = $("#pipe-body");
+    const raw = `<div class="raw">${esc(pipe.raw)}</div>`;
+    const S = pipe.step;
+
+    if (S === 0) {
+      b.innerHTML = `<div class="step-label">Step 1 / The fork</div>
+        <div class="step-q">Is there something someone should do — or is this a thought?</div>
+        <div class="step-hint">The single fork. A thought stores clean and stops. A task continues through the gate.</div>${raw}
+        <div class="choices">
+          <button class="choice" data-pick="task"><div class="ct">It's a task</div><div class="cd">someone does something →</div></button>
+          <button class="choice" data-pick="thought"><div class="ct">It's a thought</div><div class="cd">label · store · stop</div></button>
+        </div>`;
+      b.querySelectorAll("[data-pick]").forEach(x => x.onclick = () => {
+        pipe.data.type = x.dataset.pick;
+        if (pipe.data.type === "thought") return saveThought();
+        autoOwner(); pipe.step = 1; renderStep();
+      });
+      nav(false);
+      return;
+    }
+
+    if (S === 1) { // domain/owner
+      const c = pipe.data;
+      const ownerLine = c.ownerKey
+        ? `Routed to <b>${esc(E.ownerName(c.ownerKey))}</b> — ${esc(E.ownerRole(c.ownerKey))}.` +
+          (c.secondaryKey ? ` Secondary cc: <b>${esc(E.ownerName(c.secondaryKey))}</b> (one ask each).` : "")
+        : `No clear owner from the content. This becomes <b>pre-decision</b> — unassigned until it has reads.`;
+      b.innerHTML = `<div class="step-label">Step 2 / Domain → Owner</div>
+        <div class="step-q">Who owns this?</div>
+        <div class="step-hint">Auto-classified by content. Override if the map is wrong.</div>${raw}
+        <div class="owner-pin">${ownerLine}</div>
+        <label class="field"><span class="fl">Owner</span>
+          <select class="fi" id="f-owner">
+            <option value="">— unassigned (pre-decision)</option>
+            ${["joao", "ju", "matheus", "me"].map(k => `<option value="${k}" ${c.ownerKey === k ? "selected" : ""}>${esc(E.ownerName(k))} — ${esc(E.ownerRole(k))}</option>`).join("")}
+          </select></label>`;
+      $("#f-owner").onchange = e => pipe.data.ownerKey = e.target.value || null;
+      nav(true, () => { pipe.step = pipe.data.ownerKey ? 2 : 3; renderStep(); }); // skip bypass interrupt if unassigned
+      return;
+    }
+
+    if (S === 2) { // ANTI-BYPASS interrupt
+      const k = pipe.data.ownerKey;
+      b.innerHTML = `<div class="step-label">Step 3 / Anti-bypass interrupt</div>
+        <div class="step-q">This has an owner: ${esc(E.ownerName(k))}.</div>
+        <div class="step-hint">Route to them — don't become the second channel.</div>${raw}
+        <div class="interrupt"><span class="mono">⚑ The bypass interrupt — fired at input</span>
+          <p>If you land this somewhere other than through ${esc(E.ownerName(k))}, you create the second channel that makes you the source of confusion.</p></div>
+        <div class="choices col">
+          <button class="choice" data-by="route"><div class="ct">Route through ${esc(E.ownerName(k))}</div><div class="cd">the right way</div></button>
+          <button class="choice" data-by="own"><div class="ct">I'll carry it myself</div><div class="cd">owner = me · on the record</div></button>
+        </div>`;
+      b.querySelectorAll("[data-by]").forEach(x => x.onclick = () => {
+        if (x.dataset.by === "own") pipe.data.ownerKey = "me";
+        pipe.data.bypassChecked = true; pipe.step = 3; renderStep();
+      });
+      nav(true, null, true);
+      return;
+    }
+
+    if (S === 3) { // THE ASK
+      b.innerHTML = `<div class="step-label">Step 4 / The ask</div>
+        <div class="step-q">What is the one thing they do?</div>
+        <div class="step-hint">Required. Specific enough to act on tomorrow.</div>${raw}
+        <label class="field"><span class="fl">The ask</span>
+          <textarea class="fi" id="f-ask" placeholder="e.g. Fechar a proposta de preço para a Belle e me mandar até quarta">${esc(pipe.data.ask || "")}</textarea></label>
+        <div class="gate-fail" id="ask-fail" style="display:none">The ask can't be empty — that's the hunt for an instruction that was never there.</div>`;
+      nav(true, () => {
+        const v = $("#f-ask").value.trim();
+        if (!v) { $("#ask-fail").style.display = "block"; return; }
+        pipe.data.ask = v;
+        pipe.step = pipe.data.ownerKey ? 4 : 31; renderStep(); // unassigned → pre-decision confirm
+      });
+      return;
+    }
+
+    if (S === 31) { // pre-decision confirm (no owner)
+      b.innerHTML = `<div class="step-label">Escape valve / Pre-decision</div>
+        <div class="step-q">No owner yet — so this is pre-decision.</div>
+        <div class="step-hint">It needs reads before it can carry an owner or a date. The ask becomes “gather reads on X.” No date.</div>${raw}
+        <div class="owner-pin">Saving as <b>pre-decision</b>: “${esc(pipe.data.ask)}”. It will age on the board until reads land.</div>`;
+      nav(true, () => { pipe.data.stage = "pre-decision"; finalize(); });
+      return;
+    }
+
+    if (S === 4) { // THE DATE
+      b.innerHTML = `<div class="step-label">Step 5 / The date</div>
+        <div class="step-q">By when?</div>
+        <div class="step-hint">Required for a live task. Can't be skipped — if you can't name one, it's pre-decision or hold.</div>${raw}
+        <label class="field"><span class="fl">Date</span><input class="fi" type="date" id="f-date" value="${esc(pipe.data.date || "")}"></label>
+        <div class="choices col" style="margin-top:6px">
+          <button class="choice" data-reclass="pre"><div class="ct">No date — needs reads first</div><div class="cd">reclassify → pre-decision</div></button>
+          <button class="choice" data-reclass="hold"><div class="ct">No date — real but not the hour</div><div class="cd">reclassify → hold (blocked_by)</div></button>
+        </div>`;
+      b.querySelectorAll("[data-reclass]").forEach(x => x.onclick = () => {
+        if (x.dataset.reclass === "pre") { pipe.data.stage = "pre-decision"; pipe.data.date = null; return finalize(); }
+        pipe.data.stage = "hold"; pipe.step = 41; renderStep();
+      });
+      nav(true, () => {
+        const v = $("#f-date").value;
+        if (!v) { flash("No date. Pick one — or use a reclassify option below."); return; }
+        pipe.data.date = v; pipe.data.stage = "live"; pipe.step = 5; renderStep();
+      });
+      return;
+    }
+
+    if (S === 41) { // hold blocked_by
+      b.innerHTML = `<div class="step-label">Escape valve / Hold</div>
+        <div class="step-q">What is it blocked by?</div>
+        <div class="step-hint">A hold must name its blocker. No date until it's unblocked.</div>${raw}
+        <label class="field"><span class="fl">Blocked by</span><input class="fi" id="f-block" placeholder="o que precisa existir / acontecer primeiro"></label>`;
+      nav(true, () => { const v = $("#f-block").value.trim(); if (!v) { flash("Name the blocker."); return; } pipe.data.blocked_by = v; pipe.data.date = null; finalize(); });
+      return;
+    }
+
+    if (S === 5) { // constraint flags
+      const cf = E.detectConstraintFlags(pipe.raw, { crosses: pipe.data.crosses, isBet: pipe.data.isBet });
+      pipe.data.constraint_flags = cf.map(c => c.code);
+      const body = cf.length
+        ? cf.map(c => `<div class="interrupt"><span class="mono">${esc(c.code)} · ${esc(c.label)}</span><p>${esc(c.ask)}</p></div>`).join("")
+        : `<p class="empty good">No constraint flags triggered on this input.</p>`;
+      b.innerHTML = `<div class="step-label">Step 6 / Constraint flags</div>
+        <div class="step-q">Anything that needs a guardrail?</div>
+        <div class="step-hint">Surfaced automatically. Note them — they ride with the item.</div>${raw}${body}`;
+      nav(true, () => { pipe.step = 6; renderStep(); });
+      return;
+    }
+
+    if (S === 6) { // FINAL GATE
+      b.innerHTML = `<div class="step-label">Step 7 / Final gate</div>
+        <div class="step-q">Can ${esc(E.ownerName(pipe.data.ownerKey))} act on this tomorrow?</div>
+        <div class="step-hint">If no, the ask isn't sharp enough yet — back to the ask.</div>${raw}
+        <div class="owner-pin"><b>${esc(E.ownerName(pipe.data.ownerKey))}</b> · ${esc(pipe.data.ask)} · <b>${esc(E.fmtDate(pipe.data.date))}</b></div>
+        <div class="choices">
+          <button class="choice" data-gate="y"><div class="ct">Yes — it has shape</div><div class="cd">save + draft</div></button>
+          <button class="choice" data-gate="n"><div class="ct">No — not yet</div><div class="cd">back to the ask</div></button>
+        </div>`;
+      b.querySelectorAll("[data-gate]").forEach(x => x.onclick = () => {
+        if (x.dataset.gate === "n") { pipe.step = 3; renderStep(); return; }
+        finalize();
+      });
+      nav(true, null, true);
+      return;
+    }
+  }
+
+  function nav(showBack, onNext, hideNext) {
+    const b = $("#pipe-body");
+    const el = document.createElement("div"); el.className = "pnav";
+    el.innerHTML = `${showBack ? `<button class="back">← Back</button>` : `<span></span>`}` +
+      (hideNext ? "" : `<button class="next">Continue →</button>`);
+    b.appendChild(el);
+    const back = el.querySelector(".back"); if (back) back.onclick = () => { pipe.step = Math.max(0, prevStep()); renderStep(); };
+    const next = el.querySelector(".next"); if (next && onNext) next.onclick = onNext;
+  }
+  function prevStep() { const order = [0, 1, 2, 3, 31, 4, 41, 5, 6]; const i = order.indexOf(pipe.step); return order[Math.max(0, i - 1)]; }
+
+  function saveThought() {
+    const item = { id: pipe.id, item: pipe.raw, raw: pipe.raw, type: "thought", stage: "thought",
+      origin: "manuel", createdAt: new Date().toISOString() };
+    const g = E.gateCheck(item);
+    if (!g.ok) { flash(g.errs[0]); return; }
+    persist(item); closeIntake(); flash("Labeled as a thought. Stored. No owner, no ask, no date."); render();
+  }
+
+  function finalize() {
+    const d = pipe.data;
+    const item = {
+      id: pipe.id, item: d.ask ? capFirst(pipe.raw) : pipe.raw, raw: pipe.raw,
+      type: "task", stage: d.stage || "live", domain: d.domain || null,
+      owner: d.ownerKey || null, secondary_owner: d.secondaryKey || null, assignee: null,
+      ask: d.ask || null, date: d.date || null, blocked_by: d.blocked_by || null,
+      constraint_flags: d.constraint_flags || [], origin: "manuel", createdAt: new Date().toISOString(), reads: []
+    };
+    const g = E.gateCheck(item);
+    if (!g.ok) { flash("Gate refused: " + g.errs[0]); return; }
+    delete item._unresolved;
+    persist(item); closeIntake(); render();
+    if (item.stage === "live" && item.owner) openDraft(item.id);
+    else flash(item.stage === "pre-decision" ? "Saved as pre-decision. It will age until reads land." : "Saved on hold.");
+  }
+  function capFirst(s) { s = (s || "").trim(); return s.charAt(0).toUpperCase() + s.slice(1); }
+
+  // ---------- DRAFT (never sends) ----------
+  function openDraft(id) {
+    const i = workingItems().find(x => x.id === id); if (!i) return;
+    const name = i.owner ? E.ownerName(i.owner).split(" ")[0] : (i.assignee || "");
+    const body = draftText(name, i);
+    $("#pipe-body").innerHTML = `<div class="step-label">Draft · held for your send</div>
+      <div class="step-q">Message for ${esc(E.ownerName(i.owner) || i.assignee || "owner")}</div>
+      <div class="step-hint">In your voice, Portuguese. The board never sends — you do.</div>
+      <div class="draft-box"><div class="dh">DRAFT → ${esc(i.source ? i.source.channel : "DM")}</div>
+        <div class="db" id="draft-text" contenteditable="true">${esc(body)}</div>
+        <div class="dnote">Nothing leaves the board without your explicit confirmation. Copy, edit, then send it yourself.</div></div>
+      <div class="pnav"><button class="back">← Close</button><button class="next" id="copy-draft">Copy draft</button></div>`;
+    $("#scrim").classList.add("open"); pipe.open = true;
+    $("#pipe-body .back").onclick = closeIntake;
+    $("#copy-draft").onclick = () => { navigator.clipboard && navigator.clipboard.writeText($("#draft-text").innerText); flash("Draft copied. Send it yourself when ready."); };
+  }
+  function draftText(name, i) {
+    const when = i.date ? `\nPrazo: ${E.fmtDate(i.date)}.` : "";
+    return `Oi ${name || ""},\n\n${i.ask}.${when}\n\nQualquer coisa me chama. Valeu! 🙏`;
+  }
+
+  // ---------- COMMAND BAR ----------
+  function runCommand(raw) {
+    const c = raw.trim(); if (!c) return;
+    const low = c.toLowerCase();
+    if (/^(refresh|what'?s hot|o que (t[áa]|esta) (pegando|quente|hot))/.test(low)) return doRefresh();
+    if (/^show flags|^flags/.test(low)) return scrollTo(1);
+    if (/^what'?s stuck|^o que (est[áa]|ta) (parado|travado)/.test(low)) { scrollTo(5); flash("Showing Hold + aging Pre-Decision."); return; }
+    if (/^what am i bypassing|bypass/.test(low)) { scrollTo(1); flash("Bypass flags are in Structural Flags — code BYPASS."); return; }
+    if (/^what are my bets|^bets|apostas/.test(low)) return scrollTo(7);
+    if (low.startsWith("update on")) return updateOn(c.slice(9).trim());
+    if (low.startsWith("draft")) { const m = c.match(/for\s+(.+)$/i); return draftByName(m ? m[1] : ""); }
+    if (low.startsWith("close")) { const t = c.replace(/^close\s*/i, "").trim(); return closeByName(t); }
+    // default → intake
+    startIntake(c);
+  }
+  function scrollTo(n) { const s = document.querySelectorAll("#board .section")[n - 1]; if (s) s.scrollIntoView({ behavior: "smooth" }); }
+  function doRefresh() {
+    flash("Re-scan runs through me (the agent) — ask in chat: “refresh the board.” Re-deriving flags & ages from the last scan now.");
+    render();
+  }
+  function updateOn(scope) {
+    const items = workingItems().filter(i => (i.scope || "").toLowerCase().includes(scope.toLowerCase()) || (i.item || "").toLowerCase().includes(scope.toLowerCase()));
+    const heat = computeHeat().filter(h => (h.scope || "").toLowerCase().includes(scope.toLowerCase()) || (h.what || "").toLowerCase().includes(scope.toLowerCase()));
+    if (!items.length && !heat.length) return flash(`Nothing on “${scope}” in the current scan.`);
+    flash(`${scope}: ${items.length} item(s), ${heat.length} heat entr(ies). Highlighted below.`);
+    if (items[0]) { const el = $("#row-" + items[0].id); if (el) el.scrollIntoView({ behavior: "smooth", block: "center" }); }
+  }
+  function draftByName(t) { const i = workingItems().find(x => (x.item || "").toLowerCase().includes(t.toLowerCase())); if (i) openDraft(i.id); else flash(`No item matching “${t}”.`); }
+  function closeByName(t) { const i = workingItems().find(x => (x.item || "").toLowerCase().includes(t.toLowerCase()) && x.stage !== "done"); if (i) closeItem(i.id); else flash(`No open item matching “${t}”.`); }
+
+  // ---------- toast ----------
+  let toastT;
+  function flash(msg) {
+    let t = $("#toast"); if (!t) { t = document.createElement("div"); t.id = "toast"; document.body.appendChild(t);
+      Object.assign(t.style, { position: "fixed", left: "50%", top: "20px", transform: "translateX(-50%)", background: "#0a0a0a", color: "#fff", fontFamily: "var(--mono)", fontSize: "12px", padding: "10px 16px", zIndex: 99, maxWidth: "560px", letterSpacing: ".03em", boxShadow: "0 10px 30px rgba(0,0,0,.3)" }); }
+    t.textContent = msg; t.style.opacity = "1"; clearTimeout(toastT); toastT = setTimeout(() => t.style.opacity = "0", 4200);
+  }
+
+  // ---------- boot ----------
+  function boot() {
+    $("#cmd").addEventListener("keydown", e => { if (e.key === "Enter") { runCommand($("#cmd").value); $("#cmd").value = ""; } });
+    $("#run-btn").onclick = () => { runCommand($("#cmd").value); $("#cmd").value = ""; };
+    $("#refresh-btn").onclick = doRefresh;
+    $("#pipe-x").onclick = closeIntake;
+    $("#scrim").addEventListener("click", e => { if (e.target.id === "scrim") closeIntake(); });
+    $("#commit-x").onclick = () => { flash(`${stagedCount()} staged item(s). Tell me in chat: “commit the board” and I’ll write them to Notion and regenerate the mirror.`); };
+    render();
+  }
+  document.addEventListener("DOMContentLoaded", boot);
+})();
+
+</script>
+</body>
+</html>
