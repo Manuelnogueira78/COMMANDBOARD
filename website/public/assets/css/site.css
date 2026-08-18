@@ -384,10 +384,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: var(--col-gap);
-  border-top: 1px solid var(--hairline);
-  padding: clamp(24px, 2.4vw, 40px) 0;
+  padding: clamp(26px, 2.8vw, 46px) 0;
 }
-.framework-row:last-of-type { border-bottom: 1px solid var(--hairline); }
 .framework-row h3 { font-size: clamp(16px, 1.15vw, 22px); font-weight: 400; letter-spacing: -0.02em; }
 .framework-row p { font-size: 14px; line-height: 1.5; max-width: 40em; }
 
@@ -396,7 +394,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.045em;
   font-weight: 400; text-align: left; padding: 10px 14px 10px 0; border-bottom: 1px solid var(--ink);
 }
-.index-table td { padding: 7px 14px 7px 0; vertical-align: top; border-bottom: 1px solid var(--hairline); line-height: 1.4; }
+.index-table td { padding: 8px 14px 8px 0; vertical-align: top; border-bottom: 1px solid rgba(15, 14, 14, 0.08); line-height: 1.4; }
 .index-table td.mono-cell { font-family: var(--mono); font-size: 11px; letter-spacing: 0.03em; }
 .index-table tr:hover td { background: rgba(15,14,14,0.03); }
 .index-table a:hover { text-decoration: underline; }

@@ -2,16 +2,16 @@
   "brand": {
     "name": "MATTER+ENERGY",
     "tagline": "A Storehouse of Creative Energy",
-    "manifestoLeft": "Matter+Energy is a creative operating framework for brands that want to move — with culture, through chaos, towards presence.",
+    "manifestoLeft": "Matter+Energy is the creative agency where the seniors do the work — moving brands with culture, through chaos, towards presence.",
     "network": "MATTER + ENERGY is part of FLAGCX フラグ, the largest independent creative services network in LATAM.",
     "footerStatement": "In an era where everything is abstracted, there is an urgent need to return to the fundamentals, to affirm why matter matters and why embodied existence is essential. We explore the transformation of creative energy into tangible forms, celebrating presence, awareness, relationships and the interplay of forces shaping brands."
   },
   "intros": {
-    "home": "Brands don’t lack exposure, they lack presence. You can be everywhere and still not matter. You can be loud and still not felt. To move culture, you have to move differently, with purpose, with weight, with clarity. Because movement without presence? That’s just noise. We bring direction to energy, resonance to relevance, and consequence to culture.",
-    "work": "Brands don’t lack exposure, they lack presence. You can be everywhere and still not matter. You can be loud and still not felt. To move culture, you have to move differently, with purpose, with weight, with clarity. Because movement without presence? That’s just noise. We bring direction to energy, resonance to relevance, and consequence to culture.",
-    "archive": "We are not an agency. We’re a presence system. Matter+Energy is a creative operating framework for brands that want more than visibility—they want gravity. Not just to be seen. To register. To remain.",
-    "news": "You can be loud and still not felt. To move culture, you have to move differently, with purpose, with weight, with clarity. Because movement without presence? That’s just noise. We bring direction to energy, resonance to relevance, and consequence to culture.",
-    "about": "As machines make more things possible, knowing what deserves to exist becomes more valuable. That judgment is what you pay for here. Nobody between you and the craft: the senior who sells the work is the senior who makes it."
+    "home": "Everyone can make everything now. Almost nobody can tell you what’s worth making. MATTER is the creative agency where the seniors do the work, with no pyramid between you and the craft. We took the pyramid out and put instruments in its place.",
+    "work": "Everyone can make everything now. What you can’t buy everywhere is someone who knows what to make — and what to throw away. Every piece here was made and signed by the senior you’d meet in the room.",
+    "archive": "The full body of work. Fewer projects, held longer, each one born from what makes its brand unmistakably itself. If it could belong to anyone, it isn’t here.",
+    "news": "Reports, interviews, playlists and signals from the people who make the work. Judgment is built in public. This is where we build ours.",
+    "about": "What you pay for here is judgment: senior people who decide what ships, what doesn’t, and what a brand means next. The senior who sells the work is the senior who makes it."
   },
   "opening": {
     "line1": "The world is abstract. Presence is the scarce thing.",
@@ -70,20 +70,20 @@
     "headline": "A Storehouse Of Creative Energy",
     "columns": [
       {
-        "label": "(I) The Argument",
-        "copy": "As machines make more things possible, knowing what deserves to exist becomes more valuable. That judgment is what you pay for.\n\nWe invest in people worth knowing by name — for their taste, their authorship, their point of view.\n\nThere is already enough in the world that could belong to anyone, and sameness is only getting easier to produce. Our work shouldn’t travel well between brands. It is born from what makes each one unmistakably itself."
+        "label": "(I) What You’re Buying",
+        "copy": "Everyone can make everything now. Almost nobody can tell you what’s worth making.\n\nWhat we sell is judgment: senior people who decide what ships, what doesn’t, and what a brand means for the next five years.\n\nThe work that leaves here shouldn’t travel well between brands. It is born from what makes each one unmistakably itself."
       },
       {
-        "label": "(II) How We Are Built",
-        "copy": "A creative house with nobody between the client and the craft.\n\nEvery studio stands on its own leader, its own P&L, its own reputation. The senior who sells the work is the senior who makes it — in the room from first brief to final file.\n\nWork delivered through people you never meet is the violation, whatever the reason given.\n\nThe instruments absorb what repeats. Human time moves to the one thing that cannot be absorbed: deciding what deserves to exist. A person decides what ships, and nothing reaches you without a name on it. If you want to know which part the machine made, ask. We will tell you."
+        "label": "(II) How We’re Built",
+        "copy": "A creative house with nobody between the client and the craft.\n\nEvery studio stands on its own leader and its own reputation. The senior who sells the work is the senior who makes it — in the room from first brief to final file.\n\nThe instruments absorb what repeats: the research, the bureaucracy, the repeatable hours. Human time goes where being human changes the outcome.\n\nA person decides what ships, and nothing reaches you without a name on it. Ask which part the machine made — we’ll tell you."
       },
       {
         "label": "(III) The Values",
-        "copy": "Senior Presence — first brief to final file. The name that carries the work is in the room.\n\nDepth Over Scale — fewer projects, held longer. Asked in every review: would this be missed if it disappeared?\n\nEveryone Builds a Name — taste, authorship, a point of view the market quotes.\n\nAutonomy With Accountability — real decisions, numbers public, disagreement in the room, not after.\n\nHuman-Led, AI-Fluent — instruments absorb the repeatable; people keep the judgment.\n\nMade, Not Described — the thing exists before it is defended. A deck is not evidence."
+        "copy": "Senior presence — the name that carries the work is in the room, start to finish.\n\nDepth over scale — fewer projects, held longer. Would this be missed if it disappeared?\n\nEveryone builds a name — taste, authorship, a point of view the market quotes.\n\nAutonomy with accountability — real decisions, made in the open.\n\nHuman-led, AI-fluent — instruments absorb the repeatable; people keep the judgment.\n\nMade, not described — the thing exists before it is defended. A deck is not evidence."
       },
       {
         "label": "(IV) The Deal",
-        "copy": "Taste isn’t fixed. It’s built, challenged and rebuilt — by making, questioning, returning to the work and arguing for it. So people here get real responsibility early, and protected time to keep sharpening their judgment.\n\nMost places promise development and keep the terms vague. That’s how the promise stays free. Ours has two sides, written down.\n\nOurs: clarity, support, tools, trust, and the room early — not once someone looks ready.\n\nYours: run your part like it’s yours. Standard high, numbers public, ambition out loud.\n\nFull capacity is not full potential. We leave room by design, and turn work down before growth starts consuming what makes growth possible."
+        "copy": "Judgment isn’t inherited. It’s built — by making, questioning, and returning to the work until it earns its place. People here get real responsibility early, and protected time to keep sharpening it.\n\nThe promise has two sides, written down. Ours: clarity, support, tools, trust, and the room early. Yours: run your part like it’s yours — standard high, ambition out loud.\n\nWe leave room by design, and turn work down before growth starts consuming what makes growth possible. Built to stay."
       }
     ],
     "statement": "Abundance Should Make People More Valuable, Not Less.",
@@ -212,7 +212,7 @@
     },
     "cta": {
       "line": "Something worth making?",
-      "action": "Talk to the people who’ll make it",
+      "action": "Talk to the seniors who’ll make it",
       "email": "hello@matter-energy.com"
     }
   },

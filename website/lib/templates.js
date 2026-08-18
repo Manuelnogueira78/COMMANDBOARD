@@ -264,6 +264,14 @@ function home({ site, projects, news }) {
 </section>`;
   }
 
+  if (site.about && site.about.cta) {
+    h += `
+<div class="about-cta wrap">
+  <p class="cta-line">${esc(site.about.cta.line)}</p>
+  <a class="cta-mail" href="mailto:${esc(site.about.cta.email)}">${esc(site.about.cta.action)} &rarr; ${esc(site.about.cta.email)}</a>
+</div>`;
+  }
+
   h += footer(site);
   return h;
 }
