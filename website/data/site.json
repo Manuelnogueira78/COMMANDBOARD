@@ -10,7 +10,8 @@
     "home": "Brands don’t lack exposure, they lack presence. You can be everywhere and still not matter. You can be loud and still not felt. To move culture, you have to move differently, with purpose, with weight, with clarity. Because movement without presence? That’s just noise. We bring direction to energy, resonance to relevance, and consequence to culture.",
     "work": "Brands don’t lack exposure, they lack presence. You can be everywhere and still not matter. You can be loud and still not felt. To move culture, you have to move differently, with purpose, with weight, with clarity. Because movement without presence? That’s just noise. We bring direction to energy, resonance to relevance, and consequence to culture.",
     "archive": "We are not an agency. We’re a presence system. Matter+Energy is a creative operating framework for brands that want more than visibility—they want gravity. Not just to be seen. To register. To remain.",
-    "news": "You can be loud and still not felt. To move culture, you have to move differently, with purpose, with weight, with clarity. Because movement without presence? That’s just noise. We bring direction to energy, resonance to relevance, and consequence to culture."
+    "news": "You can be loud and still not felt. To move culture, you have to move differently, with purpose, with weight, with clarity. Because movement without presence? That’s just noise. We bring direction to energy, resonance to relevance, and consequence to culture.",
+    "about": "As machines make more things possible, knowing what deserves to exist becomes more valuable. That judgment is what you pay for here. Nobody between you and the craft: the senior who sells the work is the senior who makes it."
   },
   "opening": {
     "line1": "The world is abstract. Presence is the scarce thing.",
@@ -37,34 +38,108 @@
     }
   ],
   "filters": {
-    "sectors": ["Entertainment", "Beauty & Personal Care", "Technology", "Finance", "Food & Drink", "Gaming", "Arts & Culture", "Consumer Brands"],
-    "capabilities": ["Brand Strategy", "Brand Identity", "Verbal Identity", "Campaigns", "Content", "Digital", "Motion", "Experience"],
-    "businessUnits": ["Beauty", "Branding", "Connections", "Entertainment", "Tech"]
+    "sectors": [
+      "Entertainment",
+      "Beauty & Personal Care",
+      "Technology",
+      "Finance",
+      "Food & Drink",
+      "Gaming",
+      "Arts & Culture",
+      "Consumer Brands"
+    ],
+    "capabilities": [
+      "Brand Strategy",
+      "Brand Identity",
+      "Verbal Identity",
+      "Campaigns",
+      "Content",
+      "Digital",
+      "Motion",
+      "Experience"
+    ],
+    "businessUnits": [
+      "Beauty",
+      "Branding",
+      "Connections",
+      "Entertainment",
+      "Tech"
+    ]
   },
   "about": {
     "headline": "A Storehouse Of Creative Energy",
     "columns": [
       {
         "label": "(I) The Argument",
-        "copy": "The more the world abstracts, the rarer the real becomes.\n\nThe world is saturated with signals. Brands don’t lack exposure, they lack presence. You can be everywhere and still not matter. You can be loud and still not felt.\n\nWe are a creative agency where the seniors do the work. A presence system, intentionally lean and senior, built to turn insight into motion and motion into meaning."
+        "copy": "As machines make more things possible, knowing what deserves to exist becomes more valuable. That judgment is what you pay for.\n\nWe invest in people worth knowing by name — for their taste, their authorship, their point of view.\n\nThere is already enough in the world that could belong to anyone, and sameness is only getting easier to produce. Our work shouldn’t travel well between brands. It is born from what makes each one unmistakably itself."
       },
       {
         "label": "(II) How We Are Built",
-        "copy": "Studios. No pods. Only custom-built teams. Senior presence from first brief to final pixel.\n\nIndustry-specialist teams, and no junior pyramid between you and the craft. The people who make the work are the people you meet. No account directors. No layer beneath them. Nobody handing your brand down to whoever happened to be free.\n\nThe team that starts is the team that finishes.\n\nWe took the pyramid out and put instruments in its place. We build them ourselves. We keep them underneath the work. They absorb the repeatable hours and the bureaucracy so senior time goes to the craft.\n\nThe machine is extraordinary and it doesn’t care. It calculates, and calculating is not choosing. Choosing needs a body, a history, something at stake.\n\nSo AI mediocrity never reaches a client. And if you want to know which part of a project the machine made, ask. We will tell you."
+        "copy": "A creative house with nobody between the client and the craft.\n\nEvery studio stands on its own leader, its own P&L, its own reputation. The senior who sells the work is the senior who makes it — in the room from first brief to final file.\n\nWork delivered through people you never meet is the violation, whatever the reason given.\n\nThe instruments absorb what repeats. Human time moves to the one thing that cannot be absorbed: deciding what deserves to exist. A person decides what ships, and nothing reaches you without a name on it. If you want to know which part the machine made, ask. We will tell you."
       },
       {
-        "label": "(III) The Fundamentals",
-        "copy": "People Are the Heart of Every Great Business — not a slogan. It is how we decide where everything goes.\n\nPresence Over Performance — visibility is fleeting. Presence lingers. We build things people can’t ignore.\n\nDepth Over Scale — we go further, not wider. We don’t scale. We focus.\n\nMachines for Scale, People for Meaning — the machine is the strongest colleague we have ever worked with and the worst leader we could follow.\n\nProtect Ideas Before They Make Sense — an idea that already fits a framework is an idea somebody else already had.\n\nExecution Is the Proof — execution is how strategy earns its meaning."
+        "label": "(III) The Values",
+        "copy": "Senior Presence — first brief to final file. The name that carries the work is in the room.\n\nDepth Over Scale — fewer projects, held longer. Asked in every review: would this be missed if it disappeared?\n\nEveryone Builds a Name — taste, authorship, a point of view the market quotes.\n\nAutonomy With Accountability — real decisions, numbers public, disagreement in the room, not after.\n\nHuman-Led, AI-Fluent — instruments absorb the repeatable; people keep the judgment.\n\nMade, Not Described — the thing exists before it is defended. A deck is not evidence."
       },
       {
-        "label": "(IV) People",
-        "copy": "The work is only as good as the people making it. So most of what we build internally is built for them. Our own instruments absorb the repeatable work and the bureaucracy, so senior time goes to the craft.\n\nHere, the work ships with the signature of the person who made it. The instruments exist to protect that.\n\nTime deliberately spent away from the tools, so the hand keeps its calluses. A residency. A library. Reading circles. A permanent guest programme. Time protected for the newest person in the room. “Not scalable” is banned as a first response. A slice of every year is reserved for work nobody asked us for.\n\nWe don’t rebuild the junior pyramid. Senior people sit directly on the work instead of managing layers. Better for the client. Better for them.\n\nNobody’s exhaustion is our business model. No one’s career is our margin. Taste is built through friction, and it has to be built somewhere. This is where ours comes from. It is why people who work here get more interesting while they do."
+        "label": "(IV) The Deal",
+        "copy": "Taste isn’t fixed. It’s built, challenged and rebuilt — by making, questioning, returning to the work and arguing for it. So people here get real responsibility early, and protected time to keep sharpening their judgment.\n\nMost places promise development and keep the terms vague. That’s how the promise stays free. Ours has two sides, written down.\n\nOurs: clarity, support, tools, trust, and the room early — not once someone looks ready.\n\nYours: run your part like it’s yours. Standard high, numbers public, ambition out loud.\n\nFull capacity is not full potential. We leave room by design, and turn work down before growth starts consuming what makes growth possible."
       }
     ],
-    "statement": "Our Role Is To Turn Matter Into Meaning And Energy Into Motion.",
+    "statement": "Abundance Should Make People More Valuable, Not Less.",
     "refuse": "We are not built to scale. We are built to stay. Which means some work is not for us. Volume production. Performance media at scale. Anything priced per unit. And if a project only needs execution, we are the wrong call. We will tell you that in the first conversation rather than the third. Most work now could have come from anywhere. Ours couldn’t. We leave the fingerprints on.",
-    "clients": ["Motorola", "Meta", "Google", "DirecTV Go", "Netflix", "Spotify", "Dove", "TRESemmé", "Nexxus", "Suave", "Danone", "Pepsi", "KFC", "C&A", "Havaianas", "Nike", "Vogue", "Galeries Lafayette", "Courrèges", "Bitso", "Aché", "Sanofi", "Abbott", "Deutsche Bank", "Citibank", "Telekom", "Visa", "HBO", "Amazon Prime", "Riot", "Wargaming"],
-    "services": ["Research", "Segmentation & Insights", "Panels", "Listening", "Strategy & Positioning", "Brand Architecture", "Design & Identity", "Storytelling & Content", "Integrated Marketing", "Campaign", "Social & Influence", "PR & Social", "Verbal Identity", "Visual Identity", "Digital", "Motion & 3D", "Experience Design"],
+    "clients": [
+      "Motorola",
+      "Meta",
+      "Google",
+      "DirecTV Go",
+      "Netflix",
+      "Spotify",
+      "Dove",
+      "TRESemmé",
+      "Nexxus",
+      "Suave",
+      "Danone",
+      "Pepsi",
+      "KFC",
+      "C&A",
+      "Havaianas",
+      "Nike",
+      "Vogue",
+      "Galeries Lafayette",
+      "Courrèges",
+      "Bitso",
+      "Aché",
+      "Sanofi",
+      "Abbott",
+      "Deutsche Bank",
+      "Citibank",
+      "Telekom",
+      "Visa",
+      "HBO",
+      "Amazon Prime",
+      "Riot",
+      "Wargaming"
+    ],
+    "services": [
+      "Research",
+      "Segmentation & Insights",
+      "Panels",
+      "Listening",
+      "Strategy & Positioning",
+      "Brand Architecture",
+      "Design & Identity",
+      "Storytelling & Content",
+      "Integrated Marketing",
+      "Campaign",
+      "Social & Influence",
+      "PR & Social",
+      "Verbal Identity",
+      "Visual Identity",
+      "Digital",
+      "Motion & 3D",
+      "Experience Design"
+    ],
     "team": [
       "Manuel Nogueira, São Paulo — Founder & CEO",
       "Matheus Barros, Barcelona — Founder & Exec",
@@ -127,17 +202,48 @@
       "email": "hello@matter-energy.com",
       "instagram": "@matterandenergy",
       "linkedin": "Matter+Energy",
-      "offices": ["São Paulo", "New York", "Barcelona", "Madrid", "Paris"]
+      "offices": [
+        "São Paulo",
+        "New York",
+        "Barcelona",
+        "Madrid",
+        "Paris"
+      ]
+    },
+    "cta": {
+      "line": "Something worth making?",
+      "action": "Talk to the people who’ll make it",
+      "email": "hello@matter-energy.com"
     }
   },
   "merch": {
     "headline": "New Matter Drop of Radical Collaboration",
     "link": "Shop",
     "items": [
-      { "image": "/assets/img/merch-02.jpg", "title": "This Is the Time of Presence — Longsleeve", "note": "Why the time of presence? In an era where everything is abstracted, embodied existence is essential.", "price": "Drop 01" },
-      { "image": "/assets/img/merch-07.jpg", "title": "Storehouse Tee — Manifesto Back Print", "note": "The Beauty of Process. Radical Collaboration. Energy as Essence.", "price": "Drop 01" },
-      { "image": "/assets/img/merch-03.jpg", "title": "Matter Cap — You Are Here. It Matters.", "note": "Wear the reminder: presence over performance.", "price": "Drop 01" },
-      { "image": "/assets/img/merch-13.jpg", "title": "Energy Crew — Storehouse Edition", "note": "A storehouse of creative energy, stitched.", "price": "Drop 01" }
+      {
+        "image": "/assets/img/merch-02.jpg",
+        "title": "This Is the Time of Presence — Longsleeve",
+        "note": "Why the time of presence? In an era where everything is abstracted, embodied existence is essential.",
+        "price": "Drop 01"
+      },
+      {
+        "image": "/assets/img/merch-07.jpg",
+        "title": "Storehouse Tee — Manifesto Back Print",
+        "note": "The Beauty of Process. Radical Collaboration. Energy as Essence.",
+        "price": "Drop 01"
+      },
+      {
+        "image": "/assets/img/merch-03.jpg",
+        "title": "Matter Cap — You Are Here. It Matters.",
+        "note": "Wear the reminder: presence over performance.",
+        "price": "Drop 01"
+      },
+      {
+        "image": "/assets/img/merch-13.jpg",
+        "title": "Energy Crew — Storehouse Edition",
+        "note": "A storehouse of creative energy, stitched.",
+        "price": "Drop 01"
+      }
     ]
   }
 }

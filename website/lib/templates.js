@@ -471,7 +471,7 @@ function about({ site, projects }) {
   const a = site.about;
   const published = projects.filter((p) => p.published);
   let h = head({ title: 'About — MATTER+ENERGY', description: a.columns[0].copy.slice(0, 150), path: '/about' });
-  h += masthead(site, { intro: site.intros.archive, activePath: '' });
+  h += masthead(site, { intro: site.intros.about || site.intros.archive, activePath: '' });
   h += `<div class="about-hero wrap"><h1>${esc(a.headline)}</h1></div>`;
   h += nav('/about');
   h += `
@@ -487,6 +487,11 @@ function about({ site, projects }) {
     .join('')}
 </section>
 <p class="centered-statement">${esc(a.statement)}</p>
+${a.cta ? `
+<div class="about-cta wrap">
+  <p class="cta-line">${esc(a.cta.line)}</p>
+  <a class="cta-mail" href="mailto:${esc(a.cta.email)}">${esc(a.cta.action)} &rarr; ${esc(a.cta.email)}</a>
+</div>` : ''}
 <section class="cols-4 wrap">
   <div class="col">
     <h3>(V) Clients</h3>

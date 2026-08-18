@@ -402,6 +402,29 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 .index-table a:hover { text-decoration: underline; }
 .table-scroll { overflow-x: auto; }
 
+/* about CTA — black band, one line, one action */
+.about-cta {
+  background: var(--black);
+  color: var(--paper);
+  text-align: center;
+  padding-top: clamp(48px, 6vw, 100px);
+  padding-bottom: clamp(48px, 6vw, 100px);
+  margin-bottom: clamp(48px, 6vw, 100px);
+}
+.about-cta .cta-line {
+  font-size: clamp(40px, 4.4vw, 84px);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+.about-cta .cta-mail {
+  display: inline-block;
+  margin-top: clamp(18px, 2vw, 34px);
+  font-size: clamp(16px, 1.2vw, 23px);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.about-cta .cta-mail:hover { opacity: 0.7; }
+
 .careers { text-align: center; padding: clamp(48px, 6vw, 100px) 0 clamp(70px, 8vw, 140px); font-size: clamp(24px, 2vw, 38px); letter-spacing: -0.02em; line-height: 1.25; }
 .careers a { text-decoration: underline; text-underline-offset: 4px; }
 .careers a:hover { opacity: 0.6; }
