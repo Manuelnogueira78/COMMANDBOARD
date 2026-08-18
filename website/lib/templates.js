@@ -611,12 +611,78 @@ function buPage({ site, bu, projects }) {
 </section>
 <p class="bu-serif">${povStatement.charAt(0).toUpperCase() + povStatement.slice(1)}</p>`;
 
-  featured.slice(0, 3).forEach((p) => {
-    h += `<section><a href="/work/${esc(p.slug)}">${media(p, { cls: 'media-hero' })}</a><div class="wrap">${captionRow(p)}</div></section>`;
-  });
+  /* Media rhythm mirrors the original BU page: full-bleed hero, a two-up
+     against the dense mosaic, a second full-bleed, then a two-up pair. */
+  const imaged = [...featured, ...rest].filter((p) => p.heroImage);
+  const plain = [...featured, ...rest].filter((p) => !p.heroImage);
+  const queue = [...imaged];
 
-  if (rest.length) {
-    h += `<section class="wrap"><div class="archive-grid">${rest.slice(0, 12).map(archiveCard).join('')}</div></section>`;
+  const heroP = queue.shift() || plain.shift();
+  const pairA = [queue.shift(), queue.shift() || plain.shift()].filter(Boolean);
+  const soloB = queue.shift() || plain.shift();
+  const pairB = [queue.shift() || plain.shift(), queue.shift() || plain.shift()].filter(Boolean);
+  const bigSlots = [heroP, ...pairA, soloB, ...pairB].filter(Boolean);
+  const shown = new Set(bigSlots.map((p) => p.slug));
+
+  /* mosaic pulls every remaining visual in the vertical — hero frames and
+     gallery frames alike — so the page carries texture, not empty blocks */
+  const usedSrc = new Set(bigSlots.map((p) => p.heroImage).filter(Boolean));
+  const mosaicSrc = [];
+  buProjects.forEach((p) => {
+    [p.heroImage, ...(p.gallery || [])].filter(Boolean).forEach((src) => {
+      if (!usedSrc.has(src) && !mosaicSrc.includes(src)) mosaicSrc.push(src);
+    });
+  });
+  (bu.mosaic || []).forEach((src) => { if (!mosaicSrc.includes(src)) mosaicSrc.push(src); });
+  const mosaic = mosaicSrc.length >= 8 ? mosaicSrc.slice(0, 12) : null;
+
+  /* BU-level hero overrides the first project frame when the vertical has one */
+  if (bu.heroVideo || bu.heroImage) {
+    h += `<section class="media-hero">${
+      bu.heroVideo
+        ? `<video src="${esc(bu.heroVideo)}" autoplay muted loop playsinline poster="${esc(bu.heroImage || '')}" aria-label="${esc(bu.name)}"></video>`
+        : `<img src="${esc(bu.heroImage)}" alt="${esc(bu.name)} — MATTER+ENERGY">`
+    }</section>`;
+    if (bu.heroCaption) {
+      h += `<div class="caption-row wrap"><div class="cap-meta">${esc(bu.name)}<br>MATTER+ENERGY</div><div></div><p class="cap-desc">${esc(bu.heroCaption)}</p></div>`;
+    }
+  } else if (heroP) {
+    h += `<section><a href="/work/${esc(heroP.slug)}">${media(heroP, { cls: 'media-hero' })}</a><div class="wrap">${captionRow(heroP)}</div></section>`;
+  }
+
+  if (pairA.length) {
+    if (mosaic) {
+      const first = pairA[0];
+      h += `<section class="wrap"><div class="two-up">
+        <figure><a href="/work/${esc(first.slug)}">${media(first)}</a></figure>
+        <figure><div class="mosaic">${mosaic
+          .map((src) => `<img src="${esc(src)}" alt="" loading="lazy">`)
+          .join('')}</div></figure>
+      </div>
+      <div class="two-up">${captionRow(first)}<div class="caption-row"><div class="cap-meta">Selected frames<br>${esc(bu.name)}</div><div></div><p class="cap-desc">A running index of the work this vertical has put into the world.</p></div></div></section>`;
+      if (pairA[1]) {
+        h += `<section><a href="/work/${esc(pairA[1].slug)}">${media(pairA[1], { cls: 'media-hero' })}</a><div class="wrap">${captionRow(pairA[1])}</div></section>`;
+      }
+    } else {
+      h += `<section class="wrap"><div class="two-up">${pairA
+        .map((p) => `<figure><a href="/work/${esc(p.slug)}">${media(p)}</a></figure>`)
+        .join('')}</div>
+        <div class="two-up">${pairA.map((p) => captionRow(p)).join('')}</div></section>`;
+    }
+  }
+  if (soloB) {
+    h += `<section><a href="/work/${esc(soloB.slug)}">${media(soloB, { cls: 'media-hero' })}</a><div class="wrap">${captionRow(soloB)}</div></section>`;
+  }
+  if (pairB.length) {
+    h += `<section class="wrap"><div class="two-up">${pairB
+      .map((p) => `<figure><a href="/work/${esc(p.slug)}">${media(p)}</a></figure>`)
+      .join('')}</div>
+      <div class="two-up">${pairB.map((p) => captionRow(p)).join('')}</div></section>`;
+  }
+
+  const gridRest = buProjects.filter((p) => !shown.has(p.slug));
+  if (gridRest.length) {
+    h += `<section class="wrap"><div class="archive-grid">${gridRest.slice(0, 12).map(archiveCard).join('')}</div></section>`;
   }
 
   h += `
