@@ -1,0 +1,115 @@
+[
+ {
+  "id": "BU-BRANDING",
+  "slug": "branding",
+  "name": "Branding",
+  "hidden": true,
+  "status": "Ready for Review",
+  "positioningHeadline": "Turning Brands Into Presence.",
+  "positioning": "We understand branding as a continuous practice of translation and connection — transforming cultural understanding, strategic clarity and creative energy into identities, systems and experiences that can be felt.",
+  "povHeadline": "Branding as creative manifestation, empathy as method, and curiosity as a constant.",
+  "povs": [
+   {
+    "title": "Branding as Practice",
+    "copy": "Branding is a continuous practice of translation and connection. Our work begins with empathy: listening to people, culture, context and what remains unsaid. Before a brand can move others, it needs to understand them. We do not impose style. We build expression — giving form to what a brand stands for, what it can become and how it arrives in the world."
+   },
+   {
+    "title": "Concept Into Form",
+    "copy": "We approach brands as dynamic systems of energy, not static identities. Every expression is the visible form of an idea. Strategy provides the inner logic; creativity provides the outer shape. Concept and form move together across language, image, motion, digital and space. Precision and poetry are not opposites. Together, they create brands that are clear in thought, distinct in expression and coherent in every manifestation."
+   },
+   {
+    "title": "Cultural Presence",
+    "copy": "A brand is not only what it says. It is how it makes people feel, move and belong. We read culture deeply, listening for patterns and human behaviour as living systems, translating them into positions that feel relevant, networked and built to last. The aim is not visibility alone, but presence: brands with human weight, cultural resonance and the capacity to move beyond markets and become part of people’s lives."
+   },
+   {
+    "title": "Interconnected System",
+    "copy": "Presence, strategy, language and design are not separate steps. They operate as one connected practice. We move from immersion to understanding; from positioning to expression — so the whole system remains coherent without becoming fixed. Multiplicity is not fragmentation: every touchpoint can transform while staying true to the same identity."
+   }
+  ],
+  "services": [
+   "Research",
+   "Segmentation & Insights",
+   "Listening",
+   "Strategy & Positioning",
+   "Brand Architecture",
+   "Design & Identity",
+   "Storytelling & Content",
+   "Integrated Marketing",
+   "Campaign",
+   "Social & Influence",
+   "PR & Social",
+   "Verbal Identity",
+   "Visual Identity",
+   "Digital",
+   "Motion & 3D",
+   "Experience Design"
+  ],
+  "team": [
+   "Manuel Nogueira — Founder & CEO",
+   "Matheus Barros — Founder & Exec",
+   "Louise Winkler Freshel — Paris",
+   "Giulia Naccarato — São Paulo"
+  ],
+  "clients": [
+   "Alchemia",
+   "NewCo",
+   "St Ives",
+   "Motorola",
+   "Kunumi"
+  ]
+ },
+ {
+  "id": "BU-ENTERTAINMENT",
+  "slug": "entertainment",
+  "name": "Entertainment",
+  "hidden": true,
+  "status": "Draft — Strategist Proposal",
+  "positioningHeadline": "Stories That Move Culture.",
+  "positioning": "We build the moments when a story meets the world — launch campaigns, creative development and always-on presence for the titles, platforms and artists shaping what culture watches, hears and talks about next.",
+  "povHeadline": "Fandom as fuel, launches as cultural events, and craft that travels across every screen.",
+  "povs": [
+   {
+    "title": "The Launch Is a Cultural Event",
+    "copy": "A premiere is not a media plan. It is a moment culture either adopts or scrolls past. We design launches as events in people’s lives — key art that stops thumbs, films that reward attention, activations that give fandom somewhere to go. The goal is never awareness alone. It is conversation, belonging, and the feeling that missing it means missing out."
+   },
+   {
+    "title": "Fandom as Fuel",
+    "copy": "Entertainment audiences are not demographics. They are communities with memory, language and standards. We work from inside fandom — reading its codes, honouring its canon, giving it materials worth remixing. When the audience becomes the amplifier, media becomes the spark instead of the engine."
+   },
+   {
+    "title": "Craft That Travels",
+    "copy": "A story born in São Paulo has to land in Seoul; a Korean format has to feel at home in Mexico City. We build creative systems that translate without flattening — respecting local texture while protecting the idea. Global consistency and cultural specificity are not a trade-off. They are the brief."
+   },
+   {
+    "title": "Always-On Presence",
+    "copy": "Titles launch; platforms live. Between premieres, we keep brands present — social systems, branded content, performance creative and editorial series that hold attention when there is nothing new to announce. Presence between launches is what makes the next launch land harder."
+   }
+  ],
+  "services": [
+   "Launch Campaigns",
+   "Key Art & AV",
+   "Creative Development",
+   "Social & Content Systems",
+   "Talent & Influence",
+   "Events & Premieres",
+   "Performance Creative",
+   "Branded Content",
+   "Editorial Series"
+  ],
+  "team": [
+   "João Uzner — CCO",
+   "Roberta Tannus — C&C VP",
+   "Juliana Fernandes — COO",
+   "Jessica Gomes — Rio de Janeiro",
+   "Marcos Bispo — Rio de Janeiro"
+  ],
+  "clients": [
+   "Netflix",
+   "HBO",
+   "Spotify",
+   "Amazon Prime"
+  ],
+  "heroImage": "/assets/img/ent-takeahike-03.jpg",
+  "heroCaption": "Stories that move culture — from Seoul to São Paulo. Take a Hike! for Netflix."
+ }
+]

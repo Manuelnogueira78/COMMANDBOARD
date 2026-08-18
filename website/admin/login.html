@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Admin — MATTER+ENERGY</title>
+<link rel="icon" type="image/png" href="/assets/logo/icon-matter-black.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body class="admin-body">
+<main class="login-shell">
+  <img class="login-mark" src="/assets/logo/icon-matter-black.png" alt="MATTER+ENERGY">
+  <h1>Admin</h1>
+  <p class="mono mono-muted">Matter+Energy — Presence Control</p>
+  <form id="login-form" autocomplete="on">
+    <label>
+      <span class="mono">Email</span>
+      <input type="email" name="email" required autocomplete="username" placeholder="you@matter-energy.com">
+    </label>
+    <label>
+      <span class="mono">Password</span>
+      <input type="password" name="password" required autocomplete="current-password" placeholder="••••••••••">
+    </label>
+    <button type="submit" class="btn-primary">Enter</button>
+    <p class="form-error mono" id="login-error" role="alert" hidden></p>
+  </form>
+  <p class="mono mono-muted login-foot"><a href="/">&larr; Back to the site</a></p>
+</main>
+<script>
+document.getElementById('login-form').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  var f = e.target, err = document.getElementById('login-error');
+  err.hidden = true;
+  var res = await fetch('/api/login', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ email: f.email.value.trim(), password: f.password.value })
+  });
+  if (res.ok) { window.location.href = '/admin'; return; }
+  var data = await res.json().catch(function () { return {}; });
+  err.textContent = data.error || 'Login failed.';
+  err.hidden = false;
+});
+</script>
+</body>
+</html>

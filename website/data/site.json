@@ -1,0 +1,256 @@
+{
+  "brand": {
+    "name": "MATTER+ENERGY",
+    "tagline": "A Storehouse of Creative Energy",
+    "manifestoLeft": "Matter+Energy is the creative agency where the seniors do the work — moving brands with culture, through chaos, towards presence.",
+    "network": "MATTER + ENERGY is part of FLAGCX フラグ, the largest independent creative services network in LATAM.",
+    "footerStatement": "In an era where everything is abstracted, there is an urgent need to return to the fundamentals, to affirm why matter matters and why embodied existence is essential. We explore the transformation of creative energy into tangible forms, celebrating presence, awareness, relationships and the interplay of forces shaping brands."
+  },
+  "intros": {
+    "home": "Everyone can make everything now. Almost nobody can tell you what’s worth making. MATTER is the creative agency where the seniors do the work, with no pyramid between you and the craft. We took the pyramid out and put instruments in its place.",
+    "work": "Everyone can make everything now. What you can’t buy everywhere is someone who knows what to make — and what to throw away. Every piece here was made and signed by the senior you’d meet in the room.",
+    "archive": "The full body of work. Fewer projects, held longer, each one born from what makes its brand unmistakably itself. If it could belong to anyone, it isn’t here.",
+    "news": "Reports, interviews, playlists and signals from the people who make the work. Judgment is built in public. This is where we build ours.",
+    "about": "What you pay for here is judgment: senior people who decide what ships, what doesn’t, and what a brand means next. The senior who sells the work is the senior who makes it."
+  },
+  "opening": {
+    "line1": "The world is abstract. Presence is the scarce thing.",
+    "line2": "Here, the seniors do the work. No pyramid between you and the craft.",
+    "line3": "Our own instruments absorb the rest.",
+    "line4": "Below is the proof."
+  },
+  "values": [
+    {
+      "title": "Presence and Commitment",
+      "copy": "Be here, fully. In an age of distraction, attention is power. We choose to pay attention to what matters, to move with intention, to create from the ground up. No shortcuts."
+    },
+    {
+      "title": "The Beauty of Process",
+      "copy": "Transformation is not a straight line. It’s an excavation, a layering, a constant shedding of what no longer serves. We embrace the unpolished, the unfinished, the work in progress. This is where real change takes root."
+    },
+    {
+      "title": "Radical Collaboration",
+      "copy": "We don’t believe in hierarchy for hierarchy’s sake. The best work emerges when we all have skin in the game. This is collaboration as a shared risk, a collective pursuit, a trust in each other’s strengths."
+    },
+    {
+      "title": "Energy as Essence",
+      "copy": "Beyond product, beyond service—our core is energy. The drive to create, the spark of connection, the fire of curiosity. It’s about tapping into what makes us feel alive, what makes us human, and infusing that into everything we touch."
+    }
+  ],
+  "filters": {
+    "sectors": [
+      "Entertainment",
+      "Beauty & Personal Care",
+      "Technology",
+      "Finance",
+      "Food & Drink",
+      "Gaming",
+      "Arts & Culture",
+      "Consumer Brands"
+    ],
+    "capabilities": [
+      "Brand Strategy",
+      "Brand Identity",
+      "Verbal Identity",
+      "Campaigns",
+      "Content",
+      "Digital",
+      "Motion",
+      "Experience"
+    ],
+    "businessUnits": [
+      "Beauty",
+      "Branding",
+      "Connections",
+      "Entertainment",
+      "Tech"
+    ]
+  },
+  "about": {
+    "headline": "A Storehouse Of Creative Energy",
+    "columns": [
+      {
+        "label": "(I) What You’re Buying",
+        "copy": "Everyone can make everything now. Almost nobody can tell you what’s worth making.\n\nWhat we sell is judgment: senior people who decide what ships, what doesn’t, and what a brand means for the next five years.\n\nThe work that leaves here shouldn’t travel well between brands. It is born from what makes each one unmistakably itself."
+      },
+      {
+        "label": "(II) How We’re Built",
+        "copy": "A creative house with nobody between the client and the craft.\n\nEvery studio stands on its own leader and its own reputation. The senior who sells the work is the senior who makes it — in the room from first brief to final file.\n\nThe instruments absorb what repeats: the research, the bureaucracy, the repeatable hours. Human time goes where being human changes the outcome.\n\nA person decides what ships, and nothing reaches you without a name on it. Ask which part the machine made — we’ll tell you."
+      },
+      {
+        "label": "(III) The Values",
+        "copy": "Senior presence — the name that carries the work is in the room, start to finish.\n\nDepth over scale — fewer projects, held longer. Would this be missed if it disappeared?\n\nEveryone builds a name — taste, authorship, a point of view the market quotes.\n\nAutonomy with accountability — real decisions, made in the open.\n\nHuman-led, AI-fluent — instruments absorb the repeatable; people keep the judgment.\n\nMade, not described — the thing exists before it is defended. A deck is not evidence."
+      },
+      {
+        "label": "(IV) The Deal",
+        "copy": "Judgment isn’t inherited. It’s built — by making, questioning, and returning to the work until it earns its place. People here get real responsibility early, and protected time to keep sharpening it.\n\nThe promise has two sides, written down. Ours: clarity, support, tools, trust, and the room early. Yours: run your part like it’s yours — standard high, ambition out loud.\n\nWe leave room by design, and turn work down before growth starts consuming what makes growth possible. Built to stay."
+      }
+    ],
+    "statement": "Abundance Should Make People More Valuable, Not Less.",
+    "refuse": "We are not built to scale. We are built to stay. Which means some work is not for us. Volume production. Performance media at scale. Anything priced per unit. And if a project only needs execution, we are the wrong call. We will tell you that in the first conversation rather than the third. Most work now could have come from anywhere. Ours couldn’t. We leave the fingerprints on.",
+    "clients": [
+      "Motorola",
+      "Meta",
+      "Google",
+      "DirecTV Go",
+      "Netflix",
+      "Spotify",
+      "Dove",
+      "TRESemmé",
+      "Nexxus",
+      "Suave",
+      "Danone",
+      "Pepsi",
+      "KFC",
+      "C&A",
+      "Havaianas",
+      "Nike",
+      "Vogue",
+      "Galeries Lafayette",
+      "Courrèges",
+      "Bitso",
+      "Aché",
+      "Sanofi",
+      "Abbott",
+      "Deutsche Bank",
+      "Citibank",
+      "Telekom",
+      "Visa",
+      "HBO",
+      "Amazon Prime",
+      "Riot",
+      "Wargaming"
+    ],
+    "services": [
+      "Research",
+      "Segmentation & Insights",
+      "Panels",
+      "Listening",
+      "Strategy & Positioning",
+      "Brand Architecture",
+      "Design & Identity",
+      "Storytelling & Content",
+      "Integrated Marketing",
+      "Campaign",
+      "Social & Influence",
+      "PR & Social",
+      "Verbal Identity",
+      "Visual Identity",
+      "Digital",
+      "Motion & 3D",
+      "Experience Design"
+    ],
+    "team": [
+      "Manuel Nogueira, São Paulo — Founder & CEO",
+      "Matheus Barros, Barcelona — Founder & Exec",
+      "Juliana Fernandes, São Paulo — COO",
+      "João Uzner, São Paulo — CCO",
+      "Louise Winkler Freshel, Paris — CBO",
+      "Fernanda Stapassoli, Rio Grande do Sul — CPO",
+      "Roberta Tannus, São Paulo — C&C VP",
+      "Bianca Nunes, São Paulo",
+      "Camila Schincaglia, New York",
+      "Erica Igue, Madrid",
+      "Fernando Bartolo, São Paulo",
+      "Fernando Prado, São Paulo",
+      "Gabriel Pereira, Alagoas",
+      "Giulia Naccarato, São Paulo",
+      "Gleison Stievano, São Paulo",
+      "Gustavo Ribeiro, São Paulo",
+      "Jessica Gomes, Rio de Janeiro",
+      "Jessica Pereira, Rio de Janeiro",
+      "Julia Alves de Lima, São Paulo",
+      "Julia Nogueira, São Paulo",
+      "Kyle Ferino, Pennsylvania",
+      "Larissa Vaz, Barcelona",
+      "Luisa Fedrizzi, São Paulo",
+      "Marcos Bispo, Rio de Janeiro",
+      "Mariana Miloski, New Jersey",
+      "Millene Bonetto, São Paulo",
+      "Narayani Leonardo, New York",
+      "Raquel Veríssimo, São Paulo",
+      "Rodrigo Lopes, São Paulo",
+      "Sara Grosso, New York",
+      "Thaís Schroder, São Paulo",
+      "Victoria Ambar Vitorino, São Paulo",
+      "Vinicius Rochlin, Marseille"
+    ],
+    "framework": [
+      {
+        "title": "Segmentation & Insights",
+        "copy": "We listen before we build. Segmentation and insights to find out who an audience actually is — not who a deck says they are. Panels to test ideas against real people. Ongoing social and cultural listening to catch a signal before it becomes a trend. Every project starts here. Insight that isn’t grounded in real behavior is just opinion with a font."
+      },
+      {
+        "title": "Strategy & Positioning / Brand Architecture",
+        "copy": "We define what a brand is for. Positioning, brand architecture — how a brand’s products, sub-brands and business units relate to each other and to the whole. The output isn’t a deck. It is a decision a brand can hold onto for years."
+      },
+      {
+        "title": "Visual & Verbal Systems",
+        "copy": "Matter into meaning. We build the systems that make a brand recognizable — visual and verbal — so it holds together whether it is on a billboard or in a tweet."
+      },
+      {
+        "title": "Storytelling & Content",
+        "copy": "Energy into motion. Strategy doesn’t move anyone until it becomes a story. We write and produce the content that carries a brand’s point of view into the world — narrative, messaging, tone."
+      },
+      {
+        "title": "Integrated Marketing",
+        "copy": "Where it all becomes real. Full campaigns, social and influencer strategy, PR and social communications — working as one connected effort, not six disconnected vendors."
+      }
+    ],
+    "contact": {
+      "line": "Let’s make something that matters.",
+      "email": "hello@matter-energy.com",
+      "instagram": "@matterandenergy",
+      "linkedin": "Matter+Energy",
+      "offices": [
+        "São Paulo",
+        "New York",
+        "Barcelona",
+        "Madrid",
+        "Paris"
+      ]
+    },
+    "cta": {
+      "line": "Something worth making?",
+      "action": "Talk to the seniors who’ll make it",
+      "email": "hello@matter-energy.com"
+    },
+    "images": {
+      "band": "/assets/img/life-01.jpg",
+      "pair": [
+        "/assets/img/life-07.jpg",
+        "/assets/img/life-10.jpg"
+      ]
+    }
+  },
+  "merch": {
+    "headline": "New Matter Drop of Radical Collaboration",
+    "link": "Shop",
+    "items": [
+      {
+        "image": "/assets/img/merch-02.jpg",
+        "title": "This Is the Time of Presence — Longsleeve",
+        "note": "Why the time of presence? In an era where everything is abstracted, embodied existence is essential.",
+        "price": "Drop 01"
+      },
+      {
+        "image": "/assets/img/merch-07.jpg",
+        "title": "Storehouse Tee — Manifesto Back Print",
+        "note": "The Beauty of Process. Radical Collaboration. Energy as Essence.",
+        "price": "Drop 01"
+      },
+      {
+        "image": "/assets/img/merch-03.jpg",
+        "title": "Matter Cap — You Are Here. It Matters.",
+        "note": "Wear the reminder: presence over performance.",
+        "price": "Drop 01"
+      },
+      {
+        "image": "/assets/img/merch-13.jpg",
+        "title": "Energy Crew — Storehouse Edition",
+        "note": "A storehouse of creative energy, stitched.",
+        "price": "Drop 01"
+      }
+    ]
+  }
+}

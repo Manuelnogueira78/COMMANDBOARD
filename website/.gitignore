@@ -1,0 +1,8 @@
+data/users.json
+node_modules/
+*.log
+
+# Harvested social media assets - for use in separate session
+public/assets/img/social-*.jpg
+public/assets/img/clip-*.mp4
+public/assets/img/clip-*-poster.jpg
