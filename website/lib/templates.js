@@ -29,6 +29,7 @@ ${image ? `<meta property="og:image" content="https://matter-energy.com${esc(ima
 <meta name="twitter:card" content="${image ? 'summary_large_image' : 'summary'}">
 <link rel="icon" type="image/png" href="/assets/logo/icon-matter-black.png">
 <link rel="stylesheet" href="/assets/css/site.css">
+<noscript><style>.reveal{opacity:1 !important;transform:none !important}</style></noscript>
 </head>
 <body>`;
 }
@@ -99,10 +100,15 @@ function footer(site) {
 </html>`;
 }
 
+/* Portrait sources in wide slots lose most of their height to the crop, so each
+   project can name the point the crop should hold onto. Falls back to the
+   per-slot default in the stylesheet. */
+const focus = (p) => (p && p.heroFocus ? ` style="--focus:${esc(p.heroFocus)}"` : '');
+
 /* media block: real image or branded placeholder (never stretched) */
 function media(project, { cls = '', ratio = '' } = {}) {
   if (project.heroImage) {
-    return `<div class="media-full ${cls}"><img src="${esc(project.heroImage)}" alt="${esc(project.title)} — ${esc(project.client)}" loading="lazy"></div>`;
+    return `<div class="media-full ${cls}"><img src="${esc(project.heroImage)}"${focus(project)} alt="${esc(project.title)} — ${esc(project.client)}" loading="lazy"></div>`;
   }
   return `<div class="ph ${ratio} ${cls}" role="img" aria-label="${esc(project.title)} — visual coming soon"><img class="ph-mark" src="/assets/logo/icon-matter-white.png" alt=""></div>`;
 }
@@ -124,7 +130,7 @@ function archiveCard(p) {
 <${tag} class="archive-card${p.casePage ? '' : ' archive-card--flat'}"${href} data-filterable data-bu="${esc(p.businessUnits.join('|'))}" data-sector="${esc(p.sector)}" data-caps="${esc(p.capabilities.join('|'))}">
   <div class="a-meta">${esc(p.title)}<br>${esc(p.client)}<br>${esc(p.year)}</div>
   <p class="a-quote">&ldquo;${esc(p.onePhraser)}&rdquo;</p>
-  ${p.heroImage ? `<div class="a-img"><img src="${esc(p.heroImage)}" alt="${esc(p.title)}" loading="lazy"></div>` : ''}
+  ${p.heroImage ? `<div class="a-img"><img src="${esc(p.heroImage)}"${focus(p)} alt="${esc(p.title)}" loading="lazy"></div>` : ''}
 </${tag}>`;
 }
 
@@ -164,6 +170,7 @@ function home({ site, projects, news }) {
   let h = head({ title: 'MATTER+ENERGY — A Storehouse of Creative Energy', description: site.brand.manifestoLeft, path: '/', image: hero && hero.heroImage });
   h += masthead(site, { intro: site.intros.home, activePath: '' });
   h += nav('/');
+  h += '<h1 class="sr-only">MATTER+ENERGY — A Storehouse of Creative Energy</h1>';
   h += `
 <section class="opening wrap reveal">
   <p>${esc(site.opening.line1)}</p>
@@ -294,6 +301,7 @@ function work({ site, projects, query = {} }) {
   let h = head({ title: 'Work — MATTER+ENERGY', description: site.intros.work, path: '/work' });
   h += masthead(site, { intro: site.intros.work, activePath: '/work' });
   h += nav('/work');
+  h += '<h1 class="sr-only">Work</h1>';
   h += `<div class="wrap"><p class="filter-status" id="filter-status" hidden></p></div>`;
   h += `<section class="work-grid wrap" id="work-grid" data-initial-bu="${esc(query.bu || '')}">`;
 
@@ -304,7 +312,7 @@ function work({ site, projects, query = {} }) {
   <figure>
     <a href="/work/${esc(p.slug)}"><div class="w-img">${
       p.heroImage
-        ? `<img src="${esc(p.heroImage)}" alt="${esc(p.title)} — ${esc(p.client)}" loading="lazy">`
+        ? `<img src="${esc(p.heroImage)}"${focus(p)} alt="${esc(p.title)} — ${esc(p.client)}" loading="lazy">`
         : `<div class="ph" role="img" aria-label="${esc(p.title)}"><img class="ph-mark" src="/assets/logo/icon-matter-white.png" alt=""></div>`
     }</div></a>
   </figure>
@@ -366,9 +374,9 @@ function workCase({ site, project: p, next }) {
   h += nav('/work');
   h += `<section class="media-hero">${
     p.video
-      ? `<video src="${esc(p.video)}" autoplay muted loop playsinline poster="${esc(p.heroImage)}" aria-label="${esc(p.title)}"></video>`
+      ? `<video src="${esc(p.video)}"${focus(p)} autoplay muted loop playsinline poster="${esc(p.heroImage)}" aria-label="${esc(p.title)}"></video>`
       : p.heroImage
-      ? `<img src="${esc(p.heroImage)}" alt="${esc(p.title)} — ${esc(p.client)}">`
+      ? `<img src="${esc(p.heroImage)}"${focus(p)} alt="${esc(p.title)} — ${esc(p.client)}">`
       : `<div class="ph" role="img" aria-label="${esc(p.title)} — visual coming soon"><img class="ph-mark" src="/assets/logo/icon-matter-white.png" alt=""></div>`
   }</section>`;
 
@@ -421,6 +429,7 @@ function archive({ site, projects }) {
   let h = head({ title: 'Archive — MATTER+ENERGY', description: site.intros.archive, path: '/archive' });
   h += masthead(site, { intro: site.intros.archive, activePath: '' });
   h += nav('/archive');
+  h += '<h1 class="sr-only">Archive</h1>';
   h += `<section class="wrap"><div class="archive-grid">${list.map(archiveCard).join('')}</div></section>`;
   h += footer(site);
   return h;
@@ -433,6 +442,7 @@ function news({ site, news }) {
   let h = head({ title: 'News — MATTER+ENERGY', description: site.intros.news, path: '/news' });
   h += masthead(site, { intro: site.intros.news, activePath: '' });
   h += nav('/news');
+  h += '<h1 class="sr-only">News</h1>';
   list.forEach((n, i) => {
     const flip = n.imageSide === 'left';
     h += `
@@ -442,7 +452,7 @@ function news({ site, news }) {
     <h2>${esc(n.title)}</h2>
     <a class="n-link" href="/news/${esc(n.slug)}">${esc(n.cta)}</a>
   </div>
-  <div class="n-media"><a href="/news/${esc(n.slug)}"><img src="${esc(n.image)}" alt="${esc(n.title)}" loading="${i > 0 ? 'lazy' : 'eager'}"></a></div>
+  <div class="n-media"><a href="/news/${esc(n.slug)}"><img src="${esc(n.image)}"${focus(n)} alt="${esc(n.title)}" loading="${i > 0 ? 'lazy' : 'eager'}"></a></div>
 </section>`;
   });
   h += footer(site);
@@ -453,7 +463,7 @@ function newsArticle({ site, item: n, next }) {
   let h = head({ title: `${n.title} — MATTER+ENERGY`, description: n.excerpt, path: `/news/${n.slug}`, image: n.image });
   h += masthead(site, { intro: n.intro || n.excerpt, activePath: '' });
   h += nav('/news');
-  h += `<section class="article-hero ${n.heroFit === 'contain' ? 'article-hero--contain' : ''} wrap"><div class="hero-frame"><img src="${esc(n.image)}" alt="${esc(n.title)}"></div></section>`;
+  h += `<section class="article-hero ${n.heroFit === 'contain' ? 'article-hero--contain' : ''} wrap"><div class="hero-frame"><img src="${esc(n.image)}"${focus(n)} alt="${esc(n.title)}"></div></section>`;
   h += `
 <div class="article-title wrap">
   <p class="kicker">${esc(n.category)}</p>

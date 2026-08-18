@@ -27,25 +27,33 @@
     var params = new URLSearchParams(window.location.search);
     var bu = params.get('bu') || grid.getAttribute('data-initial-bu') || '';
     if (bu) {
-      var cells = document.querySelectorAll('[data-filterable]');
+      /* count the grid only: the index table shares data-filterable, and summing
+         both reported N projects above an empty grid */
       var shown = 0;
-      cells.forEach(function (cell) {
+      grid.querySelectorAll('[data-filterable]').forEach(function (cell) {
         var units = (cell.getAttribute('data-bu') || '').split('|');
         var match = units.indexOf(bu) !== -1;
         cell.classList.toggle('is-hidden', !match);
         if (match) shown++;
       });
+      document.querySelectorAll('.index-table [data-filterable]').forEach(function (row) {
+        var units = (row.getAttribute('data-bu') || '').split('|');
+        row.classList.toggle('is-hidden', units.indexOf(bu) === -1);
+      });
       var status = document.getElementById('filter-status');
       if (status) {
         status.hidden = false;
-        status.textContent = 'Filtered by ' + bu + ' — ' + shown + ' project' + (shown === 1 ? '' : 's') + '. ';
+        status.textContent = 'Filtered by ' + bu + ' \u2014 ' + (shown === 0
+          ? 'no case pages yet; see the index below. '
+          : shown + ' project' + (shown === 1 ? '' : 's') + '. ');
         var clear = document.createElement('a');
         clear.href = '/work';
         clear.textContent = 'Clear filter';
         clear.style.textDecoration = 'underline';
         status.appendChild(clear);
       }
-      /* mark the active BU in the masthead line */
+      /* mark the active BU in the masthead line; ALL. is no longer current */
+      document.querySelectorAll('.bu-line a.active').forEach(function (a) { a.classList.remove('active'); });
       document.querySelectorAll('.bu-line a').forEach(function (a) {
         try {
           var u = new URL(a.href, window.location.origin);
@@ -56,7 +64,9 @@
   }
 
   /* Video: pause offscreen hero videos to save battery */
-  var vids = document.querySelectorAll('video[autoplay]');
+  var calm = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (calm) { document.querySelectorAll('video[autoplay]').forEach(function (v) { v.removeAttribute('autoplay'); v.pause(); v.setAttribute('controls', ''); }); }
+  var vids = calm ? [] : document.querySelectorAll('video[autoplay]');
   if ('IntersectionObserver' in window && vids.length) {
     var vio = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {

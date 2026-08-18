@@ -136,7 +136,7 @@ function slugify(t) {
 
 const PROJECT_FIELDS = ['title', 'client', 'industry', 'sector', 'onePhraser', 'longDescription', 'type', 'year',
   'businessUnits', 'capabilities', 'deliverables', 'credits', 'driveFolder', 'notes', 'published', 'featured',
-  'order', 'heroImage', 'gallery', 'video', 'casePage', 'heroKind'];
+  'order', 'heroImage', 'gallery', 'video', 'casePage', 'heroKind', 'heroFocus'];
 
 function sanitizeProject(input, existing = {}) {
   const p = { ...existing };

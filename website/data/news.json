@@ -27,7 +27,8 @@
     "type": "caption",
     "text": "ICLR 2026 — OOH + Event Experience. Created by MATTER for Kunumi."
    }
-  ]
+  ],
+  "heroFocus": "50% 40%"
  },
  {
   "id": "NEWS-002",
@@ -177,7 +178,8 @@
     "type": "caption",
     "text": "Full interview at Shots. Photography: MATTER Sessions."
    }
-  ]
+  ],
+  "heroFocus": "50% 26%"
  },
  {
   "id": "NEWS-005",
@@ -223,7 +225,8 @@
     "type": "p",
     "text": "Beyond product, beyond service—our core is energy. The drive to create, the spark of connection, the fire of curiosity. It’s about tapping into what makes us feel alive, what makes us human, and infusing that into everything we touch."
    }
-  ]
+  ],
+  "heroFocus": "50% 40%"
  },
  {
   "id": "NEWS-006",
@@ -275,7 +278,8 @@
     "type": "caption",
     "text": "MATTER & ENERGY presents Echoes: Le Nomad. Madrid, July 2025. Supported by Motorola."
    }
-  ]
+  ],
+  "heroFocus": "50% 30%"
  },
  {
   "id": "NEWS-008",
@@ -301,6 +305,7 @@
     "type": "caption",
     "text": "Clube de Criação, São Paulo. Created by MATTER for Netflix."
    }
-  ]
+  ],
+  "heroFocus": "50% 30%"
  }
 ]
