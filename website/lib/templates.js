@@ -494,6 +494,7 @@ function about({ site, projects }) {
     )
     .join('')}
 </section>
+${a.images && a.images.band ? `<section class="media-hero"><img src="${esc(a.images.band)}" alt="Inside MATTER+ENERGY"></section>` : ''}
 <p class="centered-statement">${esc(a.statement)}</p>
 ${a.cta ? `
 <div class="about-cta wrap">
@@ -529,6 +530,9 @@ Connect with us on
 LinkedIn</div>
   </div>
 </section>
+${a.images && a.images.pair ? `<section class="wrap"><div class="two-up">${a.images.pair
+    .map((src) => `<figure><img src="${esc(src)}" alt="Inside MATTER+ENERGY" loading="lazy"></figure>`)
+    .join('')}</div></section>` : ''}
 <h2 class="giant-heading">The Framework</h2>
 <section class="wrap">
   ${a.framework
@@ -611,22 +615,35 @@ function buPage({ site, bu, projects }) {
 </section>
 <p class="bu-serif">${povStatement.charAt(0).toUpperCase() + povStatement.slice(1)}</p>`;
 
-  /* Media rhythm mirrors the original BU page: full-bleed hero, a two-up
-     against the dense mosaic, a second full-bleed, then a two-up pair. */
-  const imaged = [...featured, ...rest].filter((p) => p.heroImage);
-  const plain = [...featured, ...rest].filter((p) => !p.heroImage);
-  const queue = [...imaged];
+  /* Media rhythm mirrors the original BU page. Full-bleed and two-up slots
+     take PHOTOGRAPHY only — typographic covers crop badly at that scale, so
+     they go to the mosaic and the archive cards instead. */
+  const all = [...featured, ...rest];
+  const photos = all.filter((p) => p.heroImage && p.heroKind !== 'graphic');
+  const buHeroSrc = bu.heroVideo || bu.heroImage || '';
 
-  const heroP = queue.shift() || plain.shift();
-  const pairA = [queue.shift(), queue.shift() || plain.shift()].filter(Boolean);
-  const soloB = queue.shift() || plain.shift();
-  const pairB = [queue.shift() || plain.shift(), queue.shift() || plain.shift()].filter(Boolean);
-  const bigSlots = [heroP, ...pairA, soloB, ...pairB].filter(Boolean);
+  const slots = [];
+  let i = buHeroSrc ? 0 : 1;
+  if (!buHeroSrc && photos.length) slots.push(['hero', photos[0]]);
+  for (const kind of ['pair', 'solo', 'pair', 'solo']) {
+    if (i >= photos.length) break;
+    if (kind === 'pair' && photos.length - i >= 2) {
+      slots.push(['pair', photos[i], photos[i + 1]]);
+      i += 2;
+    } else {
+      slots.push(['solo', photos[i]]);
+      i += 1;
+    }
+  }
+  const bigSlots = slots.flatMap((s) => s.slice(1));
   const shown = new Set(bigSlots.map((p) => p.slug));
 
-  /* mosaic pulls every remaining visual in the vertical — hero frames and
-     gallery frames alike — so the page carries texture, not empty blocks */
+  const gridRest = buProjects.filter((p) => !shown.has(p.slug));
   const usedSrc = new Set(bigSlots.map((p) => p.heroImage).filter(Boolean));
+  if (bu.heroImage) usedSrc.add(bu.heroImage);
+  /* frames already shown on the archive cards below must not repeat in the mosaic */
+  gridRest.slice(0, 12).forEach((p) => { if (p.heroImage) usedSrc.add(p.heroImage); });
+
   const mosaicSrc = [];
   buProjects.forEach((p) => {
     [p.heroImage, ...(p.gallery || [])].filter(Boolean).forEach((src) => {
@@ -636,8 +653,11 @@ function buPage({ site, bu, projects }) {
   (bu.mosaic || []).forEach((src) => { if (!mosaicSrc.includes(src)) mosaicSrc.push(src); });
   const mosaic = mosaicSrc.length >= 8 ? mosaicSrc.slice(0, 12) : null;
 
-  /* BU-level hero overrides the first project frame when the vertical has one */
-  if (bu.heroVideo || bu.heroImage) {
+  const fullBleed = (p) =>
+    `<section><a href="/work/${esc(p.slug)}">${media(p, { cls: 'media-hero' })}</a><div class="wrap">${captionRow(p)}</div></section>`;
+
+  /* the vertical's own hero film or key art */
+  if (buHeroSrc) {
     h += `<section class="media-hero">${
       bu.heroVideo
         ? `<video src="${esc(bu.heroVideo)}" autoplay muted loop playsinline poster="${esc(bu.heroImage || '')}" aria-label="${esc(bu.name)}"></video>`
@@ -646,41 +666,32 @@ function buPage({ site, bu, projects }) {
     if (bu.heroCaption) {
       h += `<div class="caption-row wrap"><div class="cap-meta">${esc(bu.name)}<br>MATTER+ENERGY</div><div></div><p class="cap-desc">${esc(bu.heroCaption)}</p></div>`;
     }
-  } else if (heroP) {
-    h += `<section><a href="/work/${esc(heroP.slug)}">${media(heroP, { cls: 'media-hero' })}</a><div class="wrap">${captionRow(heroP)}</div></section>`;
   }
 
-  if (pairA.length) {
-    if (mosaic) {
-      const first = pairA[0];
-      h += `<section class="wrap"><div class="two-up">
-        <figure><a href="/work/${esc(first.slug)}">${media(first)}</a></figure>
-        <figure><div class="mosaic">${mosaic
-          .map((src) => `<img src="${esc(src)}" alt="" loading="lazy">`)
-          .join('')}</div></figure>
-      </div>
-      <div class="two-up">${captionRow(first)}<div class="caption-row"><div class="cap-meta">Selected frames<br>${esc(bu.name)}</div><div></div><p class="cap-desc">A running index of the work this vertical has put into the world.</p></div></div></section>`;
-      if (pairA[1]) {
-        h += `<section><a href="/work/${esc(pairA[1].slug)}">${media(pairA[1], { cls: 'media-hero' })}</a><div class="wrap">${captionRow(pairA[1])}</div></section>`;
-      }
-    } else {
-      h += `<section class="wrap"><div class="two-up">${pairA
-        .map((p) => `<figure><a href="/work/${esc(p.slug)}">${media(p)}</a></figure>`)
-        .join('')}</div>
-        <div class="two-up">${pairA.map((p) => captionRow(p)).join('')}</div></section>`;
+  let mosaicPlaced = false;
+  slots.forEach(([kind, a, b]) => {
+    if (kind === 'hero' || kind === 'solo') {
+      h += fullBleed(a);
+      return;
     }
-  }
-  if (soloB) {
-    h += `<section><a href="/work/${esc(soloB.slug)}">${media(soloB, { cls: 'media-hero' })}</a><div class="wrap">${captionRow(soloB)}</div></section>`;
-  }
-  if (pairB.length) {
-    h += `<section class="wrap"><div class="two-up">${pairB
-      .map((p) => `<figure><a href="/work/${esc(p.slug)}">${media(p)}</a></figure>`)
-      .join('')}</div>
-      <div class="two-up">${pairB.map((p) => captionRow(p)).join('')}</div></section>`;
-  }
+    /* first two-up runs the case against the mosaic, as the original does */
+    if (mosaic && !mosaicPlaced) {
+      mosaicPlaced = true;
+      h += `<section class="wrap"><div class="two-up">
+        <figure><a href="/work/${esc(a.slug)}">${media(a)}</a></figure>
+        <figure><div class="mosaic">${mosaic.map((src) => `<img src="${esc(src)}" alt="" loading="lazy">`).join('')}</div></figure>
+      </div>
+      <div class="two-up">${captionRow(a)}<div class="caption-row"><div class="cap-meta">Selected frames<br>${esc(bu.name)}</div><div></div><p class="cap-desc">A running index of the work this vertical has put into the world.</p></div></div></section>`;
+      if (b) h += fullBleed(b);
+      return;
+    }
+    h += `<section class="wrap"><div class="two-up">
+      <figure><a href="/work/${esc(a.slug)}">${media(a)}</a></figure>
+      <figure><a href="/work/${esc(b.slug)}">${media(b)}</a></figure>
+    </div>
+    <div class="two-up">${captionRow(a)}${captionRow(b)}</div></section>`;
+  });
 
-  const gridRest = buProjects.filter((p) => !shown.has(p.slug));
   if (gridRest.length) {
     h += `<section class="wrap"><div class="archive-grid">${gridRest.slice(0, 12).map(archiveCard).join('')}</div></section>`;
   }

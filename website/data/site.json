@@ -214,6 +214,13 @@
       "line": "Something worth making?",
       "action": "Talk to the seniors who’ll make it",
       "email": "hello@matter-energy.com"
+    },
+    "images": {
+      "band": "/assets/img/life-01.jpg",
+      "pair": [
+        "/assets/img/life-07.jpg",
+        "/assets/img/life-10.jpg"
+      ]
     }
   },
   "merch": {

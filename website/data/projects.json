@@ -42,7 +42,8 @@
    "/assets/img/fifa-03.jpg",
    "/assets/img/fifa-street.jpg"
   ],
-  "video": "/assets/img/fifa-type.mp4"
+  "video": "/assets/img/fifa-type.mp4",
+  "heroKind": "photo"
  },
  {
   "id": "PRJ-028",
@@ -52,7 +53,7 @@
   "industry": "Entertainment",
   "sector": "Entertainment",
   "onePhraser": "Contextualized OOH stunts in Wednesday's acidic voice",
-  "longDescription": "The Wednesday Season 2 Brazil launch campaign built cultural conversation through bold, site-specific stunts rather than a conventional media push: contextualized OOH carrying \"acidic phrases\" written in Wednesday's voice, placed at culturally relevant locations across Brazilian cities. The centerpiece was a mural on the Minhocão viaduct in São Paulo by artist Aline Bispo, which generated major organic conversation despite triggering controversy and a fine under the city's clean-city law. When an original activation planned for Pelourinho in Salvador was cancelled and singer Ana Castela declined a planned talent tie-in late in the process, the team pivoted to a new activation, \"Estação das Sombras,\" and an AV transformation featuring Boca Rosa. The retrospective credits the team's resilience through repeated direction changes, while flagging that neither the late talent decline nor the OOH fine had a pre-mapped contingency plan. The campaign is flagged internally as case-study-ready and awards-worthy.",
+  "longDescription": "Contextualised out-of-home in Wednesday's own voice: acidic lines placed exactly where they would land, across culturally loaded locations in Brazil.\n\nThe centrepiece was a mural on the Minhocão viaduct in São Paulo by the artist Aline Bispo — a scale of presence that earned organic awareness far beyond the media plan. Estação das Sombras followed as an alternative activation when the original concept could not proceed.\n\nA season launch built to be walked past, photographed and repeated rather than merely seen.",
   "type": "Launch Campaign",
   "year": "2025",
   "businessUnits": [
@@ -61,7 +62,13 @@
   "capabilities": [
    "Campaigns"
   ],
-  "deliverables": [],
+  "deliverables": [
+   "Launch Campaign",
+   "Contextual OOH",
+   "Mural",
+   "Activation",
+   "Social Content"
+  ],
   "credits": "",
   "driveFolder": "",
   "notes": "",
@@ -70,7 +77,8 @@
   "order": 1,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-021",
@@ -79,8 +87,8 @@
   "client": "Netflix",
   "industry": "Entertainment",
   "sector": "Entertainment",
-  "onePhraser": "Chico Bento x One Piece crossover launch campaign",
-  "longDescription": "The One Piece S02 launch campaign for Netflix Brazil hinged on a single crossover idea: pairing the straw hat of Luffy with Chico Bento, the iconic Mauricio de Sousa Productions (MSP) character, treating both hats as a shared symbol bridging anime and Brazilian pop culture. What started as a small insight grew into a fully integrated rollout: a hero film (\"Jornada dos Sonhos\") where 2D Chico Bento falls into the Going Merry world and is swallowed by Laboon before waking with Luffy's hat; a video call between Iñaki Godoy and Chico about trading hats; wanted-poster exchanges between Netflix and MSP's social accounts; an Eiichiro Oda talent video; a Laboon activation on Copacabana beach; a Gabriel Medina collaboration; and bespoke stretched-Luffy OOH. It launched March 9, 2026 and passed 85 million views across assets, with the hero film drawing 46.9 million views and the Iñaki call earning the highest engagement rate (4.09%). The retrospective noted the two-straw-hats connection could have been explored further, and that MSP's production pace strained against ad deadlines (17 edit versions in two days).",
+  "onePhraser": "Every Brazilian has a little pirate in them.",
+  "longDescription": "One straw hat belongs to the most-watched pirate in anime. The other belongs to Chico Bento, a character Brazilians have known since childhood. We built the campaign on the bridge between them.\n\nA cultural crossover with Mauricio de Sousa Produções carried the season into Brazilian pop memory rather than arriving as another import. The hero film, Jornada dos Sonhos, drew 46.8M views. A stretched-Luffy carousel added 14.3M with a 1.81% engagement rate; a call with Iñaki reached 12.2M at 4.09%; the overview cut 4.8M.\n\nTotal: more than 85M views across the campaign.",
   "type": "Launch Campaign",
   "year": "2025–2026",
   "businessUnits": [
@@ -89,8 +97,14 @@
   "capabilities": [
    "Campaigns"
   ],
-  "deliverables": [],
-  "credits": "",
+  "deliverables": [
+   "Launch Campaign",
+   "Hero Film",
+   "Social Content",
+   "Brand Crossover",
+   "Talent"
+  ],
+  "credits": "Creative Direction: Kika Igue, Gleison Stievano. Creation: Diego, Chacon, Marcos Bispo, Gustavo Ribeiro. Consultant: Kary. Account: Luisa Fedrizzi, Rodrigo Lopes. Production: Thaís Schroder. Support: João Uzner, Juliana Fernandes, Fernanda Stapassoli, Pilar. Partners: Mauricio de Sousa Produções, Monks, 828, Guizo.",
   "driveFolder": "",
   "notes": "",
   "published": true,
@@ -98,7 +112,8 @@
   "order": 2,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-030",
@@ -124,11 +139,14 @@
   "published": true,
   "featured": true,
   "order": 3,
-  "heroImage": "/assets/img/award-collage.png",
+  "heroImage": "/assets/img/ent-sintonia-03.jpg",
   "gallery": [
-   "/assets/img/award-sintonia.png"
+   "/assets/img/ent-sintonia-01.jpg",
+   "/assets/img/ent-sintonia-02.jpg",
+   "/assets/img/award-collage.png"
   ],
-  "video": ""
+  "video": "",
+  "heroKind": "photo"
  },
  {
   "id": "PRJ-035",
@@ -138,7 +156,7 @@
   "industry": "Entertainment",
   "sector": "Entertainment",
   "onePhraser": "A weeping Narcos crossover film: Pablo Triste",
-  "longDescription": "Launch campaign for Griselda, Netflix's Sofia Vergara series on cocaine trafficker Griselda Blanco, adapted for the Brazilian market. Creative development centered on a character-driven film called \"Pablo Triste\" and a concept tying the show into the Narcos universe, alongside a \"Ficha Criminal\" (criminal record) idea. Original music was researched (Hefty) and composed (Pingado) specifically for the campaign. The Pablo Triste AV reached 14.9M views and 47,459 engagements (0.32% engagement rate). Retrospective learnings flagged friction in OOH vendor management and coordination issues with production house The End.",
+  "longDescription": "Launch campaign for Griselda, Netflix's Sofia Vergara series on cocaine trafficker Griselda Blanco, adapted for the Brazilian market. Creative development centered on a character-driven film called \"Pablo Triste\" and a concept tying the show into the Narcos universe, alongside a \"Ficha Criminal\" (criminal record) idea. Original music was researched (Hefty) and composed (Pingado) specifically for the campaign. The Pablo Triste AV reached 14.9M views and 47,459 engagements (0.32% engagement rate). Retrospective learnings flagged friction in OOH vendor management and coordination issues with production house The End.\n\nThe campaign's AV centrepiece, Pablo Triste, drew 14.9M views and 47,459 engagements.",
   "type": "Launch Campaign",
   "year": "2023–2024",
   "businessUnits": [
@@ -156,7 +174,8 @@
   "order": 4,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-023",
@@ -165,8 +184,8 @@
   "client": "Netflix",
   "industry": "Entertainment",
   "sector": "Entertainment",
-  "onePhraser": "Drone spectacle and prayer-chain stunt for the finale",
-  "longDescription": "Launch campaign for the final season of Alice in Borderland, built to beat S1/S2 conversation volume and ride the momentum of Squid Game S3. Three ideas were approved straight out of Round 1: a drone show over Curitiba, chosen specifically for production feasibility and visual novelty; \"Arisu Vivera,\" a collaboration with the popular account Padre Patrick that leaned into real fandom behavior by staging prayer-chain-style engagement; and Tudum Charts, an interactive platform pitched as a potential permanent Netflix global asset. The drone video hit 10M views on TikTok, becoming one of the most-viewed pieces ever on Netflix Brasil's profile, with unplanned amplification from Curitiba's city government and local press. Not everything landed: Tudum Charts never got a structured rollout, and Padre posted about a Netflix competitor after signing an exclusivity agreement.",
+  "onePhraser": "Three ideas. One round. Ten million views.",
+  "longDescription": "Promoting a season means telling people it exists. Staging a cultural moment means giving them something to participate in.\n\nThree ideas, all approved in the first round. A synchronised drone show over Curitiba — chosen because it was strategically right, not because it was obvious; the activation film passed 10M views on TikTok, among the highest-performing posts in Netflix Brasil's history. Arisu Vivera, a creator activation built on something the fandom had already invented: fans were making their own prayer chains for the characters. We didn't manufacture that behaviour — we gave it a stage. And Tudum Charts, an interactive platform with enough architecture that Netflix's international product teams flagged it as a potential permanent global asset.\n\nCuritiba's city government and local media amplified the drone moment on their own.",
   "type": "Launch Campaign",
   "year": "2025",
   "businessUnits": [
@@ -175,7 +194,13 @@
   "capabilities": [
    "Campaigns"
   ],
-  "deliverables": [],
+  "deliverables": [
+   "Creative Development",
+   "Drone Activation",
+   "Creator Activation",
+   "Interactive Platform",
+   "Social Content"
+  ],
   "credits": "",
   "driveFolder": "",
   "notes": "",
@@ -184,7 +209,8 @@
   "order": 5,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-029",
@@ -193,8 +219,8 @@
   "client": "Netflix",
   "industry": "Entertainment",
   "sector": "Entertainment",
-  "onePhraser": "Swapping film stars for shelter dogs up for adoption",
-  "longDescription": "Launch campaign for the Netflix film Caramelo, run against a hard KPI set from the outset: drive real dog adoptions. The unifying idea, \"Protagonistas,\" put actual shelter dogs in the place of movie posters — professional portrait-style key art of adoptable dogs, an ASMR video with the film's canine cast, a music video for an original IZA track, and a nationwide adoption platform built with Instituto Caramelo, including a dedicated site with real dog profiles and a trending-audio social collab with Iza. Results: 12 real dogs adopted (including a 10-year-old named Bernadete and a three-legged dog nicknamed Caramelo da Upa), a 132% jump in adoption-related searches in week one, 133K+ unique site visits and 180 adoption forms submitted, an ASMR video that passed 15M views, and Caramelo becoming the most-watched Brazilian film in Netflix history, reaching the Top 10 in 90 countries. One approved idea, a platform concept called \"Augoritmos,\" had to be dropped after technical limitations surfaced too late to build a substitute.",
+  "onePhraser": "Netflix replaced its stars with strays. Brazil adopted them.",
+  "longDescription": "Netflix asked us to launch a dog movie. We replaced the stars of seven hit shows with shelter dogs, built a national adoption platform across 15 states, and turned a film launch into a movement.\n\nThe platform: there are encounters that change your life. The line: a friend changes your world. Key art swaps put strays where the celebrities usually are, then an ASMR film, 48 social assets, the adoption site and a music video with IZA carried it out into the country.\n\nCaramelo became the most-watched Brazilian film in Netflix history, Top 10 in 90 countries within two weeks. Searches for animal adoption rose 132% in the first week. The adoption platform drew 133K unique visits and 180 completed forms. The ASMR film passed 15M views; the IZA music video 5.77M across YouTube, Instagram and TikTok. 53 editorial placements followed.\n\nTwelve real dogs found homes, including ten-year-old Bernadete and three-legged Caramelo da Upa. Every one of the 60 dogs that appeared in the film was adopted.",
   "type": "Launch Campaign",
   "year": "2024–2025",
   "businessUnits": [
@@ -203,16 +229,27 @@
   "capabilities": [
    "Campaigns"
   ],
-  "deliverables": [],
+  "deliverables": [
+   "Campaign Concept",
+   "Key Art",
+   "ASMR Film",
+   "Adoption Platform",
+   "Social Content",
+   "Music Video",
+   "PR"
+  ],
   "credits": "",
   "driveFolder": "",
   "notes": "",
   "published": true,
   "featured": true,
   "order": 6,
-  "heroImage": "",
-  "gallery": [],
-  "video": ""
+  "heroImage": "/assets/img/ent-caramelo-01.jpg",
+  "gallery": [
+   "/assets/img/ent-caramelo-02.jpg"
+  ],
+  "video": "",
+  "heroKind": "photo"
  },
  {
   "id": "PRJ-034",
@@ -240,7 +277,8 @@
   "order": 7,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-008",
@@ -262,13 +300,16 @@
   "deliverables": [],
   "credits": "",
   "driveFolder": "",
-  "notes": "",
-  "published": true,
+  "notes": "Unannounced campaign — imagery and copy staged but withheld from the live site. Publish from the admin once the client has announced.",
+  "published": false,
   "featured": true,
   "order": 8,
-  "heroImage": "",
-  "gallery": [],
-  "video": ""
+  "heroImage": "/assets/img/ent-cidade-de-deus-01.jpg",
+  "gallery": [
+   "/assets/img/ent-cidade-de-deus-02.jpg"
+  ],
+  "video": "",
+  "heroKind": "photo"
  },
  {
   "id": "PRJ-048",
@@ -298,7 +339,8 @@
   "gallery": [
    "/assets/img/sound-vol2.jpg"
   ],
-  "video": ""
+  "video": "",
+  "heroKind": "graphic"
  },
  {
   "id": "PRJ-043",
@@ -327,7 +369,8 @@
   "order": 10,
   "heroImage": "/assets/img/sound-vol3.jpg",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": "graphic"
  },
  {
   "id": "PRJ-059",
@@ -357,7 +400,8 @@
   "gallery": [
    "/assets/img/razr-wood.png"
   ],
-  "video": ""
+  "video": "",
+  "heroKind": "photo"
  },
  {
   "id": "PRJ-060",
@@ -385,7 +429,8 @@
   "order": 12,
   "heroImage": "/assets/img/razr-red.png",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": "photo"
  },
  {
   "id": "PRJ-006",
@@ -414,7 +459,8 @@
   "order": 13,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-002",
@@ -443,7 +489,8 @@
   "order": 14,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-003",
@@ -471,7 +518,8 @@
   "order": 102,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-004",
@@ -499,7 +547,8 @@
   "order": 103,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-005",
@@ -527,7 +576,8 @@
   "order": 104,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-007",
@@ -555,7 +605,8 @@
   "order": 106,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-009",
@@ -583,7 +634,8 @@
   "order": 108,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-010",
@@ -611,7 +663,8 @@
   "order": 109,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-011",
@@ -639,9 +692,13 @@
   "published": true,
   "featured": false,
   "order": 110,
-  "heroImage": "",
-  "gallery": [],
-  "video": ""
+  "heroImage": "/assets/img/ent-avatar-02.jpg",
+  "gallery": [
+   "/assets/img/ent-avatar-01.jpg",
+   "/assets/img/ent-avatar-03.jpg"
+  ],
+  "video": "",
+  "heroKind": "photo"
  },
  {
   "id": "PRJ-012",
@@ -671,7 +728,8 @@
   "order": 111,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-013",
@@ -699,7 +757,8 @@
   "order": 112,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-014",
@@ -727,7 +786,8 @@
   "order": 113,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-015",
@@ -755,7 +815,8 @@
   "order": 114,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-016",
@@ -783,7 +844,8 @@
   "order": 115,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-017",
@@ -805,13 +867,14 @@
   "deliverables": [],
   "credits": "",
   "driveFolder": "",
-  "notes": "",
-  "published": true,
+  "notes": "Unannounced campaign — imagery and copy staged but withheld from the live site. Publish from the admin once the client has announced.",
+  "published": false,
   "featured": false,
   "order": 116,
-  "heroImage": "",
+  "heroImage": "/assets/img/ent-12signos-poster.jpg",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": "photo"
  },
  {
   "id": "PRJ-018",
@@ -837,9 +900,12 @@
   "published": true,
   "featured": false,
   "order": 117,
-  "heroImage": "",
-  "gallery": [],
-  "video": ""
+  "heroImage": "/assets/img/ent-takeahike-01.jpg",
+  "gallery": [
+   "/assets/img/ent-takeahike-02.jpg"
+  ],
+  "video": "",
+  "heroKind": "photo"
  },
  {
   "id": "PRJ-019",
@@ -867,7 +933,8 @@
   "order": 118,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-020",
@@ -895,7 +962,8 @@
   "order": 119,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-022",
@@ -923,7 +991,8 @@
   "order": 121,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-024",
@@ -951,7 +1020,8 @@
   "order": 123,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-025",
@@ -979,7 +1049,8 @@
   "order": 124,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-026",
@@ -1007,7 +1078,8 @@
   "order": 125,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-027",
@@ -1035,7 +1107,8 @@
   "order": 126,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-031",
@@ -1063,7 +1136,8 @@
   "order": 130,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-032",
@@ -1091,7 +1165,8 @@
   "order": 131,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-033",
@@ -1119,7 +1194,8 @@
   "order": 132,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-036",
@@ -1147,7 +1223,8 @@
   "order": 135,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-037",
@@ -1176,7 +1253,8 @@
   "order": 136,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-038",
@@ -1205,7 +1283,8 @@
   "order": 137,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-039",
@@ -1234,7 +1313,8 @@
   "order": 138,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-040",
@@ -1262,7 +1342,8 @@
   "order": 139,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-041",
@@ -1290,7 +1371,8 @@
   "order": 140,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-042",
@@ -1319,7 +1401,8 @@
   "order": 141,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-044",
@@ -1348,7 +1431,8 @@
   "order": 143,
   "heroImage": "/assets/img/sound-vol4.jpg",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": "graphic"
  },
  {
   "id": "PRJ-045",
@@ -1377,7 +1461,8 @@
   "order": 144,
   "heroImage": "/assets/img/sound-vol7.jpg",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": "graphic"
  },
  {
   "id": "PRJ-046",
@@ -1405,7 +1490,8 @@
   "order": 145,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-047",
@@ -1434,7 +1520,8 @@
   "order": 146,
   "heroImage": "/assets/img/sound-vol5.jpg",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": "graphic"
  },
  {
   "id": "PRJ-049",
@@ -1462,7 +1549,8 @@
   "order": 148,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-050",
@@ -1490,7 +1578,8 @@
   "order": 149,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-051",
@@ -1518,7 +1607,8 @@
   "order": 150,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-052",
@@ -1547,7 +1637,8 @@
   "order": 151,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-053",
@@ -1576,7 +1667,8 @@
   "order": 152,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-054",
@@ -1604,7 +1696,8 @@
   "order": 153,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-055",
@@ -1632,7 +1725,8 @@
   "order": 154,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-056",
@@ -1660,7 +1754,8 @@
   "order": 155,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-057",
@@ -1688,7 +1783,8 @@
   "order": 156,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-058",
@@ -1716,7 +1812,8 @@
   "order": 157,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  },
  {
   "id": "PRJ-061",
@@ -1744,7 +1841,8 @@
   "order": 160,
   "heroImage": "/assets/img/razr-red.png",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": "photo"
  },
  {
   "id": "PRJ-062",
@@ -1772,7 +1870,8 @@
   "order": 161,
   "heroImage": "/assets/img/razr-wood.png",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": "photo"
  },
  {
   "id": "PRJ-063",
@@ -1800,6 +1899,7 @@
   "order": 162,
   "heroImage": "",
   "gallery": [],
-  "video": ""
+  "video": "",
+  "heroKind": ""
  }
 ]
