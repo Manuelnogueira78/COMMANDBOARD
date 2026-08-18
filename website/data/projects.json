@@ -43,7 +43,8 @@
    "/assets/img/fifa-street.jpg"
   ],
   "video": "/assets/img/fifa-type.mp4",
-  "heroKind": "photo"
+  "heroKind": "photo",
+  "casePage": true
  },
  {
   "id": "PRJ-028",
@@ -78,7 +79,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": true
  },
  {
   "id": "PRJ-021",
@@ -113,7 +115,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": true
  },
  {
   "id": "PRJ-030",
@@ -146,7 +149,8 @@
    "/assets/img/award-collage.png"
   ],
   "video": "",
-  "heroKind": "photo"
+  "heroKind": "photo",
+  "casePage": true
  },
  {
   "id": "PRJ-035",
@@ -175,7 +179,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": true
  },
  {
   "id": "PRJ-023",
@@ -210,7 +215,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": true
  },
  {
   "id": "PRJ-029",
@@ -249,7 +255,8 @@
    "/assets/img/ent-caramelo-02.jpg"
   ],
   "video": "",
-  "heroKind": "photo"
+  "heroKind": "photo",
+  "casePage": true
  },
  {
   "id": "PRJ-034",
@@ -278,7 +285,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": true
  },
  {
   "id": "PRJ-008",
@@ -309,7 +317,8 @@
    "/assets/img/ent-cidade-de-deus-02.jpg"
   ],
   "video": "",
-  "heroKind": "photo"
+  "heroKind": "photo",
+  "casePage": false
  },
  {
   "id": "PRJ-048",
@@ -340,7 +349,8 @@
    "/assets/img/sound-vol2.jpg"
   ],
   "video": "",
-  "heroKind": "graphic"
+  "heroKind": "graphic",
+  "casePage": true
  },
  {
   "id": "PRJ-043",
@@ -370,7 +380,8 @@
   "heroImage": "/assets/img/sound-vol3.jpg",
   "gallery": [],
   "video": "",
-  "heroKind": "graphic"
+  "heroKind": "graphic",
+  "casePage": true
  },
  {
   "id": "PRJ-059",
@@ -401,7 +412,8 @@
    "/assets/img/razr-wood.png"
   ],
   "video": "",
-  "heroKind": "photo"
+  "heroKind": "photo",
+  "casePage": true
  },
  {
   "id": "PRJ-060",
@@ -430,7 +442,8 @@
   "heroImage": "/assets/img/razr-red.png",
   "gallery": [],
   "video": "",
-  "heroKind": "photo"
+  "heroKind": "photo",
+  "casePage": true
  },
  {
   "id": "PRJ-006",
@@ -460,7 +473,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": true
  },
  {
   "id": "PRJ-002",
@@ -490,7 +504,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": true
  },
  {
   "id": "PRJ-003",
@@ -519,7 +534,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-004",
@@ -548,7 +564,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-005",
@@ -577,7 +594,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-007",
@@ -606,7 +624,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-009",
@@ -635,7 +654,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-010",
@@ -664,7 +684,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-011",
@@ -698,7 +719,8 @@
    "/assets/img/ent-avatar-03.jpg"
   ],
   "video": "",
-  "heroKind": "photo"
+  "heroKind": "photo",
+  "casePage": true
  },
  {
   "id": "PRJ-012",
@@ -729,7 +751,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-013",
@@ -758,7 +781,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-014",
@@ -787,7 +811,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-015",
@@ -816,7 +841,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-016",
@@ -845,7 +871,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-017",
@@ -874,7 +901,8 @@
   "heroImage": "/assets/img/ent-12signos-poster.jpg",
   "gallery": [],
   "video": "",
-  "heroKind": "photo"
+  "heroKind": "photo",
+  "casePage": false
  },
  {
   "id": "PRJ-018",
@@ -905,7 +933,8 @@
    "/assets/img/ent-takeahike-02.jpg"
   ],
   "video": "",
-  "heroKind": "photo"
+  "heroKind": "photo",
+  "casePage": true
  },
  {
   "id": "PRJ-019",
@@ -934,7 +963,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-020",
@@ -963,7 +993,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-022",
@@ -992,7 +1023,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-024",
@@ -1021,7 +1053,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-025",
@@ -1050,7 +1083,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-026",
@@ -1079,7 +1113,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-027",
@@ -1108,7 +1143,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-031",
@@ -1137,7 +1173,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-032",
@@ -1166,7 +1203,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-033",
@@ -1195,7 +1233,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-036",
@@ -1224,7 +1263,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-037",
@@ -1254,7 +1294,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-038",
@@ -1284,7 +1325,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-039",
@@ -1314,7 +1356,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-040",
@@ -1343,7 +1386,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-041",
@@ -1372,7 +1416,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-042",
@@ -1402,7 +1447,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-044",
@@ -1432,7 +1478,8 @@
   "heroImage": "/assets/img/sound-vol4.jpg",
   "gallery": [],
   "video": "",
-  "heroKind": "graphic"
+  "heroKind": "graphic",
+  "casePage": false
  },
  {
   "id": "PRJ-045",
@@ -1462,7 +1509,8 @@
   "heroImage": "/assets/img/sound-vol7.jpg",
   "gallery": [],
   "video": "",
-  "heroKind": "graphic"
+  "heroKind": "graphic",
+  "casePage": false
  },
  {
   "id": "PRJ-046",
@@ -1491,7 +1539,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-047",
@@ -1521,7 +1570,8 @@
   "heroImage": "/assets/img/sound-vol5.jpg",
   "gallery": [],
   "video": "",
-  "heroKind": "graphic"
+  "heroKind": "graphic",
+  "casePage": false
  },
  {
   "id": "PRJ-049",
@@ -1550,7 +1600,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-050",
@@ -1579,7 +1630,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-051",
@@ -1608,7 +1660,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-052",
@@ -1638,7 +1691,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-053",
@@ -1668,7 +1722,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-054",
@@ -1697,7 +1752,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-055",
@@ -1726,7 +1782,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-056",
@@ -1755,7 +1812,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-057",
@@ -1784,7 +1842,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-058",
@@ -1813,7 +1872,8 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  },
  {
   "id": "PRJ-061",
@@ -1842,7 +1902,8 @@
   "heroImage": "/assets/img/razr-red.png",
   "gallery": [],
   "video": "",
-  "heroKind": "photo"
+  "heroKind": "photo",
+  "casePage": false
  },
  {
   "id": "PRJ-062",
@@ -1871,7 +1932,8 @@
   "heroImage": "/assets/img/razr-wood.png",
   "gallery": [],
   "video": "",
-  "heroKind": "photo"
+  "heroKind": "photo",
+  "casePage": false
  },
  {
   "id": "PRJ-063",
@@ -1900,6 +1962,7 @@
   "heroImage": "",
   "gallery": [],
   "video": "",
-  "heroKind": ""
+  "heroKind": "",
+  "casePage": false
  }
 ]

@@ -117,18 +117,26 @@ function captionRow(project) {
 }
 
 function archiveCard(p) {
+  /* only elected cases carry a page — the rest stay on the record, unlinked */
+  const tag = p.casePage ? 'a' : 'div';
+  const href = p.casePage ? ` href="/work/${esc(p.slug)}"` : '';
   return `
-<a class="archive-card" href="/work/${esc(p.slug)}" data-filterable data-bu="${esc(p.businessUnits.join('|'))}" data-sector="${esc(p.sector)}" data-caps="${esc(p.capabilities.join('|'))}">
+<${tag} class="archive-card${p.casePage ? '' : ' archive-card--flat'}"${href} data-filterable data-bu="${esc(p.businessUnits.join('|'))}" data-sector="${esc(p.sector)}" data-caps="${esc(p.capabilities.join('|'))}">
   <div class="a-meta">${esc(p.title)}<br>${esc(p.client)}<br>${esc(p.year)}</div>
   <p class="a-quote">&ldquo;${esc(p.onePhraser)}&rdquo;</p>
   ${p.heroImage ? `<div class="a-img"><img src="${esc(p.heroImage)}" alt="${esc(p.title)}" loading="lazy"></div>` : ''}
-</a>`;
+</${tag}>`;
+}
+
+/* index-table cell: link only when there is a case page behind it */
+function indexLink(p, label) {
+  return p.casePage ? `<a href="/work/${esc(p.slug)}">${esc(label)}</a>` : esc(label);
 }
 
 /* ---------- HOME ---------- */
 
 function home({ site, projects, news }) {
-  const feat = projects.filter((p) => p.published && p.featured);
+  const feat = projects.filter((p) => p.published && p.casePage && p.featured);
   const hero = feat[0];
   const interview = news.find((n) => n.slug === 'manuel-nogueira-on-shots');
   const signals = news.find((n) => n.slug === 'matter-into-energy-what-we-care-about');
@@ -281,8 +289,8 @@ function home({ site, projects, news }) {
 function work({ site, projects, query = {} }) {
   /* Work = the curated selection (featured cases). The full body of work lives
      in the Archive and in the index table below. */
-  const selected = projects.filter((p) => p.published && p.featured);
-  const others = projects.filter((p) => p.published && !p.featured);
+  const selected = projects.filter((p) => p.published && p.casePage);
+  const others = projects.filter((p) => p.published && !p.casePage);
   let h = head({ title: 'Work — MATTER+ENERGY', description: site.intros.work, path: '/work' });
   h += masthead(site, { intro: site.intros.work, activePath: '/work' });
   h += nav('/work');
@@ -317,7 +325,7 @@ function work({ site, projects, query = {} }) {
         .map(
           (p) => `<tr data-filterable data-bu="${esc(p.businessUnits.join('|'))}">
         <td class="mono-cell">${esc(p.id)}</td>
-        <td><a href="/work/${esc(p.slug)}">${esc(p.title)}</a></td>
+        <td>${indexLink(p, p.title)}</td>
         <td>${esc(p.client.split(';')[0].split(',')[0])}</td>
         <td>${esc(p.sector)}</td>
         <td>${esc(p.type)}</td>
@@ -459,6 +467,22 @@ function newsArticle({ site, item: n, next }) {
         if (b.type === 'h2') return `<h2>${esc(b.text)}</h2>`;
         if (b.type === 'quote') return `<blockquote>${esc(b.text)}</blockquote>`;
         if (b.type === 'caption') return `<p class="caption">${esc(b.text)}</p>`;
+        if (b.type === 'video') {
+          return `<div class="article-video"><video src="${esc(b.src)}"${b.poster ? ` poster="${esc(b.poster)}"` : ''} controls muted loop playsinline preload="metadata"></video>${
+            b.text ? `<p class="caption">${esc(b.text)}</p>` : ''
+          }</div>`;
+        }
+        /* reels keep their 9:16 crop — the format they were shot in.
+           A reel without a file yet renders a labelled slot, never a broken frame. */
+        if (b.type === 'reels') {
+          return `<div class="reel-grid">${(b.items || [])
+            .map((r) => `<figure class="reel">${
+              r.src
+                ? `<video src="${esc(r.src)}"${r.poster ? ` poster="${esc(r.poster)}"` : ''} controls muted loop playsinline preload="metadata"></video>`
+                : `<div class="reel-slot">${esc(r.slot || 'Reel — file pending')}</div>`
+            }${r.caption ? `<figcaption>${esc(r.caption)}</figcaption>` : ''}</figure>`)
+            .join('')}</div>`;
+        }
         return `<p>${esc(b.text)}</p>`;
       })
       .join('\n    ')}
@@ -554,7 +578,7 @@ ${a.images && a.images.pair ? `<section class="wrap"><div class="two-up">${a.ima
         .map(
           (p) => `<tr>
         <td class="mono-cell">${esc(p.id)}</td>
-        <td><a href="/work/${esc(p.slug)}">${esc(p.client.split(';')[0].split(',')[0])}</a></td>
+        <td>${indexLink(p, p.client.split(';')[0].split(',')[0])}</td>
         <td>${esc(p.sector)}</td>
         <td>&ldquo;${esc(p.onePhraser)}&rdquo;</td>
         <td>${esc(p.type)}</td>
@@ -619,7 +643,7 @@ function buPage({ site, bu, projects }) {
      take PHOTOGRAPHY only — typographic covers crop badly at that scale, so
      they go to the mosaic and the archive cards instead. */
   const all = [...featured, ...rest];
-  const photos = all.filter((p) => p.heroImage && p.heroKind !== 'graphic');
+  const photos = all.filter((p) => p.heroImage && p.heroKind !== 'graphic' && p.casePage);
   const buHeroSrc = bu.heroVideo || bu.heroImage || '';
 
   const slots = [];
@@ -705,7 +729,7 @@ function buPage({ site, bu, projects }) {
         .map(
           (p) => `<tr>
         <td class="mono-cell">${esc(p.id)}</td>
-        <td><a href="/work/${esc(p.slug)}">${esc(p.client.split(';')[0].split(',')[0])}</a></td>
+        <td>${indexLink(p, p.client.split(';')[0].split(',')[0])}</td>
         <td>${esc(p.sector)}</td>
         <td>&ldquo;${esc(p.onePhraser)}&rdquo;</td>
         <td>${esc(p.type)}</td>

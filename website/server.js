@@ -136,7 +136,7 @@ function slugify(t) {
 
 const PROJECT_FIELDS = ['title', 'client', 'industry', 'sector', 'onePhraser', 'longDescription', 'type', 'year',
   'businessUnits', 'capabilities', 'deliverables', 'credits', 'driveFolder', 'notes', 'published', 'featured',
-  'order', 'heroImage', 'gallery', 'video'];
+  'order', 'heroImage', 'gallery', 'video', 'casePage', 'heroKind'];
 
 function sanitizeProject(input, existing = {}) {
   const p = { ...existing };
@@ -145,7 +145,7 @@ function sanitizeProject(input, existing = {}) {
     let v = input[f];
     if (['businessUnits', 'capabilities', 'deliverables', 'gallery'].includes(f)) {
       v = Array.isArray(v) ? v.map(String) : String(v).split(/[;,]/).map((s) => s.trim()).filter(Boolean);
-    } else if (['published', 'featured'].includes(f)) {
+    } else if (['published', 'featured', 'casePage'].includes(f)) {
       v = Boolean(v);
     } else if (f === 'order') {
       v = Number(v) || 0;
@@ -220,7 +220,7 @@ async function handleAPI(req, res, url) {
     if (!body || !body.title || !body.client) return sendJSON(res, 400, { error: 'Title and client are required.' });
     const projects = store.projects;
     const proj = sanitizeProject(body, {
-      published: false, featured: false, order: 1000, heroImage: '', gallery: [], video: '',
+      published: false, featured: false, casePage: false, heroKind: '', order: 1000, heroImage: '', gallery: [], video: '',
       businessUnits: [], capabilities: [], deliverables: [], credits: '', driveFolder: '', notes: '',
       industry: '', sector: '', onePhraser: '', longDescription: '', type: '', year: '',
     });
@@ -291,7 +291,7 @@ const server = http.createServer(async (req, res) => {
     if (p === '/sitemap.xml') {
       const base = 'https://matter-energy.com';
       const urls = ['/', '/work', '/archive', '/news', '/about']
-        .concat(store.projects.filter((x) => x.published).map((x) => `/work/${x.slug}`))
+        .concat(store.projects.filter((x) => x.published && x.casePage).map((x) => `/work/${x.slug}`))
         .concat(store.news.filter((x) => x.published).map((x) => `/news/${x.slug}`));
       const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
         .map((u) => `  <url><loc>${base}${u}</loc></url>`)
@@ -330,9 +330,9 @@ const server = http.createServer(async (req, res) => {
 
     const caseMatch = p.match(/^\/work\/([a-z0-9-]+)$/);
     if (caseMatch) {
-      const published = projects.filter((x) => x.published);
+      const published = projects.filter((x) => x.published && x.casePage);
       const proj = projects.find((x) => x.slug === caseMatch[1]);
-      if (proj && proj.published) {
+      if (proj && proj.published && proj.casePage) {
         const idx = published.findIndex((x) => x.slug === proj.slug);
         const next = published[(idx + 1) % published.length];
         return send(res, 200, T.workCase({ site, project: proj, next: next && next.slug !== proj.slug ? next : null }));

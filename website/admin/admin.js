@@ -88,7 +88,8 @@
         '<td class="hide-sm">' + esc(p.sector) + '</td>' +
         '<td class="hide-sm">' + esc(p.year) + '</td>' +
         '<td><span class="pill ' + (p.published ? 'on' : 'off') + '">' + (p.published ? 'Published' : 'Hidden') + '</span> ' +
-        (p.featured ? '<span class="pill on">Featured</span>' : '') + '</td>' +
+        (p.featured ? '<span class="pill on">Featured</span> ' : '') +
+        (p.casePage ? '<span class="pill on">Case page</span>' : '<span class="pill off">Listed only</span>') + '</td>' +
         '<td class="actions">' +
         '<button class="btn-ghost" data-act="edit" data-slug="' + esc(p.slug) + '">Edit</button>' +
         '<button class="btn-ghost" data-act="toggle" data-slug="' + esc(p.slug) + '">' + (p.published ? 'Hide' : 'Publish') + '</button>' +
@@ -186,6 +187,7 @@
       '<div class="checks">' +
       '<label><input type="checkbox" name="published" ' + (p.published ? 'checked' : '') + '> Published</label>' +
       '<label><input type="checkbox" name="featured" ' + (p.featured ? 'checked' : '') + '> Featured (landing + top of Work)</label>' +
+      '<label><input type="checkbox" name="casePage" ' + (p.casePage ? 'checked' : '') + '> Has a case page</label>' +
       '<label style="max-width:130px"><input type="number" name="order" value="' + esc(p.order) + '" style="width:80px"> Order</label>' +
       '</div>' +
       '<div class="drawer-actions">' +
@@ -214,7 +216,8 @@
             longDescription: f.longDescription.value.trim(), deliverables: f.deliverables.value,
             credits: f.credits.value.trim(), heroImage: f.heroImage.value.trim(), video: f.video.value.trim(),
             gallery: f.gallery.value, driveFolder: f.driveFolder.value.trim(), notes: f.notes.value.trim(),
-            published: f.published.checked, featured: f.featured.checked, order: Number(f.order.value) || 1000,
+            published: f.published.checked, featured: f.featured.checked, casePage: f.casePage.checked,
+            order: Number(f.order.value) || 1000,
           };
           if (!body.title || !body.client) { toast('Title and client are required.'); return; }
           var req = isNew

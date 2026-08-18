@@ -550,3 +550,54 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 @media (max-width: 720px) {
   .mosaic { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+
+/* archive cards without a case page behind them: on the record, not clickable */
+.archive-card--flat { cursor: default; }
+.archive-card--flat:hover .a-meta { text-decoration: none; }
+
+/* ============================================================
+   REELS — vertical video, the format they were shot in
+   ============================================================ */
+.reel-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--col-gap);
+  padding: clamp(24px, 3vw, 48px) 0;
+}
+.reel { margin: 0; }
+.reel video, .reel img {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  background: var(--black);
+}
+.reel figcaption {
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+  color: var(--muted);
+  margin-top: 8px;
+  line-height: 1.5;
+}
+.reel-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 9 / 16;
+  background: var(--black);
+  color: rgba(255, 255, 255, 0.7);
+  font-family: var(--mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.7;
+}
+.article-body .content .reel-grid { margin-left: 0; }
+@media (max-width: 900px) { .reel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* a single inline video inside an article */
+.article-video { padding: clamp(20px, 2.4vw, 40px) 0; }
+.article-video video { width: 100%; height: auto; background: var(--black); }
