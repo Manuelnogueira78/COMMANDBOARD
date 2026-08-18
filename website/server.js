@@ -49,6 +49,9 @@ const store = {
 
 const SESSION_TTL = 1000 * 60 * 60 * 8; // 8h
 const sessions = new Map(); // token -> {email, expires}
+const loginAttempts = new Map(); // ip -> [timestamps]
+const LOGIN_WINDOW = 1000 * 60 * 10; // 10 min
+const LOGIN_MAX_ATTEMPTS = 8;
 
 function hashPassword(password, salt) {
   salt = salt || crypto.randomBytes(16).toString('hex');
@@ -161,12 +164,21 @@ async function handleAPI(req, res, url) {
   const p = url.pathname;
 
   if (p === '/api/login' && method === 'POST') {
+    const ip = req.socket.remoteAddress || 'unknown';
+    const now = Date.now();
+    const attempts = (loginAttempts.get(ip) || []).filter((t) => now - t < LOGIN_WINDOW);
+    if (attempts.length >= LOGIN_MAX_ATTEMPTS) {
+      return sendJSON(res, 429, { error: 'Too many attempts. Try again in a few minutes.' });
+    }
     const body = await readJSONBody(req);
     if (!body || !body.email || !body.password) return sendJSON(res, 400, { error: 'Email and password required.' });
     const user = store.users.find((u) => u.email.toLowerCase() === String(body.email).toLowerCase());
     if (!user || !verifyPassword(String(body.password), user)) {
+      attempts.push(now);
+      loginAttempts.set(ip, attempts);
       return sendJSON(res, 401, { error: 'Invalid credentials.' });
     }
+    loginAttempts.delete(ip);
     const token = createSession(user.email);
     res.setHeader('Set-Cookie', `me_session=${token}; HttpOnly; Path=/; SameSite=Strict; Max-Age=${SESSION_TTL / 1000}`);
     return sendJSON(res, 200, { ok: true, user: { email: user.email, name: user.name, mustChangePassword: !!user.mustChangePassword } });
@@ -276,9 +288,20 @@ const server = http.createServer(async (req, res) => {
     /* static assets */
     if (p.startsWith('/assets/')) return serveStatic(res, PUBLIC, p);
     if (p === '/favicon.ico') return serveStatic(res, PUBLIC, '/assets/logo/icon-matter-black.png');
+    if (p === '/sitemap.xml') {
+      const base = 'https://matter-energy.com';
+      const urls = ['/', '/work', '/archive', '/news', '/about']
+        .concat(store.projects.filter((x) => x.published).map((x) => `/work/${x.slug}`))
+        .concat(store.news.filter((x) => x.published).map((x) => `/news/${x.slug}`));
+      const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls
+        .map((u) => `  <url><loc>${base}${u}</loc></url>`)
+        .join('\n')}\n</urlset>\n`;
+      return send(res, 200, xml, { 'Content-Type': 'application/xml; charset=utf-8' });
+    }
     if (p === '/robots.txt') {
-      const hidden = store.bus.filter((b) => b.hidden).map((b) => `Disallow: /${b.slug}`).join('\n');
-      return send(res, 200, `User-agent: *\nAllow: /\nDisallow: /admin\n${hidden}\n`, { 'Content-Type': 'text/plain' });
+      /* Ghost verticals are deliberately NOT listed here — a Disallow line would
+         reveal the URL. They carry <meta name="robots" content="noindex"> instead. */
+      return send(res, 200, `User-agent: *\nAllow: /\nDisallow: /admin\nSitemap: https://matter-energy.com/sitemap.xml\n`, { 'Content-Type': 'text/plain' });
     }
 
     /* admin */

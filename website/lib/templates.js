@@ -11,7 +11,7 @@ const nl2p = (s = '') =>
 
 /* ---------- shared partials ---------- */
 
-function head({ title, description = '', noindex = false, path = '/' }) {
+function head({ title, description = '', noindex = false, path = '/', image = '' }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,6 +21,12 @@ function head({ title, description = '', noindex = false, path = '/' }) {
 <meta name="description" content="${esc(description)}">
 ${noindex ? '<meta name="robots" content="noindex, nofollow">' : ''}
 <link rel="canonical" href="https://matter-energy.com${esc(path)}">
+<meta property="og:title" content="${esc(title)}">
+<meta property="og:description" content="${esc(description)}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://matter-energy.com${esc(path)}">
+${image ? `<meta property="og:image" content="https://matter-energy.com${esc(image)}">` : ''}
+<meta name="twitter:card" content="${image ? 'summary_large_image' : 'summary'}">
 <link rel="icon" type="image/png" href="/assets/logo/icon-matter-black.png">
 <link rel="stylesheet" href="/assets/css/site.css">
 </head>
@@ -147,7 +153,7 @@ function home({ site, projects, news }) {
     stripPlain[0], stripImaged[0], stripPlain[1], stripPlain[2], stripImaged[1], stripPlain[3],
   ].filter(Boolean);
 
-  let h = head({ title: 'MATTER+ENERGY — A Storehouse of Creative Energy', description: site.brand.manifestoLeft, path: '/' });
+  let h = head({ title: 'MATTER+ENERGY — A Storehouse of Creative Energy', description: site.brand.manifestoLeft, path: '/', image: hero && hero.heroImage });
   h += masthead(site, { intro: site.intros.home, activePath: '' });
   h += nav('/');
   h += `
@@ -327,6 +333,7 @@ function workCase({ site, project: p, next }) {
     title: `${p.title} — MATTER+ENERGY`,
     description: p.onePhraser,
     path: `/work/${p.slug}`,
+    image: p.heroImage,
   });
   h += `
 <header class="case-head wrap">
@@ -427,7 +434,7 @@ function news({ site, news }) {
 }
 
 function newsArticle({ site, item: n, next }) {
-  let h = head({ title: `${n.title} — MATTER+ENERGY`, description: n.excerpt, path: `/news/${n.slug}` });
+  let h = head({ title: `${n.title} — MATTER+ENERGY`, description: n.excerpt, path: `/news/${n.slug}`, image: n.image });
   h += masthead(site, { intro: n.intro || n.excerpt, activePath: '' });
   h += nav('/news');
   h += `<section class="article-hero ${n.heroFit === 'contain' ? 'article-hero--contain' : ''} wrap"><div class="hero-frame"><img src="${esc(n.image)}" alt="${esc(n.title)}"></div></section>`;
