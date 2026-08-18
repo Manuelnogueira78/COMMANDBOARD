@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Dashboard — MATTER+ENERGY Admin</title>
+<link rel="icon" type="image/png" href="/assets/logo/icon-matter-black.png">
+<link rel="stylesheet" href="/assets/css/site.css">
+<link rel="stylesheet" href="/admin/admin.css">
+</head>
+<body class="admin-body">
+<header class="admin-top">
+  <a class="wordmark" href="/" target="_blank" rel="noopener">MATTER+ENERGY</a>
+  <div class="who">
+    <span id="who-email"></span>
+    <button class="btn-ghost" id="btn-password">Password</button>
+    <button class="btn-ghost" id="btn-logout">Log out</button>
+  </div>
+</header>
+
+<main class="admin-main">
+  <div class="admin-tabs" role="tablist">
+    <button class="active" data-tab="projects" role="tab">Projects</button>
+    <button data-tab="news" role="tab">News</button>
+    <button data-tab="bus" role="tab">Verticals</button>
+  </div>
+
+  <section id="tab-projects" role="tabpanel">
+    <div class="admin-toolbar">
+      <button class="btn-ghost" id="btn-new-project">+ Add project</button>
+      <input type="search" id="project-search" placeholder="Search title, client, sector…" aria-label="Search projects">
+      <select id="project-filter" aria-label="Filter by state" style="max-width:200px">
+        <option value="">All states</option>
+        <option value="published">Published</option>
+        <option value="hidden">Hidden</option>
+        <option value="featured">Featured</option>
+      </select>
+      <span class="admin-count" id="project-count"></span>
+    </div>
+    <div style="overflow-x:auto">
+      <table class="admin-table" id="project-table">
+        <thead>
+          <tr><th>ID</th><th>Title</th><th class="hide-sm">Client</th><th class="hide-sm">Sector</th><th class="hide-sm">Year</th><th>State</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tab-news" role="tabpanel" hidden>
+    <div class="admin-toolbar"><span class="admin-count" id="news-count"></span></div>
+    <div style="overflow-x:auto">
+      <table class="admin-table" id="news-table">
+        <thead><tr><th>ID</th><th>Category</th><th>Title</th><th>State</th><th>Actions</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="tab-bus" role="tabpanel" hidden>
+    <div class="admin-toolbar"><span class="admin-count" id="bus-count"></span></div>
+    <div style="overflow-x:auto">
+      <table class="admin-table" id="bus-table">
+        <thead><tr><th>ID</th><th>Vertical</th><th>Positioning</th><th>URL</th><th>Visibility</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <p class="mono mono-muted" style="margin-top:18px">Vertical ghost pages are hidden from navigation, marked noindex, and excluded from robots.txt. Share the URL directly with stakeholders.</p>
+  </section>
+</main>
+
+<div id="drawer-root"></div>
+<script src="/admin/admin.js" defer></script>
+</body>
+</html>

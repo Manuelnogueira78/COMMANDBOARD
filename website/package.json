@@ -1,0 +1,12 @@
+{
+  "name": "matter-energy-website",
+  "version": "1.0.0",
+  "description": "MATTER+ENERGY — official website + admin (zero-dependency Node.js)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js 3000"
+  },
+  "engines": { "node": ">=16" },
+  "private": true
+}
