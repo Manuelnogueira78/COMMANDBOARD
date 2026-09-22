@@ -77,7 +77,7 @@ Frase:         Real life gives you one take.
 A posição:     Every film is a moment that could go wrong, and one feature that keeps the character in control of it.
 O que fizemos: Three 15-second films, each carrying one feature and each ending on the snap shut. In Perfect Shot, a palm gesture starts Photo Booth Mode and catches the winning pool shot as it happens. In Underwater, a woman dives in with her Razr still clipped to her swimsuit, flips it open, and the party carries on. In Flat Tire, two friends stuck on an empty road follow Gemini's step-by-step help with the Razr standing on the car, and change the tire together.
 Status:        The third chapter of Make It Iconic, after two batches that built Razr's character.
-Créditos:      Directed by Manuel Nogueira. Production with MAGMA.
+Créditos:      Production with MAGMA.
 ```
 
 ```
@@ -173,7 +173,7 @@ O problema:    Razr's name was famous, but for a lot of people it was the phone 
 A posição:     Nobody waits for the red carpet to be iconic. The more ordinary the place, the louder the presence.
 O que fizemos: Six films across two batches, each turning an everyday place into a stage. An office walked like a runway. A skater weaving through a traffic jam to make the train. A woman walking a Bengal cat through the city. A full-court shot from a beach chair. A drum solo in an instrument shop. A surprise party the guest ends up running. Every film ends on the same gesture, the Razr snapping shut: I lived it, I captured it, I'm back in the moment.
 Status:        The platform ran into a third chapter, One Take.
-Créditos:      First batch directed by Manuel Nogueira. Production with MAGMA.
+Créditos:      Production with MAGMA.
 Entra: filmes Work, Roller Skating, Cat Lady, Full Court, Drummer, Surprise + key visuals -> LINK PENDENTE (Jessica Pereira)
 ```
 
