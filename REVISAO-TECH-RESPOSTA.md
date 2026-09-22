@@ -52,7 +52,6 @@ A posição:     The World Cup is not an event, it is a call. And Motorola is th
 O que fizemos: "Football is Calling": the global platform, a 60-second hero film and the campaign system around it. Three moments where logic loses, on a Moto G, a Razr and an Edge, each one ending on the same screen: Incoming call, FIFA World Cup. The brand picks up with the sound that made it famous. Hello Moto. Regional cuts say "soccer" in North America and "football" everywhere else, and the system carries into product stories, social, retail and product experiences.
 Status:        The tournament closed in July 2026. Results are being consolidated with Motorola.
 Texto longo:   Every day, life tells us to be sensible. Save money. Get some sleep. Keep away from the other team. Every four years, a louder voice gets through. Life says save for the future. You hear go for it. Life says roll with your people. You hear everyone's your people. Life says take it easy. You hear take the moment. A sponsor usually puts its logo next to the passion. This platform puts the brand inside it: the phone is not a list of features, it is the thing that rings.
-Créditos:      Creative and platform, São Paulo and New York. Production with MAGMA.
 ```
 
 ```
@@ -77,7 +76,6 @@ Frase:         Real life gives you one take.
 A posição:     Every film is a moment that could go wrong, and one feature that keeps the character in control of it.
 O que fizemos: Three 15-second films, each carrying one feature and each ending on the snap shut. In Perfect Shot, a palm gesture starts Photo Booth Mode and catches the winning pool shot as it happens. In Underwater, a woman dives in with her Razr still clipped to her swimsuit, flips it open, and the party carries on. In Flat Tire, two friends stuck on an empty road follow Gemini's step-by-step help with the Razr standing on the car, and change the tire together.
 Status:        The third chapter of Make It Iconic, after two batches that built Razr's character.
-Créditos:      Production with MAGMA.
 ```
 
 ```
@@ -107,7 +105,6 @@ A posição:     Nobody joins a scene by buying the right thing. Someone asks th
 O que fizemos: The Crew, a documentary series about three real creators shot with their real friends. Rafaella Braga goes from São Paulo street graffiti to Berlin galleries and comes back to paint with the people who believed in her first. Le Nomad, a DJ raised in eleven cities, makes Madrid home through music. Kazane Shimazaki turns Tokyo laundromats and arcades into a stage for his freestyle crew. The phone is never demonstrated. It gets tossed, passed around, knocked off an amp and dropped in a sink, then used again.
 Status:        Are You In? continues in the Moto G franchise playbook MATTER now leads for Motorola.
 Texto longo:   Self expression looks like a solo act. It almost never is. Behind every artist there is a crew that saw them first: the friends who showed up to the first gig, held the ladder, shared the post. A phone priced for everyone is the phone the whole crew can carry.
-Créditos:      Production with MAGMA.
 ```
 
 ```
@@ -120,7 +117,6 @@ A posição:     Every brand gets the colour the same morning. Only one phone ge
 O que fizemos: The Lightness of Being turns Cloud Dancer from a shade into a sensation. Two dancers move through a studio of sky and drifting veils, and the phone is the only solid element in the room. Editorial stills, tabletop product shots, looping product films, dance vignettes and a making-of, with the Swarovski charm as an accessory inside the Pantone world. Everything released at the reveal on 4 December 2025.
 Status:        Motorola's fourth consecutive year as Pantone's official smartphone partner.
 Texto longo:   A colour on a swatch is just a code, and nobody falls in love with a code. We fall for how a colour makes us feel. The feelings we chase most have no weight at all: a breath, a drift, the second before a dancer lands.
-Créditos:      Production with MAGMA.
 ```
 
 ```
@@ -173,7 +169,6 @@ O problema:    Razr's name was famous, but for a lot of people it was the phone 
 A posição:     Nobody waits for the red carpet to be iconic. The more ordinary the place, the louder the presence.
 O que fizemos: Six films across two batches, each turning an everyday place into a stage. An office walked like a runway. A skater weaving through a traffic jam to make the train. A woman walking a Bengal cat through the city. A full-court shot from a beach chair. A drum solo in an instrument shop. A surprise party the guest ends up running. Every film ends on the same gesture, the Razr snapping shut: I lived it, I captured it, I'm back in the moment.
 Status:        The platform ran into a third chapter, One Take.
-Créditos:      Production with MAGMA.
 Entra: filmes Work, Roller Skating, Cat Lady, Full Court, Drummer, Surprise + key visuals -> LINK PENDENTE (Jessica Pereira)
 ```
 
