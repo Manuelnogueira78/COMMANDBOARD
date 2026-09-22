@@ -28,7 +28,9 @@ Base: o documento `/tech` de 22 set 2026, cruzado com o Case Study Index do Noti
 4. **Proof (secção 4)**: `proof[2]` passa de Razr e Edge para Kunumi, para a página não provar só um cliente. O texto está abaixo.
 5. **Clientes (secção 12)**: Google, Meta, Deutsche Telekom e Visa não têm trabalho MATTER Tech registado. Saem. Voltam só se houver engagement MATTER assinado. Parceiros das campanhas Motorola (Pantone, Swarovski, Bose, FIFA) não são clientes e não entram.
 6. **Casos Razr**: se o template suportar ligação entre cases ("capítulo anterior / seguinte"), ligar make-it-iconic → batch-3. Se não suportar, a ordem do ponto 1 resolve.
-7. **Números Motorola** (proof[0] e rebranding): confirmar que +20%, best-ever 2024 e #1 flip são números públicos (Lenovo/Motorola). O texto abaixo já os atribui à Motorola, sem dizer que são resultado nosso.
+7. **Página /tech, o que fica como está**: positioning, offer (h1, turn, sub, pov), start.firstStep, positioningHeadline, sections[0], sections[2] e capabilities[0] estão certos e publicam.
+   Motivos das mudanças: a tese dizia que a prática "happened first" em Tech, mas Entertainment tem muito mais história. Agora a tese diz o que Tech tem de próprio. "Without a re-shoot" aparecia três vezes e fica só em sections[2]. O modelo de pagamento agora reflete como vendemos de facto: playbook de franquia anual mais projetos (Motorola) e retainer (Kunumi). Eventos entram nas capacidades por causa do case Kunumi.
+8. **Números Motorola** (proof[0] e rebranding): confirmar que +20%, best-ever 2024 e #1 flip são números públicos (Lenovo/Motorola). O texto abaixo já os atribui à Motorola, sem dizer que são resultado nosso.
 
 ---
 
@@ -42,6 +44,12 @@ proof[2]:         **Kunumi** One evening at ICLR 2026 in Rio became an ongoing e
 heroCaption:      Motorola and Kunumi, 2024 to 2026: brand systems and the launches that run on them.
 sections[1].copy: Brand platform, verbal identity, franchise playbooks, films, key visuals and product imagery, all inside one system. Every launch of the year speaks the same language, and each one teaches the next. Motorola's Edge and Moto G franchise playbooks, its FIFA World Cup platform and its Razr films run this way.
 clients:          Motorola · Kunumi
+thesis:           A studio is a team we built so many times for one industry that the practice earned a name. In technology, that practice is the launch: many products, many markets, one argument that holds all year.
+start.fromYou:    **From you** The product roadmap for the year, the markets that matter, and access to your last three launches.
+start.fromUs:     **From us** A position on the problem, then one modular launch system that every release of the year runs on.
+start.howYouPay:  **How you pay** A system for the year, then each launch inside it. Or a retainer, when the work is a presence rather than a calendar.
+sections[3].copy: A brand people can describe in a sentence, a launch system that compounds through the year, and a person who stays answerable for the position after delivery. In every market, the buyer finds the brand they came for.
+capabilities[1]:  **Launches** Global campaigns · Product films · Regional product imagery · Retail and OOH · Events and experiences · Social content
 ```
 
 ```
@@ -130,6 +138,13 @@ This is the same year AI models won a gold medal at the International Mathematic
 ---
 
 ## === IMAGENS ===
+
+```
+/tech
+Sai:   sections[2].media[0] fig-748d13fb.mp4 (é o filme do Edge, não mostra imagem adaptada por região)
+Entra: antes e depois de uma imagem de produto adaptada por mercado, do GX8 Gallery Shoot -> LINK PENDENTE (Jessica Pereira)
+Nota:  até existir esse material, o filme do Edge fica.
+```
 
 ```
 /work/fifa-world-cup-2026
