@@ -93,4 +93,4 @@ Atenção: o Alcione Cantando pode não ser o vídeo oficial que está no YouTub
 - `ONEPIECE_CHICO_CASE_FullHD.mp4` (148MB): https://drive.google.com/file/d/1LpqI1kwvaNXO0_0CTAWlBtgAO7nCkXTm/view
 - `ONEPIECE_CHICO_CASE_ INTEGRATED 0608_FULLHD.mp4` (212MB): https://drive.google.com/file/d/1PVafkwWsMgKGgDA2tbQLlyl3JIuYUx50/view
 
-Se o site já usa o `ent-onepiece-case.mp4`, este é o mesmo material.
+O site já tem um `ent-onepiece-case.mp4` (20MB, versão web). Pode ser o mesmo vídeo-case: comparar antes de trocar.
