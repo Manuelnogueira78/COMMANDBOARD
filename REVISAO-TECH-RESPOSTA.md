@@ -38,7 +38,7 @@ Base: o documento `/tech` de 22 set 2026, cruzado com o Case Study Index do Noti
 
 ```
 /tech
-team:             Fernando Prado, Director, Tech, São Paulo · Jessica Pereira, Account, Technology, Rio de Janeiro
+offer.sub:        A global brand system and the launches that run on it: platform, film, product imagery per region, retail and social. Every asset inside the system. Every launch signed by the people who started the work with you.
 proof[0]:         **Motorola** Since the system began: +20% year on year, Motorola's best-ever smartphone sales in 2024, and #1 flip phone in North America and Latin America.
 proof[2]:         **Kunumi** One evening at ICLR 2026 in Rio became an ongoing editorial and cultural partnership with the AI institute.
 heroCaption:      Motorola and Kunumi, 2024 to 2026: brand systems and the launches that run on them.
@@ -49,6 +49,7 @@ start.fromYou:    **From you** The product roadmap for the year, the markets tha
 start.fromUs:     **From us** A position on the problem, then one modular launch system that every release of the year runs on.
 start.howYouPay:  **How you pay** A system for the year, then each launch inside it. Or a retainer, when the work is a presence rather than a calendar.
 sections[3].copy: A brand people can describe in a sentence, a launch system that compounds through the year, and a person who stays answerable for the position after delivery. In every market, the buyer finds the brand they came for.
+sections[3].title: The people who start the work with you are the people who stay with it.
 capabilities[1]:  **Launches** Global campaigns · Product films · Regional product imagery · Retail and OOH · Events and experiences · Social content
 ```
 
