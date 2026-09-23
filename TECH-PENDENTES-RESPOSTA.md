@@ -74,3 +74,20 @@ Se o template só aceita media em `sections[2]`, subir o mosaico (secção 8) pa
 ## 7. Fora de Tech
 
 Nexxus, Spotify Creme, Palome, a decisão de analytics e o push não são de Tech. Ficam com os donos.
+
+## 8. Resultados e PR do rebrand (pesquisa de 23 set)
+
+**Não há clipping nem deck de resultados do rebrand.** O que existe:
+
+| O quê | O que é | Link |
+|---|---|---|
+| `[EXT] MATTER_PR_MOTOROLA - Brand Guidelines, Final, Nov 28 2025.pdf` (85MB) | O brand book final entregue no projeto Brand VI. Melhor fonte de identidade do que o guideline de cards do ponto 1: usar este primeiro | https://drive.google.com/file/d/1HNVtOZ11NvfXCW9gt_j5Wi0D9_R4xLAt/view |
+| Figma "MATTER - Motorola Brandbook - PR Story" | A história de PR do rebrand, preparada para a Jessica (For The Right Reasons) | https://www.figma.com/slides/3zbayPgv5u4zVV7puYkHhl/MATTER---Motorola-Brandbook---PR-Story |
+| `MATTER+Energy, PR Pipeline` | Linha 2, "Brand VI": ângulos como o sprint de cinco dias em Lake Como. Sem press release e sem cobertura registada | https://docs.google.com/spreadsheets/d/1K6lM8BfWjDUfu09S2rzsob4CkPKmn9RXTVqOZUO9ixY/edit |
+| `Matter × Motorola` (abril 2026) | Dados públicos de mercado com fontes (LatAm #2 com cerca de 20% de share; NA #1 em flip e prepaid; 50% do mercado de foldables nos EUA). É desempenho da Motorola, não resultado da MATTER | https://docs.google.com/document/d/15AW0ZjBy6JBehL4tNongO5c9spb2xjaeCB6D2iucXG0/edit |
+| `On What Motorola Is Building` (maio 2026) | Pesquisa própria sobre como o público lê a marca: 2.694 posts em 7 línguas. Tem citações de consumidores, não métricas de campanha | https://docs.google.com/document/d/1y5tn17kqW5CqkyQVWyDBgGPO0chXEiza3EQR80tQcvE/edit |
+
+**Para o site:**
+- O case do rebrand foi criado a partir de um deck "Matter_Credentials_Branding (Feb 26)" que não aparece no Drive com esse nome. Pedir o ficheiro a quem montou o site em agosto.
+- O número atual (+20%, best-ever 2024, #1 flip) é da Motorola. Fica atribuído à Motorola, como está no texto novo.
+- Não usar os documentos internos da Motorola que aparecem no Drive (KPI deck de 2023, BrandPulse Australia). São confidenciais e são de antes do rebrand.
