@@ -34,11 +34,10 @@ Entra: fotos do sprint de Lake Como, se aprovadas pela Motorola -> pasta "2024_L
 === NOTAS (não publicar) ===
 
 1. **"O número" sai e entra "Status".** O brand book foi entregue no fim de 2025. Os números de 2024 são contexto e ficam em "O problema", como força da marca, não como resultado deste trabalho.
-2. **Confirmar com a Motorola antes de publicar:** o essence (Play With Possible), a persona (The True Original) e o nome Motosans vêm de um documento interno do cliente. Se algum não puder ser público, cortar a frase inteira em vez de a reescrever.
-3. **Porto Rocha:** o crédito diz "Identity design with Porto Rocha", que é o que fizeram (identidade, tipografia e guidelines, a partir da estratégia e da voz com a MATTER). Avisar a Porto Rocha antes de publicar.
-4. **Fontes:**
+2. **Porto Rocha:** o crédito diz "Identity design with Porto Rocha", que é o que fizeram (identidade, tipografia e guidelines, a partir da estratégia e da voz com a MATTER). Avisar a Porto Rocha antes de publicar.
+3. **Fontes:**
    - "Best-ever smartphone sales in 2024" e "#1 flip in North America" são números públicos da Motorola/Lenovo.
    - "Growing lead in foldables" resume os 50% de foldables nos EUA do doc Matter × Motorola (abril 2026). Se o número exato for usado, citar a fonte.
-5. **O que ficou fora de propósito:**
+4. **O que ficou fora de propósito:**
    - O brief original falava de identidade "fragmentada" e de uma marca pouco conhecida pela geração mais nova. Isso é real, mas é a voz interna do cliente. O texto diz a mesma coisa pelo lado da ambição, não da falha.
    - Nenhum fee, nenhuma citação de cliente (as notas são transcrições automáticas, não verificadas), nenhum nome de pessoa da Motorola.
