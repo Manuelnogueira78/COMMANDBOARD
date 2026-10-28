@@ -444,8 +444,8 @@ footer .mono { color: var(--ink-3); }
 
     <footer>
       <div class="topline" style="border:0;padding:0">
-        <span class="mono">DRAFTS ONLY · NOTHING SENDS WITHOUT MANUEL'S CONFIRMATION</span>
-        <span class="mono">RUNS AS MANUEL · READS ONLY WHAT MANUEL CAN SEE</span>
+        <span class="mono">DRAFTS ONLY · NOTHING SENDS WITHOUT THE CEO'S CONFIRMATION</span>
+        <span class="mono">RUNS AS THE CEO · READS ONLY WHAT THE CEO CAN SEE</span>
       </div>
     </footer>
   </div>
@@ -476,7 +476,7 @@ footer .mono { color: var(--ink-3); }
    Loaded as a plain <script> so the board opens from file://
    with no server and no CORS.
 
-   PRIVACY: derived from PRIVATE Slack channels Manuel can access.
+   PRIVACY: derived from PRIVATE Slack channels the CEO can access.
    Comp/salary figures are deliberately abstracted out of this
    committed mirror. See README › Privacy.
 
@@ -499,10 +499,10 @@ window.MATTER_STORE = {
 
   config: {
     owners: {
-      joao:    { name: "João Calazans", role: "CCO · creative / pitch / client", slack: "U0B7MAZKMQB" },
-      ju:      { name: "Ju Fernandes",  role: "COO · ops / budget / hiring / institutional", slack: "U088KN7SG69" },
-      matheus: { name: "Matheus",       role: "CTO · AI / systems / infra / knowledge base", slack: "U04JDFQ1BTQ" },
-      me:      { name: "Manuel",        role: "CEO", slack: "U04JH5V4405" }
+      cco:     { name: "CCO", role: "creative / pitch / client" },
+      coo:     { name: "COO", role: "ops / budget / hiring / institutional" },
+      cto:     { name: "CTO", role: "AI / systems / infra / knowledge base" },
+      me:      { name: "CEO", role: "CEO" }
     },
     lexicon: {
       fire:       ["pegando fogo", "mais uma semana de fire", "muita coisa ao mesmo tempo", "to meio sumido", "ritmo muito devagar"],
@@ -530,7 +530,7 @@ window.MATTER_STORE = {
     {
       id: "itm-content-strategist", item: "Content Strategist — fechar contratação",
       type: "task", stage: "live", domain: "operations / people",
-      owner: "ju", assignee: "Louise", origin: "ju",
+      owner: "coo", assignee: "Louise", origin: "coo",
       ask: "Fechar Content Strategist e decidir se entra +1 especialista no sprint",
       date: "2026-06-23", createdAt: "2026-06-09T12:48:00-03:00",
       scope: "Brand Comms", constraint_flags: [], blocked_by: null,
@@ -539,7 +539,7 @@ window.MATTER_STORE = {
     {
       id: "itm-sprint-date", item: "Sprint de estratégia — fechar data + briefar Roberta",
       type: "task", stage: "hold", domain: "operations",
-      owner: "ju", assignee: "Ju Fernandes", origin: "ju",
+      owner: "coo", assignee: "COO", origin: "coo",
       ask: "Fechar a data do sprint e briefar Roberta",
       date: null, createdAt: "2026-06-09T12:48:00-03:00",
       scope: "Brand Comms", constraint_flags: [], blocked_by: "itm-content-strategist",
@@ -548,7 +548,7 @@ window.MATTER_STORE = {
     {
       id: "itm-sprint-prework", item: "Prework do sprint de estratégia",
       type: "task", stage: "hold", domain: "operations",
-      owner: "ju", assignee: "Louise", origin: "ju",
+      owner: "coo", assignee: "Louise", origin: "coo",
       ask: "Preparar o prework do sprint",
       date: null, createdAt: "2026-06-09T12:48:00-03:00",
       scope: "Brand Comms", constraint_flags: [], blocked_by: "itm-sprint-date",
@@ -557,7 +557,7 @@ window.MATTER_STORE = {
     {
       id: "itm-nb-conversion", item: "New Business: foco em conversão (não no deck)",
       type: "task", stage: "pre-decision", domain: "commercial",
-      owner: null, assignee: null, origin: "manuel",
+      owner: null, assignee: null, origin: "me",
       ask: "Gather reads: quantas reuniões novas e apresentações de BU estamos realmente conseguindo",
       date: null, createdAt: "2026-05-19T05:26:00-03:00",
       scope: "New Business", constraint_flags: ["C1"], blocked_by: null,
@@ -566,7 +566,7 @@ window.MATTER_STORE = {
     {
       id: "itm-constellation", item: "Constellation — timeline revisada",
       type: "task", stage: "hold", domain: "creative / client",
-      owner: "joao", assignee: "Fernando Prado", origin: "manuel",
+      owner: "cco", assignee: "Fernando Prado", origin: "me",
       ask: "Revisar a timeline quando o briefing oficial do cliente chegar",
       date: null, createdAt: "2025-12-01T09:25:00-03:00",
       scope: "Moto / Constellation", constraint_flags: ["C3"],
@@ -576,7 +576,7 @@ window.MATTER_STORE = {
     {
       id: "itm-hinge-feedback", item: "RFP Hinge — capturar aprendizado da perda",
       type: "task", stage: "pre-decision", domain: "commercial",
-      owner: "matheus", assignee: "Matheus", origin: "matheus",
+      owner: "cto", assignee: "CTO", origin: "cto",
       ask: "Gather reads: feedback da Gabbi sobre o que faltou, para a conversão dos próximos",
       date: null, createdAt: "2026-02-24T04:50:00-03:00",
       scope: "New Business", constraint_flags: [], blocked_by: null,
@@ -603,7 +603,7 @@ window.MATTER_STORE = {
     {
       id: "heat-nb-conversion", what: "New Business: conversão vs. deck",
       scope: "New Business", itemId: "itm-nb-conversion",
-      why: "Manuel abriu a frente (19/mai): <b>o objetivo é conversão</b>, não o deck. Sem métrica de reuniões/apresentações ainda.",
+      why: "O CEO abriu a frente (19/mai): <b>o objetivo é conversão</b>, não o deck. Sem métrica de reuniões/apresentações ainda.",
       signals: { velocity: 3, altitude: 5, client: 4, slippage: 2, stall: 3 },
       cid: "C08QGHMBNCT"
     },
@@ -663,9 +663,9 @@ window.MATTER_STORE = {
   // ---- DOMAIN → OWNER routing (the OWNER MAP from the spec) ----
   // returns { ownerKey, reason } or { ownerKey:null } => pre-decision
   const DOMAIN_RULES = [
-    { key: "joao",    domain: "creative",   re: /\b(criativ|creative|pitch|deck|posicion|positioning|campanh|campaign|brand|client|cliente|cmo|apresenta|narrativ|copy|art)\b/i },
-    { key: "ju",      domain: "operations", re: /\b(oper|budget|or[çc]ament|hiring|contrat|vaga|timeline|prazo|cronograma|institu|process|financ|contrat|legal|RH|people)\b/i },
-    { key: "matheus", domain: "ai/systems", re: /\b(\bAI\b|\bIA\b|tool|ferramenta|system|sistema|t[ée]cnic|technical|infra|knowledge\s?base|base de conhecimento|automat|pipeline|integra|API|dado|data|dashboard|c[óo]digo|code)\b/i },
+    { key: "cco",     domain: "creative",   re: /\b(criativ|creative|pitch|deck|posicion|positioning|campanh|campaign|brand|client|cliente|cmo|apresenta|narrativ|copy|art)\b/i },
+    { key: "coo",     domain: "operations", re: /\b(oper|budget|or[çc]ament|hiring|contrat|vaga|timeline|prazo|cronograma|institu|process|financ|contrat|legal|RH|people)\b/i },
+    { key: "cto",     domain: "ai/systems", re: /\b(\bAI\b|\bIA\b|tool|ferramenta|system|sistema|t[ée]cnic|technical|infra|knowledge\s?base|base de conhecimento|automat|pipeline|integra|API|dado|data|dashboard|c[óo]digo|code)\b/i },
   ];
 
   // explicit name mentions win over keyword inference (you named a person)
@@ -700,7 +700,7 @@ window.MATTER_STORE = {
     return { domain: dom, ownerKey: hits[0].key, secondaryKey: hits[1].key, crosses: true };
   }
 
-  function ownerName(key) { return (OWNERS[key] && OWNERS[key].name) || (key === "me" ? "Manuel" : "unassigned"); }
+  function ownerName(key) { return (OWNERS[key] && OWNERS[key].name) || (key === "me" ? "CEO" : "unassigned"); }
   function ownerRole(key) { return (OWNERS[key] && OWNERS[key].role) || ""; }
 
   // ---- THE GATE — the single enforced invariant ----
@@ -782,7 +782,7 @@ window.MATTER_STORE = {
   function detectStructuralFlags(items, heat) {
     const out = [];
     const live = items.filter(i => i.type === "task" && i.stage === "live");
-    const byMe = items.filter(i => i.origin === "manuel");
+    const byMe = items.filter(i => i.origin === "me");
 
     // FLAG 1 — ORPHAN: heat with no matching Item
     (heat || []).forEach(h => {
@@ -1022,7 +1022,7 @@ window.MATTER_STORE = {
 
   // 4 — LIVE ITEMS by owner
   function sec_live(live) {
-    const keys = ["joao", "ju", "matheus", "me"];
+    const keys = ["cco", "coo", "cto", "me"];
     const groups = keys.map(k => {
       const its = live.filter(i => i.owner === k);
       const over = its.length >= E.TH.owner_overload_k;
@@ -1153,7 +1153,7 @@ window.MATTER_STORE = {
         <label class="field"><span class="fl">Owner</span>
           <select class="fi" id="f-owner">
             <option value="">— unassigned (pre-decision)</option>
-            ${["joao", "ju", "matheus", "me"].map(k => `<option value="${k}" ${c.ownerKey === k ? "selected" : ""}>${esc(E.ownerName(k))} — ${esc(E.ownerRole(k))}</option>`).join("")}
+            ${["cco", "coo", "cto", "me"].map(k => `<option value="${k}" ${c.ownerKey === k ? "selected" : ""}>${esc(E.ownerName(k))} — ${esc(E.ownerRole(k))}</option>`).join("")}
           </select></label>`;
       $("#f-owner").onchange = e => pipe.data.ownerKey = e.target.value || null;
       nav(true, () => { pipe.step = pipe.data.ownerKey ? 2 : 3; renderStep(); }); // skip bypass interrupt if unassigned
@@ -1278,7 +1278,7 @@ window.MATTER_STORE = {
 
   function saveThought() {
     const item = { id: pipe.id, item: pipe.raw, raw: pipe.raw, type: "thought", stage: "thought",
-      origin: "manuel", createdAt: new Date().toISOString() };
+      origin: "me", createdAt: new Date().toISOString() };
     const g = E.gateCheck(item);
     if (!g.ok) { flash(g.errs[0]); return; }
     persist(item); closeIntake(); flash("Labeled as a thought. Stored. No owner, no ask, no date."); render();
@@ -1291,7 +1291,7 @@ window.MATTER_STORE = {
       type: "task", stage: d.stage || "live", domain: d.domain || null,
       owner: d.ownerKey || null, secondary_owner: d.secondaryKey || null, assignee: null,
       ask: d.ask || null, date: d.date || null, blocked_by: d.blocked_by || null,
-      constraint_flags: d.constraint_flags || [], origin: "manuel", createdAt: new Date().toISOString(), reads: []
+      constraint_flags: d.constraint_flags || [], origin: "me", createdAt: new Date().toISOString(), reads: []
     };
     const g = E.gateCheck(item);
     if (!g.ok) { flash("Gate refused: " + g.errs[0]); return; }

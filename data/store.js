@@ -9,7 +9,7 @@
    Loaded as a plain <script> so the board opens from file://
    with no server and no CORS.
 
-   PRIVACY: derived from PRIVATE Slack channels Manuel can access.
+   PRIVACY: derived from PRIVATE Slack channels the CEO can access.
    Comp/salary figures are deliberately abstracted out of this
    committed mirror. See README › Privacy.
 
@@ -32,10 +32,10 @@ window.MATTER_STORE = {
 
   config: {
     owners: {
-      joao:    { name: "João Calazans", role: "CCO · creative / pitch / client", slack: "U0B7MAZKMQB" },
-      ju:      { name: "Ju Fernandes",  role: "COO · ops / budget / hiring / institutional", slack: "U088KN7SG69" },
-      matheus: { name: "Matheus",       role: "CTO · AI / systems / infra / knowledge base", slack: "U04JDFQ1BTQ" },
-      me:      { name: "Manuel",        role: "CEO", slack: "U04JH5V4405" }
+      cco:     { name: "CCO", role: "creative / pitch / client" },
+      coo:     { name: "COO", role: "ops / budget / hiring / institutional" },
+      cto:     { name: "CTO", role: "AI / systems / infra / knowledge base" },
+      me:      { name: "CEO", role: "CEO" }
     },
     lexicon: {
       fire:       ["pegando fogo", "mais uma semana de fire", "muita coisa ao mesmo tempo", "to meio sumido", "ritmo muito devagar"],
@@ -63,7 +63,7 @@ window.MATTER_STORE = {
     {
       id: "itm-content-strategist", item: "Content Strategist — fechar contratação",
       type: "task", stage: "live", domain: "operations / people",
-      owner: "ju", assignee: "Louise", origin: "ju",
+      owner: "coo", assignee: "Louise", origin: "coo",
       ask: "Fechar Content Strategist e decidir se entra +1 especialista no sprint",
       date: "2026-06-23", createdAt: "2026-06-09T12:48:00-03:00",
       scope: "Brand Comms", constraint_flags: [], blocked_by: null,
@@ -72,7 +72,7 @@ window.MATTER_STORE = {
     {
       id: "itm-sprint-date", item: "Sprint de estratégia — fechar data + briefar Roberta",
       type: "task", stage: "hold", domain: "operations",
-      owner: "ju", assignee: "Ju Fernandes", origin: "ju",
+      owner: "coo", assignee: "COO", origin: "coo",
       ask: "Fechar a data do sprint e briefar Roberta",
       date: null, createdAt: "2026-06-09T12:48:00-03:00",
       scope: "Brand Comms", constraint_flags: [], blocked_by: "itm-content-strategist",
@@ -81,7 +81,7 @@ window.MATTER_STORE = {
     {
       id: "itm-sprint-prework", item: "Prework do sprint de estratégia",
       type: "task", stage: "hold", domain: "operations",
-      owner: "ju", assignee: "Louise", origin: "ju",
+      owner: "coo", assignee: "Louise", origin: "coo",
       ask: "Preparar o prework do sprint",
       date: null, createdAt: "2026-06-09T12:48:00-03:00",
       scope: "Brand Comms", constraint_flags: [], blocked_by: "itm-sprint-date",
@@ -90,7 +90,7 @@ window.MATTER_STORE = {
     {
       id: "itm-nb-conversion", item: "New Business: foco em conversão (não no deck)",
       type: "task", stage: "pre-decision", domain: "commercial",
-      owner: null, assignee: null, origin: "manuel",
+      owner: null, assignee: null, origin: "me",
       ask: "Gather reads: quantas reuniões novas e apresentações de BU estamos realmente conseguindo",
       date: null, createdAt: "2026-05-19T05:26:00-03:00",
       scope: "New Business", constraint_flags: ["C1"], blocked_by: null,
@@ -99,7 +99,7 @@ window.MATTER_STORE = {
     {
       id: "itm-constellation", item: "Constellation — timeline revisada",
       type: "task", stage: "hold", domain: "creative / client",
-      owner: "joao", assignee: "Fernando Prado", origin: "manuel",
+      owner: "cco", assignee: "Fernando Prado", origin: "me",
       ask: "Revisar a timeline quando o briefing oficial do cliente chegar",
       date: null, createdAt: "2025-12-01T09:25:00-03:00",
       scope: "Moto / Constellation", constraint_flags: ["C3"],
@@ -109,7 +109,7 @@ window.MATTER_STORE = {
     {
       id: "itm-hinge-feedback", item: "RFP Hinge — capturar aprendizado da perda",
       type: "task", stage: "pre-decision", domain: "commercial",
-      owner: "matheus", assignee: "Matheus", origin: "matheus",
+      owner: "cto", assignee: "CTO", origin: "cto",
       ask: "Gather reads: feedback da Gabbi sobre o que faltou, para a conversão dos próximos",
       date: null, createdAt: "2026-02-24T04:50:00-03:00",
       scope: "New Business", constraint_flags: [], blocked_by: null,
@@ -136,7 +136,7 @@ window.MATTER_STORE = {
     {
       id: "heat-nb-conversion", what: "New Business: conversão vs. deck",
       scope: "New Business", itemId: "itm-nb-conversion",
-      why: "Manuel abriu a frente (19/mai): <b>o objetivo é conversão</b>, não o deck. Sem métrica de reuniões/apresentações ainda.",
+      why: "O CEO abriu a frente (19/mai): <b>o objetivo é conversão</b>, não o deck. Sem métrica de reuniões/apresentações ainda.",
       signals: { velocity: 3, altitude: 5, client: 4, slippage: 2, stall: 3 },
       cid: "C08QGHMBNCT"
     },

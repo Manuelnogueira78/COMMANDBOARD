@@ -148,7 +148,7 @@
 
   // 4 — LIVE ITEMS by owner
   function sec_live(live) {
-    const keys = ["joao", "ju", "matheus", "me"];
+    const keys = ["cco", "coo", "cto", "me"];
     const groups = keys.map(k => {
       const its = live.filter(i => i.owner === k);
       const over = its.length >= E.TH.owner_overload_k;
@@ -279,7 +279,7 @@
         <label class="field"><span class="fl">Owner</span>
           <select class="fi" id="f-owner">
             <option value="">— unassigned (pre-decision)</option>
-            ${["joao", "ju", "matheus", "me"].map(k => `<option value="${k}" ${c.ownerKey === k ? "selected" : ""}>${esc(E.ownerName(k))} — ${esc(E.ownerRole(k))}</option>`).join("")}
+            ${["cco", "coo", "cto", "me"].map(k => `<option value="${k}" ${c.ownerKey === k ? "selected" : ""}>${esc(E.ownerName(k))} — ${esc(E.ownerRole(k))}</option>`).join("")}
           </select></label>`;
       $("#f-owner").onchange = e => pipe.data.ownerKey = e.target.value || null;
       nav(true, () => { pipe.step = pipe.data.ownerKey ? 2 : 3; renderStep(); }); // skip bypass interrupt if unassigned
@@ -404,7 +404,7 @@
 
   function saveThought() {
     const item = { id: pipe.id, item: pipe.raw, raw: pipe.raw, type: "thought", stage: "thought",
-      origin: "manuel", createdAt: new Date().toISOString() };
+      origin: "me", createdAt: new Date().toISOString() };
     const g = E.gateCheck(item);
     if (!g.ok) { flash(g.errs[0]); return; }
     persist(item); closeIntake(); flash("Labeled as a thought. Stored. No owner, no ask, no date."); render();
@@ -417,7 +417,7 @@
       type: "task", stage: d.stage || "live", domain: d.domain || null,
       owner: d.ownerKey || null, secondary_owner: d.secondaryKey || null, assignee: null,
       ask: d.ask || null, date: d.date || null, blocked_by: d.blocked_by || null,
-      constraint_flags: d.constraint_flags || [], origin: "manuel", createdAt: new Date().toISOString(), reads: []
+      constraint_flags: d.constraint_flags || [], origin: "me", createdAt: new Date().toISOString(), reads: []
     };
     const g = E.gateCheck(item);
     if (!g.ok) { flash("Gate refused: " + g.errs[0]); return; }

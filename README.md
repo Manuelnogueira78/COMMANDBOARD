@@ -27,7 +27,7 @@ so you don't have to remember to.
 Double-click **`index.html`** — it runs in the browser with no server and no
 build step. State persists in two places:
 
-- **Notion** (`Manuel's Super Brain › MATTER Command Board`) — the canonical
+- **Notion** (private workspace › `MATTER Command Board`) — the canonical
   store, three databases: Items, Flags, Heat. This is the board's memory across
   sessions.
 - **`data/store.js`** — a committed mirror of the last scan, so the page renders
@@ -41,7 +41,7 @@ A static page in your browser cannot call the Slack or Notion MCP servers
 directly; those run through Claude (the agent). So:
 
 ```
-   Slack (private channels, as Manuel)
+   Slack (private channels, as the CEO)
         │  agent scans + scores
         ▼
    Notion  ◀── canonical store (Items / Flags / Heat)
@@ -68,9 +68,9 @@ The agent re-scans Slack live, re-scores, rewrites the Notion store and
 
 | Domain | Owner |
 |---|---|
-| creative / pitch / client | **João Calazans** — CCO |
-| ops / budget / hiring / institutional | **Ju Fernandes** — COO |
-| AI / systems / infra / knowledge base | **Matheus** — CTO |
+| creative / pitch / client | **CCO** |
+| ops / budget / hiring / institutional | **COO** |
+| AI / systems / infra / knowledge base | **CTO** |
 | crosses two | primary named, secondary cc'd |
 | no owner yet | unassigned → pre-decision |
 
@@ -93,7 +93,7 @@ any matched domain owner is the secondary cc. Override anytime in the intake.
 
 ## Guardrails (non-negotiable)
 
-- Runs as Manuel's account; reads only what Manuel can already see. Not surveillance.
+- Runs as the CEO's account; reads only what the CEO can already see. Not surveillance.
 - **Drafts** messages; never sends without explicit per-message confirmation.
 - Nothing goes wide (leadership/BU) without a named human reviewer — including
   the board's own outputs.
