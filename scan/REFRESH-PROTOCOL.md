@@ -1,13 +1,13 @@
 # Refresh Protocol — how the agent re-scans and re-syncs
 
 The board's data plane runs through Claude (the agent), because a static page
-cannot call the Slack/Notion MCP servers. When Manuel says **"refresh the
+cannot call the Slack/Notion MCP servers. When the CEO says **"refresh the
 board"**, **"what's hot"**, or **"commit the board"**, run this protocol.
 
 ## Scope & ethics (read first, every time)
-- Run as Manuel's account. Read only channels/DMs Manuel can access.
-- Never read a channel the agent is in but Manuel is not.
-- **Draft only.** Never send a Slack message without Manuel's explicit
+- Run as the CEO's account. Read only channels/DMs the CEO can access.
+- Never read a channel the agent is in but the CEO is not.
+- **Draft only.** Never send a Slack message without the CEO's explicit
   per-message confirmation.
 - Thin evidence → surface less. Never inflate a weak signal into a flag.
 - Keep comp/salary specifics OUT of `data/store.js` and the Notion store.
@@ -44,15 +44,15 @@ Notion databases (`data/store.js › meta.notion`):
 1. **Heat** is a fresh snapshot each scan — create new Heat rows with today's
    `Snapshot`. (Older snapshots stay as history.)
 2. **Flags** — upsert by (Code + subject). Mark `cleared`/`converted` per
-   Manuel; never auto-resolve.
+   the CEO; never auto-resolve.
 3. **Items** — upsert by title/id. Items carry history (created, routed, moved,
    closed), so "pre-decision for N days" stays computable.
 4. Regenerate **`data/store.js`** to mirror the current Notion state (same shape),
    then the page renders the new scan. Commit it.
 
 ## D. COMMIT staged intake
-When Manuel says "commit the board", read the staged items he typed into the
-board (these live in browser localStorage; he can paste them or describe them),
+When the CEO says "commit the board", read the staged items they typed into the
+board (these live in browser localStorage; they can paste them or describe them),
 create matching Items pages in Notion, and fold them into `data/store.js`.
 
 ## Schedule

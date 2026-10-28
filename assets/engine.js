@@ -32,9 +32,9 @@
   // ---- DOMAIN → OWNER routing (the OWNER MAP from the spec) ----
   // returns { ownerKey, reason } or { ownerKey:null } => pre-decision
   const DOMAIN_RULES = [
-    { key: "joao",    domain: "creative",   re: /\b(criativ|creative|pitch|deck|posicion|positioning|campanh|campaign|brand|client|cliente|cmo|apresenta|narrativ|copy|art)\b/i },
-    { key: "ju",      domain: "operations", re: /\b(oper|budget|or[çc]ament|hiring|contrat|vaga|timeline|prazo|cronograma|institu|process|financ|contrat|legal|RH|people)\b/i },
-    { key: "matheus", domain: "ai/systems", re: /\b(\bAI\b|\bIA\b|tool|ferramenta|system|sistema|t[ée]cnic|technical|infra|knowledge\s?base|base de conhecimento|automat|pipeline|integra|API|dado|data|dashboard|c[óo]digo|code)\b/i },
+    { key: "cco",     domain: "creative",   re: /\b(criativ|creative|pitch|deck|posicion|positioning|campanh|campaign|brand|client|cliente|cmo|apresenta|narrativ|copy|art)\b/i },
+    { key: "coo",     domain: "operations", re: /\b(oper|budget|or[çc]ament|hiring|contrat|vaga|timeline|prazo|cronograma|institu|process|financ|contrat|legal|RH|people)\b/i },
+    { key: "cto",     domain: "ai/systems", re: /\b(\bAI\b|\bIA\b|tool|ferramenta|system|sistema|t[ée]cnic|technical|infra|knowledge\s?base|base de conhecimento|automat|pipeline|integra|API|dado|data|dashboard|c[óo]digo|code)\b/i },
   ];
 
   // explicit name mentions win over keyword inference (you named a person)
@@ -69,7 +69,7 @@
     return { domain: dom, ownerKey: hits[0].key, secondaryKey: hits[1].key, crosses: true };
   }
 
-  function ownerName(key) { return (OWNERS[key] && OWNERS[key].name) || (key === "me" ? "Manuel" : "unassigned"); }
+  function ownerName(key) { return (OWNERS[key] && OWNERS[key].name) || (key === "me" ? "CEO" : "unassigned"); }
   function ownerRole(key) { return (OWNERS[key] && OWNERS[key].role) || ""; }
 
   // ---- THE GATE — the single enforced invariant ----
@@ -151,7 +151,7 @@
   function detectStructuralFlags(items, heat) {
     const out = [];
     const live = items.filter(i => i.type === "task" && i.stage === "live");
-    const byMe = items.filter(i => i.origin === "manuel");
+    const byMe = items.filter(i => i.origin === "me");
 
     // FLAG 1 — ORPHAN: heat with no matching Item
     (heat || []).forEach(h => {
