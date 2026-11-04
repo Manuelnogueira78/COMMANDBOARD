@@ -1,48 +1,58 @@
-A gente cresce perto do cliente.
-Perto do cliente, a gente escuta antes de apresentar.
-Escutando antes, a gente volta com a resposta que ele ainda não pediu.
-A resposta que ele não pediu é a que ele lembra.
-E o que ele lembra decide quem ele chama de novo.
+We grow close to the client.
+Close to the client, we listen before we present.
+Listening first, we come back with the answer they haven't asked for yet.
+The answer they didn't ask for is the one they remember.
+And what they remember decides who they call again.
 
-Essa semana foi assim. Um workshop presencial virou um briefing novo. Uma conversa antes da apresentação foi feita para abrir os próximos projetos.
+This week was like that. An in-person workshop turned into a new brief. A conversation before a presentation was set up to open the next projects.
 
-Chamar de novo é confiança.
-Confiança se ganha no acabamento.
-No acabamento, o prazo apertado cumprido, sem atraso.
-Sem atraso, e bonito.
-Bonito como a gente se veste quando quer ser bem percebido.
+Being called again is trust.
+Trust is earned in the finish.
+In the finish: the tight deadline met, nothing late.
+Nothing late, and beautiful.
+Beautiful the way we dress when we want to be seen well.
 
-Quanto melhor a gente se veste, melhor a gente é percebido. Vale para pessoa e vale para trabalho.
+The better we dress, the better we are perceived. That holds for people, and it holds for work.
 
-Bem percebido, a gente vai mais longe.
-Mais longe é outro país, outra regra, outra cultura.
-Uma regra local barrou uma ideia essa semana, e o time adaptou em dias.
-Em dias, porque estava preparado.
-Preparado, nenhuma fronteira é um muro.
+Seen well, we go further.
+Further is another country, another rule, another culture.
+This week a local rule blocked an idea, and the team adapted in days.
+In days, because they were prepared.
+Prepared, no frontier is a wall.
 
-A fronteira que a gente menos atravessa fica entre nós.
-Entre nós, a resposta sobre trabalhar junto foi a mesma essa semana: nada.
-Nada, entre pessoas que têm o número uma da outra.
-Temos diretores de arte, redatores e estrategistas muito bons resolvendo problemas parecidos para clientes diferentes. Por que a gente conversa tão pouco entre pares?
-Manda o trabalho para um colega que não está no teu projeto antes de mandar para o cliente. Pergunta como ele resolveria. Pergunta mais.
+The frontier we cross least is the one between us.
+Between us, this week, the answer about working together was: nothing.
+Nothing, between people who have each other's numbers.
+We have very good art directors, writers and strategists solving similar problems for different clients. Why don't we talk more between peers?
+Send your work to a colleague outside your project before it goes to the client. Ask how they would solve it.
 
-Penso muito em fases.
+I think a lot about phases.
 
-Sinto saudade do meu filho bebê. Pequeno, aprendendo a rir. Andava no meu colo com o bracinho no meu ombro, depois dormia em mim. Precisava de mim pra tudo.
-Sinto saudade dele com 3 anos. Com 4. Com 8.
-Vou sentir saudade dos 10 também.
-E nem imagino o que ele vai ser com 18. Quanta coisa incrível vai acontecer, pra depois terminar também. Pra eu sentir saudade de novo.
+I miss my son as a baby. Small, learning to laugh. Carried in my arms with his little arm on my shoulder, then asleep on me. Needing me for everything.
+I miss him at 3. At 4. At 8.
+I will miss him at 10 too.
+And I can't imagine who he will be at 18. So many incredible things will happen, and then they will end too. So I can miss him again.
 
-Isso é ruim? Ou é assim que é viver?
+Is that bad? Or is that what living is?
 
-Lidar com o crescimento é lidar com mudança. Com boas notícias e com coisas que não acontecem mais. Com dores que passaram e com piadas que não têm mais graça. Uma noite de sono, finalmente. Até que não se durma de novo.
+Dealing with growth is dealing with change. With good news and with things that don't happen anymore. With pains that passed and jokes that aren't funny anymore. A full night's sleep, finally. Until the sleepless nights come back.
 
-Ninguém chora quando uma lagarta vira borboleta. A lagarta deixou de existir, e as duas são uma coisa só. A borboleta vai morrer também. E a lagarta talvez fosse mais linda que a borboleta. Mas é assim, né?
+Nobody cries when a caterpillar becomes a butterfly. The caterpillar is gone, and the two are one and the same. The butterfly will die too. And maybe the caterpillar was more beautiful than the butterfly. But that's how it is, right?
 
-A MATTER vai passar por fases. Eu também. Cada um de nós. Crescer não é acumular. É dar camadas, densidade, e aceitar que algumas formas ficam para trás.
+I have been talking a lot about, and taking care of, a part of MATTER called GROWTH. As you know me, that means understanding how much growth has to do with time.
+Growing is continuing.
+Continuing, caring for what we nurtured.
+Caring for what we have, while it changes.
+Changing, and still standing over time, in small increments.
 
-Talvez seja menos sobre crescer, mais sobre continuar sendo.
-Continuar sendo perto do cliente.
-Perto do cliente, cuidando do acabamento.
-Cuidando do acabamento, indo longe.
-Indo longe, e perguntando para quem está do lado.
+Anyone who has built a sandcastle learns this early. The quick castle, the one without structure, gets lost. So you learn the fundamentals. The base. The process. Structure and potential are tied together: the higher you want to build, the stronger the base has to be, and you have to calculate it carefully.
+
+MATTER will go through phases. So will I. So will each of us. Growing is not piling up. It is adding layers, density, and accepting that some shapes stay behind.
+
+Maybe it is less about growing and more about continuing to be.
+
+And seeing how beautiful what already exists is. Because all of it is. It could simply not exist.
+Knowing how to see.
+Seeing, knowing how to care.
+Caring, and continuing.
+Continuing, growing.
