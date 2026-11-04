@@ -1,17 +1,39 @@
-Li todos os sinais da semana. Três coisas se repetem nos três estúdios.
+A gente cresce perto do cliente.
+Perto do cliente, a gente escuta antes de apresentar.
+Escutando antes, a gente volta com a resposta que ele ainda não pediu.
+A resposta que ele não pediu é a que ele lembra.
+E o que ele lembra decide quem ele chama de novo.
 
-A primeira é presença. Os melhores resultados vieram de quem foi até o cliente. Um workshop presencial virou um briefing novo. Outra conversa, feita antes da apresentação, já foi pensada para aproximar o cliente e abrir os próximos projetos. A Edição 01 terminou perguntando se o trabalho precisava da gente lá. Precisa. Cliente percebe quem aparece, escuta e volta com uma resposta antes de alguém pedir.
+Essa semana foi assim. Um workshop presencial virou um briefing novo. Uma conversa antes da apresentação foi feita para abrir os próximos projetos.
 
-A segunda é acabamento. Os elogios de cliente essa semana falaram de cuidado: entregar num prazo apertado, sem atraso, e chegar bonito. Eu acredito que quanto melhor a gente se veste, melhor a gente é percebido. Vale para o trabalho. O esforço extra no fim do processo é o que o cliente lembra quando decide quem chamar de novo.
+Chamar de novo é confiança.
+Confiança se ganha no acabamento.
+No acabamento, o prazo apertado cumprido, sem atraso.
+Sem atraso, e bonito.
+Bonito como a gente se veste quando quer ser bem percebido.
 
-A terceira é alcance. Abrimos uma conversa em outro país e estamos trabalhando para um cliente fora do Brasil. Quando uma regra local impediu uma ideia, o time adaptou em dias e seguiu. Nenhuma fronteira é um muro. A gente pode ir para onde quiser, desde que vá preparado.
+Quanto melhor a gente se veste, melhor a gente é percebido. Vale para pessoa e vale para trabalho.
 
-Por trás das três está a mesma coisa: cliente é ouro. Produto excelente, criativo, bonito e que chega nas pessoas certas é o que mantém o cliente perto, e cliente perto é o que faz a gente crescer. Crescimento é um jeito de trabalhar, todo dia, em cada entrega.
+Bem percebido, a gente vai mais longe.
+Mais longe é outro país, outra regra, outra cultura.
+Uma regra local barrou uma ideia essa semana, e o time adaptou em dias.
+Em dias, porque estava preparado.
+Preparado, nenhuma fronteira é um muro.
 
-Agora o que eu quero mudar. Quando perguntei sobre trabalho entre unidades, os três estúdios responderam a mesma coisa: nada essa semana.
+A fronteira que a gente menos atravessa fica entre os nossos estúdios.
+Entre os estúdios, a resposta sobre trabalho conjunto foi a mesma nos três: nada essa semana.
+Nada, entre pessoas que têm o número uma da outra.
+Temos diretores de arte, redatores e estrategistas muito bons resolvendo problemas parecidos para clientes diferentes. Por que a gente conversa tão pouco entre pares?
+Manda o trabalho para alguém de outro estúdio antes de mandar para o cliente. Pergunta como ele resolveria. Pergunta mais.
 
-As unidades são autônomas e vão continuar sendo. Isso não impede ninguém de conversar. Temos diretores de arte, redatores e estrategistas muito bons espalhados pelos estúdios, resolvendo problemas parecidos em clientes diferentes. Vocês estão no mesmo Slack e têm o número um do outro. Por que a gente conversa tão pouco entre pares?
+Penso muito em fases.
 
-Manda o trabalho para alguém de outra unidade antes de mandar para o cliente. Pergunta como ele resolveria. Conta o que funcionou no teu projeto. Pergunta mais, e para fora da tua unidade.
+Ninguém chora quando uma lagarta vira borboleta. A lagarta deixou de existir, e as duas são uma coisa só. A borboleta vai morrer também. E a lagarta talvez fosse mais linda que a borboleta. Mas é assim, né?
 
-Semana que vem eu quero ver alguma resposta nessa pergunta. Pode ser pequena: uma conversa, um rascunho trocado, uma ideia que veio de outro time. Só isso.
+Os estúdios vão passar por fases. A gente também. Crescer não é acumular. É dar camadas, densidade, e aceitar que algumas formas ficam para trás.
+
+Talvez seja menos sobre crescer, mais sobre continuar sendo.
+Continuar sendo perto do cliente.
+Perto do cliente, cuidando do acabamento.
+Cuidando do acabamento, indo longe.
+Indo longe, e perguntando para quem está do lado.
