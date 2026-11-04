@@ -20,11 +20,11 @@ Uma regra local barrou uma ideia essa semana, e o time adaptou em dias.
 Em dias, porque estava preparado.
 Preparado, nenhuma fronteira é um muro.
 
-A fronteira que a gente menos atravessa fica entre os nossos estúdios.
-Entre os estúdios, a resposta sobre trabalho conjunto foi a mesma nos três: nada essa semana.
+A fronteira que a gente menos atravessa fica entre nós.
+Entre nós, a resposta sobre trabalhar junto foi a mesma essa semana: nada.
 Nada, entre pessoas que têm o número uma da outra.
 Temos diretores de arte, redatores e estrategistas muito bons resolvendo problemas parecidos para clientes diferentes. Por que a gente conversa tão pouco entre pares?
-Manda o trabalho para alguém de outro estúdio antes de mandar para o cliente. Pergunta como ele resolveria. Pergunta mais.
+Manda o trabalho para um colega que não está no teu projeto antes de mandar para o cliente. Pergunta como ele resolveria. Pergunta mais.
 
 Penso muito em fases.
 
@@ -39,7 +39,7 @@ Lidar com o crescimento é lidar com mudança. Com boas notícias e com coisas q
 
 Ninguém chora quando uma lagarta vira borboleta. A lagarta deixou de existir, e as duas são uma coisa só. A borboleta vai morrer também. E a lagarta talvez fosse mais linda que a borboleta. Mas é assim, né?
 
-Os estúdios vão passar por fases. A gente também. Crescer não é acumular. É dar camadas, densidade, e aceitar que algumas formas ficam para trás.
+A MATTER vai passar por fases. Eu também. Cada um de nós. Crescer não é acumular. É dar camadas, densidade, e aceitar que algumas formas ficam para trás.
 
 Talvez seja menos sobre crescer, mais sobre continuar sendo.
 Continuar sendo perto do cliente.
