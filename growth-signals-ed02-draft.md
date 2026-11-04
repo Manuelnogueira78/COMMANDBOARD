@@ -28,6 +28,15 @@ Manda o trabalho para alguém de outro estúdio antes de mandar para o cliente. 
 
 Penso muito em fases.
 
+Sinto saudade do meu filho bebê. Pequeno, aprendendo a rir. Andava no meu colo com o bracinho no meu ombro, depois dormia em mim. Precisava de mim pra tudo.
+Sinto saudade dele com 3 anos. Com 4. Com 8.
+Vou sentir saudade dos 10 também.
+E nem imagino o que ele vai ser com 18. Quanta coisa incrível vai acontecer, pra depois terminar também. Pra eu sentir saudade de novo.
+
+Isso é ruim? Ou é assim que é viver?
+
+Lidar com o crescimento é lidar com mudança. Com boas notícias e com coisas que não acontecem mais. Com dores que passaram e com piadas que não têm mais graça. Uma noite de sono, finalmente. Até que não se durma de novo.
+
 Ninguém chora quando uma lagarta vira borboleta. A lagarta deixou de existir, e as duas são uma coisa só. A borboleta vai morrer também. E a lagarta talvez fosse mais linda que a borboleta. Mas é assim, né?
 
 Os estúdios vão passar por fases. A gente também. Crescer não é acumular. É dar camadas, densidade, e aceitar que algumas formas ficam para trás.
