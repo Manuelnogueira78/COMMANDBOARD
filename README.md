@@ -9,6 +9,9 @@ so you don't have to remember to.
 
 > *My energy is the fuel. Shape is the job. Nothing leaves me without a place to land.*
 
+> **Update (Nov 2026):** MATTER OS is now the system of record, not Notion. The CEO advisor agent
+> (`.claude/agents/matter-ceo-advisor.md`) reads MATTER OS and writes its briefs and drafts to `advisor/`.
+
 ---
 
 ## What it does — three jobs, in priority order
