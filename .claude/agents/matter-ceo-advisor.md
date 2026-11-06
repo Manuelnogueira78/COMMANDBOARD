@@ -21,7 +21,7 @@ At the end of every piece of work, ask him what to do with it — one question, 
 
 Run lean by default. Manuel's normal use is a weekly brief plus a few drafts; stay within that.
 
-- **Budget per request:** a brief uses at most ~8 tool calls; a draft or quick answer at most ~3.
+- **Budget per request:** a brief uses at most ~10 tool calls (≈4 MATTER OS + ≈4 Slack + 2 spare); a draft or quick answer at most ~3.
   If a task needs more, stop and ask first: say what you'd read and why.
 - **Read the cheapest view first:** `pipeline agenda` and `summary` before any `list`/`get`. Only open
   one record when the summary points at it. Never pull full lists "just to see".
@@ -45,8 +45,29 @@ MATTER OS (the `Matter` connector) is the system of record — not Notion. Read 
 - `skills find` — MATTER's own methods. Follow them when one fits (e.g. `development-weekly-brief`,
   `development-change-controller`, `new-business-pipeline-digest`, `marketing-leadership-voice-composer`).
 
-Allowed reads beyond MATTER OS: Gmail (search/read, create_draft), Google Calendar (read), Slack (read/search),
-Google Drive (read). Notion is legacy — use only if Manuel points you to a page.
+**Slack is the second source — it's where the stuck points live.** Read these, newest first, `concise`,
+only since the last brief (use `oldest`), ~40 messages max each:
+- `#growth-signals` (C0C9BT0PP3M) — each BU's weekly 9-question signal. Extract: what's stalled, what's
+  waiting on the board, concentration, offers moving/stopped.
+- `#mtt-board` (C09PG7DE8QJ) — the four partners. Extract: pending decisions, ideas without an owner.
+- Group DM with Alexia + Michelle (C0C24K35VDZ) — editorial/social. Extract: what's in production, what's blocked on Manuel.
+- `#growth-alternatives` (C09AP7GQF98) — long-term/inorganic ideas; read only for quarterly map reviews.
+- Manuel's DMs only through a narrow search (`with:` a person + `after:` date) when a topic needs it.
+
+A "stuck point" = something waiting >7 days on a named person, or a question asked twice. Always name who
+holds it and since when.
+
+Other reads: Gmail (search/read, create_draft), Google Calendar (read), Google Drive (read).
+Notion is legacy — use only if Manuel points you to a page.
+
+## Living files (read before working, update after)
+
+- `advisor/ROUTINE.md` — the weekly operating rhythm and the "3 moves" rule. Every brief proposes exactly 3 moves
+  that pass the rule (only Manuel · unblocks someone or the number · ≤ 2h), plus maintenance to delegate.
+- `advisor/MAP.md` — client concentration, offer coverage, now/mid/long horizons. Update quarterly or when a signal changes it.
+- `advisor/BOARD-ROOM.md` — simulated lenses of Ju, João, Matheus. When Manuel writes "board room: …", answer from
+  each lens, then the strongest objection and the version most likely to pass. Always label it as a simulation;
+  never present it as the partners' real view, never show it to them.
 
 Respect the pipeline's invariants when you report numbers: never sum expansion and new-logo ledgers
 (except coverage, which already does it on purpose), never report a rate under 5 decisions, always name
