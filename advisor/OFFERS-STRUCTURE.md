@@ -1,65 +1,66 @@
-# MATTER offers: the structure to finish with João
+# MATTER offers: from João's deck to sellable offers
 
-*Built on 2026-11-06 from Matheus's workshop plan (v5), his offer-specification template, the pre-work sheet (scores from all four), and the 3 Nov board notes (Gemini). This covers MATTER's offers only.*
+*Source: "Desenho das Ofertas 2027", the deck João shared in your private DM on 4 Nov, built from the 4 Nov alignment between you and João. Cross-checked against the workshop plan v5, the pre-work scores and the 3 Nov board notes. Read on 2026-11-06.*
 
-## Where things stand
+## Where it stands (from the deck)
 
-The SP workshop was meant to leave with a decided portfolio and finished specifications. It didn't:
+**The deck's timeline:** revised version Fri 06/11 at 12h → **review with you Fri 06/11 at 15h** → WIP to the leads the week of 09/11 → **final version 13/11**. Lari unfolds the tactical layer in #16 by 23/12.
 
-- **The spec sheet holds a single example.** PDP Studio is the only offer with a written recipe, and even it says "to confirm" on *why only us*, *timeline* and all of the economics.
-- **The 3 Nov board gave you and João the job.** You two are to "finalize the open items" and "discuss the offers", Juliana builds a 7-slide deck for the BU leads, and Matheus completes it.
-- **Juliana wants one standard model for every offer.** It should carry the leadership's point of view, and she wants to decide when Lari joins this work.
-- **The rollout to leads comes after.** It's a joint presentation, then 1:1s with Luli, Lari, Fernando and Lou the next day, aiming at the new structure on **1 January**.
+**The portfolio, revised 04/11:**
+- **Lead:** Feed-Born · Resident Studio · PDP Studio
+- **Incubate:** EveryOne · Event & Experience · Brand Systems / Playbook (MATTER Design / Lobão goes in here)
+- **Sustain:** Visual Atlas · Creators Brief · Key Art & Product Suite · Teaser AV · Creative Campaign · Brand Positioning · Content Strategy
+- **Out:** Restage, absorbed into Visual Atlas and EveryOne. Creative Campaign comes out of the pitch.
 
-So the expectation on you and João is to **turn the portfolio decision into complete, sellable specifications, leading offers first, in time for Juliana's deck and the 1 Jan structure.**
+**The anchor, before the offers:** "Uma ideia na MATTER é ___" ("An idea at MATTER is ___"). The deck's own note favours *"feita para mudar de mão sem mudar de dono"* ("made to change hands without changing owners"), because it covers every offer. The direction is from one-to-many to many-to-many.
 
-## Step 0: lock the portfolio before specifying anything (30 min with João)
+**The template has 10 fields:** in one sentence · pain · POV · why only MATTER · formula · output · quality standard · for whom · what it isn't · references. The deck deliberately leaves **price, team and checklist** for Lari's #16.
 
-Every offer gets one label in writing. Current offers are **lead / sustain / incubate / stop**. New offers are **launch / test / wait**. Only the leaders get the full treatment below. The others get one line each.
+## What's missing for a full solution
 
-What the pre-work scores say (average of the four, out of 30):
+João's 10 fields answer *what the offer is and why it's good*. They don't yet make the offer **sellable or deliverable at scale**. Four layers complete it:
 
-| Offer | Avg | Strong on | Weak on | Note |
-|---|---|---|---|---|
-| Artwork Finishing | **21.8** | traction 4.5, economics 4.3 | **future 2.0** | A cash engine, and AI will commoditize it. It's a *sustain*, not a lead. |
-| Teaser AV (MKT shoot) | 20.3 | uniqueness 3.8, future 4.0 | formula 2.0 | **The biggest disagreement (11 points).** Ju gave it 26, Matheus 15. Settle it first. |
-| PR / Social Stunt | 19.5 | future 4.3, quality 4.0 | formula 2.3 | MATTER's best showcase, but it has no continuous sale. |
-| Key Art & Product Suite | 19.3 | traction 3.5 | uniqueness 2.8 | The foundation of the entertainment positioning. Quality dropped after team changes. |
-| Creative Campaign | 19.3 | future 4.3 | formula 2.0 | At Motorola, the big idea goes to Los York. MATTER wins the production. |
-| Trailer / footage-based | 17.0 | – | uniqueness 2.0, future 2.5 | A *stop* or *sustain* candidate. Your note: "a IA vai fazer melhor" ("AI will do it better"). |
-
-The sheet has about 19 more rows I couldn't read in full. Beauty's **social-first campaign** (the only offer actually *selling and growing* outside entertainment, per #growth-signals), **Team Expansion / in-house teams**, **PDP Studio**, **BIS**, **Restage / Tech Studio**, **Brand Systems**, **Resident Studio** and **MATTER Design (Lobão)** need the same scores before you call the leaders.
-
-**Advisor's read** *(a recommendation, not a decision)*: the most likely leaders are **social-first campaign** (it sells across brands), **Key Art + Teaser AV as one entertainment launch offer** (traction plus uniqueness), and **Team Expansion** (it carries ~$2M with Evermark). Artwork Finishing stays as a margin engine with AI inside it.
-
-## The full specification: 8 blocks per leading offer
-
-Blocks 1–3 and 5 extend Matheus's template, which already exists in the spec sheet. Blocks 4 and 6–8 are what the template is missing to make the offer sellable end to end.
-
-| # | Block | Owner | Content |
+| Layer | Owner | Due | What it answers |
 |---|---|---|---|
-| **1** | **The offer** | João | Name. The sentence: "Clients hire X so they can ___", in the client's voice. ICP: company type and the buyer's role. The trigger, the pain. *Why only us* with proof. Deliverables by component, with quantities and formats. What's **not** included. Standard timeline. Proof cases. |
-| **2** | **Point of view and quality** | João | 3–5 principles, the most important part. Idea filters (yes/no). Pre-delivery checklist. Good and bad references. Standard artefacts (creative lock deck, brief, deliverables sheet). Client approval rounds. |
-| **3** | **The recipe** | João (+ Ju for hours) | The steps. Who does each, at what seniority, how many hours. This is what makes the offer repeatable, and it feeds the P&L. |
-| **4** | **Shape and pricing** | **Ju** (+ João) | Pricing model: project, retainer, per-SKU or per-title, or a pool. Small/medium/large tiers. The minimum ticket. Cost to deliver, from block 3. Target margin (the floor is 10% per BU, Q3). The annual adjustment rule. What's charged for an extra round. **Also** the low-ticket product for buyers outside marketing, which the board agreed on 3 Nov. |
-| **5** | **Results** | João | What the client measures, and how MATTER proves it ("we measure reaction, not recall"). |
-| **6** | **Sales: pitch, speech, targets** | **Manuel** | The narrative: the client's pain, MATTER's point of view, proof, the offer. A 30-second speech and a 3-minute version. Top objections with answers. The target list per ICP (from the dream-30). The entry product. Who owns new logo. **Settle the 3 Nov tension here:** Ju wants to start from the standard offer and then find clients. You want to start from open accounts (L'Oréal) to stress-test entry products. **Advisor's take:** do both, with the offer spec first and L'Oréal as the first live test. |
-| **7** | **Assets to sell it** | Alexia + Michelle, BU lead | A one-page offer sheet. A credentials deck *for this offer*, using João's credentials test (only work that would get in). 2–3 published cases. A page on the site. A proposal template. A demo where AI is involved. Plus the materials loop: wrap-up → toolkit → the chosen angle per offer. |
-| **8** | **AI and system** | **Matheus** | Which steps of the recipe are automated or assisted, and where the human hand is mandatory (PDP Studio's principle: "the machine makes the starting point, the designer's hand finishes it"). What has to be built, with a date. The offer's pricing loaded into MATTER OS (`pricing` / `estimates`), so proposals come out of the spec. Run cost per job, given the 3 Nov warning of ~$8k/month for always-on agents. |
+| **A. The 10 fields** (the deck) | João + Manuel | **13/11** | What it is, POV, formula, quality |
+| **B. Shape and price** | **Ju** + João (Lari for the recipe) | **before the lead 1:1s** | Pricing model, tiers, minimum ticket, team and hours per tier, margin, annual adjustment, extra rounds |
+| **C. Pitch and speech** | **Manuel** (Lari for the sales narrative in #16) | 13/11 for leaders | 30-second line, 3-minute story, the 3 objections and their answers, target list per ICP from the dream-30, the entry product, who sells |
+| **D. Assets** | Alexia + Michelle, the lead BU | Dec | One-page sheet, a credentials deck *per offer* (with João's credentials test), 2–3 cases, a site page, a proposal template |
+| **E. System and AI** | **Matheus** | Dec–Jan | Which steps of the formula the system does, what has to be built, run cost per job, and the price loaded into MATTER OS so proposals come out of the spec |
 
-**Definition of done per offer**, from the workshop's own pass criteria: the sentence signed by all four, one client (paying or likely), one proof, a known margin, the price in MATTER OS, and a credentials deck with at least 2 cases.
+**One risk to flag in today's review.** Pushing price to #16 (23/12) means the lead 1:1s on the week of 09/11 happen without numbers. Juliana's plan validates revenue targets and COGS per BU in those same 1:1s. **At least a pricing *model* per leading offer has to exist by 13/11**, even if the tiers come later.
 
-## Open items that touch the offers (raise them with João)
+## The three leaders, layer by layer
 
-- **BIS: an offer or the operating system?** Ju says the system. It still sits on the offer list, and Beauty prospects (Cargill, Boticário) are asking for it as a product.
-- **MATTER Design / Lobão's venture.** It's growing outside the offers and the org chart. Matheus proposed a kickoff to absorb it, with prices and products harmonized.
-- **Form and Fun.** It wasn't discussed in SP. Ju will talk to Ícaro.
-- **Restage / Tech Studio.** It's "on the tip of João's tongue", but it's stalled in every BU.
-- **PDP Studio.** It has a written recipe and no sale. The prospects being opened don't sell online.
+### Feed-Born (lead · subformulas: regional activation, campaign, stunt)
+- **A (deck): strong.** The v2 pain carries a number: brand recognition in creator ads is about 50% (System1). The step a competitor wouldn't do is that *the creator tests the idea before it locks*.
+- **B, price:** open. Proposed shape: price by subformula. Regional activation as a project on top of the client's platform. Campaign as a project plus waves. Stunt as an idea fee plus production at cost-plus. Waves (seed, launch, amplify) as optional modules.
+- **C, pitch:** the pain line is the opener. The objection "isn't this just a social campaign?" is already answered in the deck ("social is a channel; Feed-Born is the order of things"). Targets: Evermark brands, Motorola regions, and Beauty's open prospects (Boticário, Dove).
+- **D, assets:** the Feed-Born deck (Evermark, Oct/26). The Suave Strawberry Delight case went live on 4 Nov. Netflix stunts for the stunt subformula.
+- **E, system:** cultural listening "with each line tied to a real post" is Matheus's social pipeline. It's real and already in use (Q-tips listening, 24 Oct). To build: the creator-test step as a repeatable tool, and the recognition measure ("found, commented, recognized").
+- **Open:** Creators Brief as its own offer or a Feed-Born step. The deck itself asks. Also confirm that global Creative Campaign (Motorola) goes to sustain, with no pitch. The deck asks you to confirm this.
 
-## Order of work (proposal)
+### Resident Studio (lead · absorbs always-on and proof & learning)
+- **A: the POV is still a draft** ("time de dentro só rende com método de fora", "a team inside only performs with method from outside"). The quality standard is good: it answers the client's three current criticisms.
+- **B, price: the most advanced, and the most urgent.** It's a retainer with transparent overhead (Rafa questioned margin and overhead), plus an annual adjustment, plus a **performance pool. The pool % has been waiting on the board since October** and blocks the ~$2M Team Expansion.
+- **C, pitch:** "capacity and speed with quality, without the cost and risk of building a team". Targets: brands with continuous volume. Motorola is likely, and it would move Tech off pure project work.
+- **D, assets:** Evermark in-house as the case. It needs numbers (deadlines met, conversion).
+- **E, system:** the MATTER rituals and tools that make "method from outside" true, read in MATTER OS. To build: the periodic results read as a standard report.
+- **Board warning (in the deck):** revenue concentration gets locked in before the SOW.
 
-1. **This week, with João (2h):** step 0, then blocks 1–2 for the first leader.
-2. **Next week:** João blocks 1–3 for all leaders. Ju block 4. You block 6. Matheus block 8.
-3. **Before Juliana's deck goes to the leads:** every leader is at "done", or explicitly marked as in progress.
-4. **January:** blocks 7 and 8 delivered. The first proposal goes out of MATTER OS from a spec.
+### PDP Studio (lead · new)
+- **A: complete,** and the only offer with a written recipe (Matheus's spec sheet).
+- **B, price:** the board flagged that it **must not become price per piece**. Proposed shape: per-portfolio pack (tiers by number of SKUs), plus a setup fee per brand (claims, references, approval chain), plus a refresh fee per launch.
+- **C, pitch:** "the PDP is the last shop window before purchase, not campaign leftovers". **The target list is the problem:** the prospects being opened (Visa, Cargill, Serena) don't sell online. You need e-commerce-heavy groups (Boticário, Hypera, Dove/Unilever, Panvel), which are already in Beauty's outreach.
+- **D, assets:** the PDP Studio release (The Drum replied on 21 Oct), Suave and ChapStick refresh, Goovi on Amazon.
+- **E, system: already built** in MATTER OS (`pdp` module: claims, approvals, issuance). Missing: a demo for prospects, and the run cost per SKU that the price needs.
+
+## For the 15h review with João (comments to bring)
+
+1. **The anchor:** confirm *"feita para mudar de mão sem mudar de dono"*. It passes the deck's own test of covering every offer, not just Feed-Born.
+2. **Price can't wait for 23/12.** Ask for a pricing *model* per leader by 13/11, owned by Ju. That's layer B above.
+3. **Feed-Born decisions:** Creators Brief becomes a step inside Feed-Born, not a separate offer. Global Creative Campaign moves to sustain.
+4. **PDP Studio needs the right buyers.** Point the target list at e-commerce-heavy groups, or it stays at zero sales.
+5. **Resident Studio** depends on the board's pool decision. Put it on Tuesday's agenda.
+6. **Boundaries still open in the deck:** Visual Atlas ↔ EveryOne ↔ Brand Systems. Event & Experience is the weakest (its quality standard is still undefined). Keep it in incubate with a kill date.
+7. **Add a layer E line to every slide** ("what the system does"), so Matheus can scope the build from the deck itself.
