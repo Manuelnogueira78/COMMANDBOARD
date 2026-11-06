@@ -6,7 +6,7 @@ a draft, "board room: …", the routine, the map), hand it to the `matter-ceo-ad
 stay inside the cost budget.
 
 Short commands Manuel uses:
-- **"brief"**: write this week's brief to `advisor/briefs/YYYY-MM-DD.md` (3 moves, maintenance, drafts).
+- **"prepara meu dia"** / **"prepara a semana"**: day or week plan in `advisor/briefs/`.
 - **"board room: <idea>"**: the simulated board perspectives from `advisor/BOARD-ROOM.md`.
 - **"draft <who/what>"**: an email (as a Gmail draft) or a Slack/LinkedIn text in `advisor/drafts/`.
 - **"close the week"**: check the 3 moves, then draft the Friday board note.
